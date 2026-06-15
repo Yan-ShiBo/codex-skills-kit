@@ -1,0 +1,658 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-06-16",
+  "description": "Reproducible source manifest for Yan-ShiBo's Codex skills setup.",
+  "sources": [
+    {
+      "source": "Imbad0202/academic-research-skills-codex",
+      "url": "https://github.com/Imbad0202/academic-research-skills-codex.git",
+      "ref": "763bccdf5d4187a779354d801b69b3cf591eea41",
+      "items": [
+        {
+          "name": "academic-research-suite",
+          "source_path": "skills/academic-research-suite",
+          "destination": "academic-research-suite",
+          "snapshot_hash": null
+        }
+      ]
+    },
+    {
+      "source": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills.git",
+      "ref": "57546260929473d4e0d1c1bb75297be2fdfa1949",
+      "items": [
+        {
+          "name": "docx",
+          "source_path": "skills/docx",
+          "destination": "docx",
+          "snapshot_hash": null
+        },
+        {
+          "name": "frontend-design",
+          "source_path": "skills/frontend-design",
+          "destination": "frontend-design",
+          "snapshot_hash": "928950704df8a8b885c03de5da626331e6f29cf8"
+        },
+        {
+          "name": "mcp-builder",
+          "source_path": "skills/mcp-builder",
+          "destination": "mcp-builder",
+          "snapshot_hash": null
+        },
+        {
+          "name": "pdf",
+          "source_path": "skills/pdf",
+          "destination": "pdf",
+          "snapshot_hash": null
+        },
+        {
+          "name": "pptx",
+          "source_path": "skills/pptx",
+          "destination": "pptx",
+          "snapshot_hash": null
+        },
+        {
+          "name": "webapp-testing",
+          "source_path": "skills/webapp-testing",
+          "destination": "webapp-testing",
+          "snapshot_hash": null
+        },
+        {
+          "name": "xlsx",
+          "source_path": "skills/xlsx",
+          "destination": "xlsx",
+          "snapshot_hash": null
+        }
+      ]
+    },
+    {
+      "source": "davila7/claude-code-templates",
+      "url": "https://github.com/davila7/claude-code-templates.git",
+      "ref": "6772ba97d5b016c87f70610429c7c44df934cfe1",
+      "items": [
+        {
+          "name": "planning-with-files",
+          "source_path": "cli-tool/components/skills/productivity/planning-with-files",
+          "destination": "planning-with-files",
+          "snapshot_hash": null,
+          "single_file": "SKILL.md"
+        }
+      ]
+    },
+    {
+      "source": "garrytan/gstack",
+      "url": "https://github.com/garrytan/gstack.git",
+      "ref": "c7ae63201ab193a7dc7fb7e0d81238645111ffac",
+      "items": [
+        {
+          "name": "gstack",
+          "source_path": ".",
+          "destination": "gstack",
+          "snapshot_hash": "cab774cced06e0a36b3b4b1518b8c968707f7e2f"
+        }
+      ]
+    },
+    {
+      "source": "github/awesome-copilot",
+      "url": "https://github.com/github/awesome-copilot.git",
+      "ref": "b4b9beb69d9e8b21c0dfcfd9c86a835997b6a83b",
+      "items": [
+        {
+          "name": "markdown-to-html",
+          "source_path": "skills/markdown-to-html",
+          "destination": "markdown-to-html",
+          "snapshot_hash": "bd8cd071f08f841753283719eeaa28adbb167051"
+        }
+      ]
+    },
+    {
+      "source": "hyhmrright/brooks-lint",
+      "url": "https://github.com/hyhmrright/brooks-lint.git",
+      "ref": "8501ba4411a9db67bcf42080b0380953b7fc90a9",
+      "items": [
+        {
+          "name": "_brooks-shared",
+          "source_path": "skills/_shared",
+          "destination": "_shared",
+          "runtime_support": true,
+          "snapshot_hash": null
+        },
+        {
+          "name": "brooks-audit",
+          "source_path": "skills/brooks-audit",
+          "destination": "brooks-audit",
+          "snapshot_hash": null
+        },
+        {
+          "name": "brooks-debt",
+          "source_path": "skills/brooks-debt",
+          "destination": "brooks-debt",
+          "snapshot_hash": null
+        },
+        {
+          "name": "brooks-health",
+          "source_path": "skills/brooks-health",
+          "destination": "brooks-health",
+          "snapshot_hash": null
+        },
+        {
+          "name": "brooks-review",
+          "source_path": "skills/brooks-review",
+          "destination": "brooks-review",
+          "snapshot_hash": null
+        },
+        {
+          "name": "brooks-sweep",
+          "source_path": "skills/brooks-sweep",
+          "destination": "brooks-sweep",
+          "snapshot_hash": null
+        },
+        {
+          "name": "brooks-test",
+          "source_path": "skills/brooks-test",
+          "destination": "brooks-test",
+          "snapshot_hash": null
+        }
+      ]
+    },
+    {
+      "source": "jimliu/baoyu-skills",
+      "url": "https://github.com/jimliu/baoyu-skills.git",
+      "ref": "441ca307a60c594e8eda0ac156609503687544c0",
+      "items": [
+        {
+          "name": "baoyu-article-illustrator",
+          "source_path": "skills/baoyu-article-illustrator",
+          "destination": "baoyu-article-illustrator",
+          "snapshot_hash": "c129e1d844873151ad0f80c2d564dd104856b514"
+        },
+        {
+          "name": "baoyu-comic",
+          "source_path": "skills/baoyu-comic",
+          "destination": "baoyu-comic",
+          "snapshot_hash": "6bdeddd8d84120b5674e94235f1f1cd35ce4d7e0"
+        },
+        {
+          "name": "baoyu-compress-image",
+          "source_path": "skills/baoyu-compress-image",
+          "destination": "baoyu-compress-image",
+          "snapshot_hash": "20c6b0e332dd370d45859d995f1c89835270138d"
+        },
+        {
+          "name": "baoyu-cover-image",
+          "source_path": "skills/baoyu-cover-image",
+          "destination": "baoyu-cover-image",
+          "snapshot_hash": "04399a90a493490e03098f53e118f1f55456bca9"
+        },
+        {
+          "name": "baoyu-danger-gemini-web",
+          "source_path": "skills/baoyu-danger-gemini-web",
+          "destination": "baoyu-danger-gemini-web",
+          "snapshot_hash": "ddb3aed23a15f76f6df1e33d3988eef735082c26"
+        },
+        {
+          "name": "baoyu-danger-x-to-markdown",
+          "source_path": "skills/baoyu-danger-x-to-markdown",
+          "destination": "baoyu-danger-x-to-markdown",
+          "snapshot_hash": "825a8dc9283332d52ca8798d127a4be32b3540fa"
+        },
+        {
+          "name": "baoyu-diagram",
+          "source_path": "skills/baoyu-diagram",
+          "destination": "baoyu-diagram",
+          "snapshot_hash": "7c6c263e274d463c06cedc0e060a8b7c9b0fa403"
+        },
+        {
+          "name": "baoyu-electron-extract",
+          "source_path": "skills/baoyu-electron-extract",
+          "destination": "baoyu-electron-extract",
+          "snapshot_hash": "d821d00d9d6e12ce310fffcd6395f78af8f3b8d6"
+        },
+        {
+          "name": "baoyu-format-markdown",
+          "source_path": "skills/baoyu-format-markdown",
+          "destination": "baoyu-format-markdown",
+          "snapshot_hash": "4973ce35522c3ca6a3dd4238e73ac431fcac2207"
+        },
+        {
+          "name": "baoyu-image-gen",
+          "source_path": "skills/baoyu-image-gen",
+          "destination": "baoyu-image-gen",
+          "snapshot_hash": "eef3dbd5b0a6edbed63bf3733f6add1187d499f5"
+        },
+        {
+          "name": "baoyu-infographic",
+          "source_path": "skills/baoyu-infographic",
+          "destination": "baoyu-infographic",
+          "snapshot_hash": "3d8b4158cc11ffe9c83dc72f509e931ef5311cfb"
+        },
+        {
+          "name": "baoyu-markdown-to-html",
+          "source_path": "skills/baoyu-markdown-to-html",
+          "destination": "baoyu-markdown-to-html",
+          "snapshot_hash": "441d1137bd34e485c94aebb1c4b10d92169a7d2d"
+        },
+        {
+          "name": "baoyu-post-to-wechat",
+          "source_path": "skills/baoyu-post-to-wechat",
+          "destination": "baoyu-post-to-wechat",
+          "snapshot_hash": "ba92a3d48524297f21b3306feafc56552fe99696"
+        },
+        {
+          "name": "baoyu-post-to-weibo",
+          "source_path": "skills/baoyu-post-to-weibo",
+          "destination": "baoyu-post-to-weibo",
+          "snapshot_hash": "4ea5f4d08ada74e173da6be085b486c222faeac6"
+        },
+        {
+          "name": "baoyu-post-to-x",
+          "source_path": "skills/baoyu-post-to-x",
+          "destination": "baoyu-post-to-x",
+          "snapshot_hash": "9a4e31a30ee413804acfb8074069118a076d462c"
+        },
+        {
+          "name": "baoyu-slide-deck",
+          "source_path": "skills/baoyu-slide-deck",
+          "destination": "baoyu-slide-deck",
+          "snapshot_hash": "fe191f9ec9c640868f33117d35e909eee3317e96"
+        },
+        {
+          "name": "baoyu-translate",
+          "source_path": "skills/baoyu-translate",
+          "destination": "baoyu-translate",
+          "snapshot_hash": "5b3015814885fbda03ed535034a8580996af8c95"
+        },
+        {
+          "name": "baoyu-url-to-markdown",
+          "source_path": "skills/baoyu-url-to-markdown",
+          "destination": "baoyu-url-to-markdown",
+          "snapshot_hash": "33b1cda80aa387d3e48b7525daf1c74d92ca8179"
+        },
+        {
+          "name": "baoyu-wechat-summary",
+          "source_path": "skills/baoyu-wechat-summary",
+          "destination": "baoyu-wechat-summary",
+          "snapshot_hash": "e8fdf130357eb30775f8913575401b315f96f576"
+        },
+        {
+          "name": "baoyu-xhs-images",
+          "source_path": "skills/baoyu-xhs-images",
+          "destination": "baoyu-xhs-images",
+          "snapshot_hash": "67176eac6d2498d9c54bc5e75c2d92f826e43915"
+        },
+        {
+          "name": "baoyu-youtube-transcript",
+          "source_path": "skills/baoyu-youtube-transcript",
+          "destination": "baoyu-youtube-transcript",
+          "snapshot_hash": "223f52d803e2180720600d621ce0d395fad1983a"
+        },
+        {
+          "name": "release-skills",
+          "source_path": ".claude/skills/release-skills",
+          "destination": "release-skills",
+          "snapshot_hash": "97438b3170eb850ba3a92de132d6866616cf338e"
+        }
+      ]
+    },
+    {
+      "source": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills.git",
+      "ref": "694fa30311e02c2639942308513555e61ee84a6f",
+      "items": [
+        {
+          "name": "caveman",
+          "source_path": "skills/productivity/caveman",
+          "destination": "caveman",
+          "snapshot_hash": "17972a1bdbf5909b9dbdc435ad348f0bf45f8664"
+        },
+        {
+          "name": "design-an-interface",
+          "source_path": "skills/deprecated/design-an-interface",
+          "destination": "design-an-interface",
+          "snapshot_hash": "59d5eca0fd23930d3d3821aa9da507f1bdb8a348"
+        },
+        {
+          "name": "diagnose",
+          "source_path": "skills/engineering/diagnose",
+          "destination": "diagnose",
+          "snapshot_hash": "43d464d0e9d1049b9d525975c0f7367ab7e01a5f"
+        },
+        {
+          "name": "edit-article",
+          "source_path": "skills/personal/edit-article",
+          "destination": "edit-article",
+          "snapshot_hash": "d86427caec7ecdccd963eb5dabc300e2c2e243a4"
+        },
+        {
+          "name": "git-guardrails-claude-code",
+          "source_path": "skills/misc/git-guardrails-claude-code",
+          "destination": "git-guardrails-claude-code",
+          "snapshot_hash": "f02ae7c2de75270e93a200e11a7e466ece897353"
+        },
+        {
+          "name": "grill-me",
+          "source_path": "skills/productivity/grill-me",
+          "destination": "grill-me",
+          "snapshot_hash": "2a1ad17028306ebe45f0e49703fa28b9b2e7f499"
+        },
+        {
+          "name": "grill-with-docs",
+          "source_path": "skills/engineering/grill-with-docs",
+          "destination": "grill-with-docs",
+          "snapshot_hash": "2c3a4e48571bfe42203ed7b49cae85f31ef4b6f2"
+        },
+        {
+          "name": "handoff",
+          "source_path": "skills/productivity/handoff",
+          "destination": "handoff",
+          "snapshot_hash": "7bbb60d64c911617cee7f71b2ba9e24364faa14e"
+        },
+        {
+          "name": "improve-codebase-architecture",
+          "source_path": "skills/engineering/improve-codebase-architecture",
+          "destination": "improve-codebase-architecture",
+          "snapshot_hash": "688c17ec27fe9309d84987716aca37b5ce7f3a88"
+        },
+        {
+          "name": "migrate-to-shoehorn",
+          "source_path": "skills/misc/migrate-to-shoehorn",
+          "destination": "migrate-to-shoehorn",
+          "snapshot_hash": "ad722b79beb1c1fb998678d498ba11760d53714b"
+        },
+        {
+          "name": "obsidian-vault",
+          "source_path": "skills/personal/obsidian-vault",
+          "destination": "obsidian-vault",
+          "snapshot_hash": "1e814d168a215762391895aee58f4de06c8e3b7f"
+        },
+        {
+          "name": "prototype",
+          "source_path": "skills/engineering/prototype",
+          "destination": "prototype",
+          "snapshot_hash": "c91bdc5d02d42ed88a3082a8fa83338895b55bd4"
+        },
+        {
+          "name": "qa",
+          "source_path": "skills/deprecated/qa",
+          "destination": "qa",
+          "snapshot_hash": "3eed5beeb18e77776349782ed087ee4560fd69c5"
+        },
+        {
+          "name": "request-refactor-plan",
+          "source_path": "skills/deprecated/request-refactor-plan",
+          "destination": "request-refactor-plan",
+          "snapshot_hash": "b0617c9cf69ac1e73a6b30f78c82ff81372079fd"
+        },
+        {
+          "name": "review",
+          "source_path": "skills/in-progress/review",
+          "destination": "review",
+          "snapshot_hash": "756c8dd5c0f097682b45ff10d64ca23087b19159"
+        },
+        {
+          "name": "scaffold-exercises",
+          "source_path": "skills/misc/scaffold-exercises",
+          "destination": "scaffold-exercises",
+          "snapshot_hash": "ef19ca90ec6645b23dc7e68601552ab795e3e6ee"
+        },
+        {
+          "name": "setup-matt-pocock-skills",
+          "source_path": "skills/engineering/setup-matt-pocock-skills",
+          "destination": "setup-matt-pocock-skills",
+          "snapshot_hash": "77638955bebe492948244f1338e54ca1a9445c29"
+        },
+        {
+          "name": "setup-pre-commit",
+          "source_path": "skills/misc/setup-pre-commit",
+          "destination": "setup-pre-commit",
+          "snapshot_hash": "5e6e9301b4826bd820401ea4114a797adb169f47"
+        },
+        {
+          "name": "tdd",
+          "source_path": "skills/engineering/tdd",
+          "destination": "tdd",
+          "snapshot_hash": "75beb3030b4c979205dd771ff85ac600baeb68f4"
+        },
+        {
+          "name": "teach",
+          "source_path": "skills/productivity/teach",
+          "destination": "teach",
+          "snapshot_hash": "fdc61615b4d56a04d88a69a135337f0cad9df235"
+        },
+        {
+          "name": "to-issues",
+          "source_path": "skills/engineering/to-issues",
+          "destination": "to-issues",
+          "snapshot_hash": "b38c5aa6ae5d6903e60d3f74a7aafd32d02f2c06"
+        },
+        {
+          "name": "to-prd",
+          "source_path": "skills/engineering/to-prd",
+          "destination": "to-prd",
+          "snapshot_hash": "fb4503f54bc618da08df2fd74109fbe57e4d8150"
+        },
+        {
+          "name": "triage",
+          "source_path": "skills/engineering/triage",
+          "destination": "triage",
+          "snapshot_hash": "de4f182c30876a2460ca307e2f601b9b892527e5"
+        },
+        {
+          "name": "ubiquitous-language",
+          "source_path": "skills/deprecated/ubiquitous-language",
+          "destination": "ubiquitous-language",
+          "snapshot_hash": "483fe10b01bed81b7eba7ee26df3f1bef9540c88"
+        },
+        {
+          "name": "write-a-skill",
+          "source_path": "skills/productivity/write-a-skill",
+          "destination": "write-a-skill",
+          "snapshot_hash": "2f252b35aa238879afc5a230ac30343708dee0b3"
+        },
+        {
+          "name": "writing-beats",
+          "source_path": "skills/in-progress/writing-beats",
+          "destination": "writing-beats",
+          "snapshot_hash": "5e947c333ec8502246992f3e7ad340545796ac67"
+        },
+        {
+          "name": "writing-fragments",
+          "source_path": "skills/in-progress/writing-fragments",
+          "destination": "writing-fragments",
+          "snapshot_hash": "d12fe507a3226039cfb74894ff67411051aef974"
+        },
+        {
+          "name": "writing-shape",
+          "source_path": "skills/in-progress/writing-shape",
+          "destination": "writing-shape",
+          "snapshot_hash": "3da82ab342a9fef004368cd48a9aa80ac1dd7b29"
+        },
+        {
+          "name": "zoom-out",
+          "source_path": "skills/engineering/zoom-out",
+          "destination": "zoom-out",
+          "snapshot_hash": "6ecebabdea814d12888f56a611da7bf182b5fb26"
+        }
+      ]
+    },
+    {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
+      "ref": "b7e3af80f6e331f6fb456667b82b12cade7c9d35",
+      "items": [
+        {
+          "name": "ui-ux-pro-max",
+          "source_path": ".claude/skills/ui-ux-pro-max",
+          "destination": "ui-ux-pro-max",
+          "snapshot_hash": "75e1acaafe8b08e59d4b86fc253ac7873aff6bba"
+        }
+      ]
+    },
+    {
+      "source": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers.git",
+      "ref": "6fd4507659784c351abbd2bc264c7162cfd386dc",
+      "items": [
+        {
+          "name": "brainstorming",
+          "source_path": "skills/brainstorming",
+          "destination": "brainstorming",
+          "snapshot_hash": "f260c775073816860fef8a37c032ac77e2ff5821"
+        },
+        {
+          "name": "dispatching-parallel-agents",
+          "source_path": "skills/dispatching-parallel-agents",
+          "destination": "dispatching-parallel-agents",
+          "snapshot_hash": "ebd0490e6b0bccfdb9f9c0cc9dd6a066036c8d89"
+        },
+        {
+          "name": "executing-plans",
+          "source_path": "skills/executing-plans",
+          "destination": "executing-plans",
+          "snapshot_hash": "7c20d2bd7ff7b166ea3064e21b1e5f0455750878"
+        },
+        {
+          "name": "finishing-a-development-branch",
+          "source_path": "skills/finishing-a-development-branch",
+          "destination": "finishing-a-development-branch",
+          "snapshot_hash": "782e09faa5dcf7e9a7a173bd14b5622e35b80169"
+        },
+        {
+          "name": "receiving-code-review",
+          "source_path": "skills/receiving-code-review",
+          "destination": "receiving-code-review",
+          "snapshot_hash": "7750c56fddb8b2f1cbdb1550a6e3e40d2eeac5f1"
+        },
+        {
+          "name": "requesting-code-review",
+          "source_path": "skills/requesting-code-review",
+          "destination": "requesting-code-review",
+          "snapshot_hash": "ff419ec159bdf5ff2f2d83c7e544c586bcde69bb"
+        },
+        {
+          "name": "subagent-driven-development",
+          "source_path": "skills/subagent-driven-development",
+          "destination": "subagent-driven-development",
+          "snapshot_hash": "73b43347c1bdc10f6ab81a5cdb036dd1c8098cc0"
+        },
+        {
+          "name": "systematic-debugging",
+          "source_path": "skills/systematic-debugging",
+          "destination": "systematic-debugging",
+          "snapshot_hash": "e96f5f2620c17069d668be1880d5492e34c84ceb"
+        },
+        {
+          "name": "test-driven-development",
+          "source_path": "skills/test-driven-development",
+          "destination": "test-driven-development",
+          "snapshot_hash": "98904a7d8e0e04b9bd46220b9b17298f45fe0b72"
+        },
+        {
+          "name": "using-git-worktrees",
+          "source_path": "skills/using-git-worktrees",
+          "destination": "using-git-worktrees",
+          "snapshot_hash": "13a9643fb9e4b236173f7d4b56b15dac10394f1b"
+        },
+        {
+          "name": "using-superpowers",
+          "source_path": "skills/using-superpowers",
+          "destination": "using-superpowers",
+          "snapshot_hash": "225dd70596c396940ff158335a954a64d93ece40"
+        },
+        {
+          "name": "verification-before-completion",
+          "source_path": "skills/verification-before-completion",
+          "destination": "verification-before-completion",
+          "snapshot_hash": "ceb2f1f67f4cadb29b32a06e54d3d0be832071f5"
+        },
+        {
+          "name": "writing-plans",
+          "source_path": "skills/writing-plans",
+          "destination": "writing-plans",
+          "snapshot_hash": "8fe8e8b6ee9e5cbe53cb172a36f0dc31f9875847"
+        },
+        {
+          "name": "writing-skills",
+          "source_path": "skills/writing-skills",
+          "destination": "writing-skills",
+          "snapshot_hash": "80e8c7d3be99d55d5d76c9516cc45a1e7f48f281"
+        }
+      ]
+    },
+    {
+      "source": "openai/skills",
+      "url": "https://github.com/openai/skills.git",
+      "ref": "a8924c2a35cfa290458852c4fad17c9133054c2e",
+      "items": [
+        {
+          "name": "gh-fix-ci",
+          "source_path": "skills/.curated/gh-fix-ci",
+          "destination": "gh-fix-ci",
+          "snapshot_hash": null
+        }
+      ]
+    },
+    {
+      "source": "vercel-labs/skills",
+      "url": "https://github.com/vercel-labs/skills.git",
+      "ref": "be0dd25b4a8665894a56f45ef582cc02ca802c39",
+      "items": [
+        {
+          "name": "find-skills",
+          "source_path": "skills/find-skills",
+          "destination": "find-skills",
+          "snapshot_hash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d"
+        }
+      ]
+    }
+  ],
+  "plugins": [
+    {
+      "selector": "github@openai-curated"
+    },
+    {
+      "selector": "documents@openai-primary-runtime"
+    },
+    {
+      "selector": "spreadsheets@openai-primary-runtime"
+    },
+    {
+      "selector": "presentations@openai-primary-runtime"
+    },
+    {
+      "selector": "hyperframes@openai-curated"
+    },
+    {
+      "selector": "computer-use@openai-bundled"
+    },
+    {
+      "selector": "superpowers@openai-curated"
+    },
+    {
+      "selector": "figma@openai-curated"
+    },
+    {
+      "selector": "biorender@openai-curated"
+    },
+    {
+      "selector": "canva@openai-curated"
+    },
+    {
+      "selector": "nvidia@openai-curated"
+    },
+    {
+      "selector": "chrome@openai-bundled"
+    },
+    {
+      "selector": "browser@openai-bundled"
+    },
+    {
+      "selector": "google-drive@openai-curated-remote"
+    }
+  ],
+  "notes": [
+    "Codex system skills are bundled with Codex and are not downloaded.",
+    "Third-party skill source code is downloaded from its original repository.",
+    "Plugin installation is best-effort because connectors may require login."
+  ]
+}

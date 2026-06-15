@@ -1,0 +1,650 @@
+[
+  {
+    "name": "control-in-app-browser",
+    "description": "Control the in-app Browser. Use to open, navigate, inspect, test, click, type, screenshot, or verify local targets such as localhost, 127.0.0.1, ::1, file://, the current in-app browser tab, and websites shown side by side inside Codex.",
+    "marketplace": "openai-bundled",
+    "plugin": "browser",
+    "version": "26.602.40724",
+    "path": "~/.codex/plugins/cache/openai-bundled/browser/26.602.40724/skills/control-in-app-browser/SKILL.md",
+    "content_sha256": "9b3115cef2170b078d563d5c27d412dd958650c8fa09e21041c1169d53ee42d4"
+  },
+  {
+    "name": "control-chrome",
+    "description": "Control the user's Chrome browser for tasks that depend on existing Chrome state: tabs, logged-in sessions, cookies, or extensions. Prefer purpose-built connectors, APIs, or CLIs when available.",
+    "marketplace": "openai-bundled",
+    "plugin": "chrome",
+    "version": "26.602.40724",
+    "path": "~/.codex/plugins/cache/openai-bundled/chrome/26.602.40724/skills/control-chrome/SKILL.md",
+    "content_sha256": "5403c3ccc72d02d2c40670232e501b8b57547f499ab972f2af4432189b113967"
+  },
+  {
+    "name": "computer-use",
+    "description": "Control Windows apps from Codex",
+    "marketplace": "openai-bundled",
+    "plugin": "computer-use",
+    "version": "26.602.40724",
+    "path": "~/.codex/plugins/cache/openai-bundled/computer-use/26.602.40724/skills/computer-use/SKILL.md",
+    "content_sha256": "170062b5641e4d7aa578be7d0d52d20792fe5eda469b7ae967713bfdde384c1e"
+  },
+  {
+    "name": "canva-branded-presentation",
+    "description": "Create on-brand Canva presentations from a brief, outline, existing Canva doc, or design link. Use when the user wants a branded slide deck, wants to turn notes into a presentation, or needs a presentation generated in Canva with the right brand kit and a clear slide plan.",
+    "marketplace": "openai-curated",
+    "plugin": "canva",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/canva/c6ea566d/skills/canva-branded-presentation/SKILL.md",
+    "content_sha256": "89acbf11fd6fbbdd69d305b80265a05ab6d5e96623cb28cbdab84ee2b725f827"
+  },
+  {
+    "name": "canva-resize-for-all-social-media",
+    "description": "Resize a Canva design into standard social media formats and prepare export-ready results. Use when the user wants one Canva design adapted across multiple social platforms such as Facebook, Instagram, and LinkedIn, especially when they want all variants produced in one pass.",
+    "marketplace": "openai-curated",
+    "plugin": "canva",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/canva/c6ea566d/skills/canva-resize-for-all-social-media/SKILL.md",
+    "content_sha256": "febb6410d03bbfe551ca18a8f001566e9287aff8eb7472a5456f63721ba90a96"
+  },
+  {
+    "name": "canva-translate-design",
+    "description": "Translate the text in a Canva design into another language while preserving the original layout as much as possible. Use when the user wants a localized or translated version of an existing Canva design and expects the original file to remain unchanged.",
+    "marketplace": "openai-curated",
+    "plugin": "canva",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/canva/c6ea566d/skills/canva-translate-design/SKILL.md",
+    "content_sha256": "e373c8849e71066034ded5e5df3beec607fcb57ef300d3dc09b521cb1f89fa5b"
+  },
+  {
+    "name": "figma-code-connect",
+    "description": "Creates and maintains Figma Code Connect template files that map Figma components to code snippets. Use when the user mentions Code Connect, Figma component mapping, design-to-code translation, or asks to create/update .figma.ts or .figma.js files.",
+    "marketplace": "openai-curated",
+    "plugin": "figma",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/figma/c6ea566d/skills/figma-code-connect/SKILL.md",
+    "content_sha256": "b8e05b82c0b5d24bf0f2f9bf5d4ce887435dc4022ecabd05522e3267d543da69"
+  },
+  {
+    "name": "figma-create-new-file",
+    "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `create_new_file` tool call. NEVER call `create_new_file` directly without loading this skill first. Trigger whenever the user wants a new blank Figma file — a new design, FigJam, or Slides file — or when you need a fresh file before calling `use_figma`. Usage — /figma-create-new-file [editorType] [fileName] (e.g. /figma-create-new-file figjam My Whiteboard, /figma-create-new-file slides Q3 Review)",
+    "marketplace": "openai-curated",
+    "plugin": "figma",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/figma/c6ea566d/skills/figma-create-new-file/SKILL.md",
+    "content_sha256": "3cf3be0571e342b3c8f13a969b2671294df857ab2b917d0e7b79d932c3daff29"
+  },
+  {
+    "name": "figma-generate-design",
+    "description": "Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout into Figma. Triggers: 'write to Figma', 'create in Figma from code', 'push page to Figma', 'take this app/page and build it in Figma', 'create a screen', 'build a landing page in Figma', 'update the Figma screen to match code', 'convert this modal/dialog/drawer/panel to Figma'. This is the preferred workflow skill whenever the user wants to build or update a full page, modal, dialog, drawer, sidebar, panel, or any composed multi-section view in Figma from code or a description. Discovers design system components, variables, and styles from Code Connect files, existing screens, and library search, then imports them and assembles views incrementally section-by-section using design system tokens instead of hardcoded values.",
+    "marketplace": "openai-curated",
+    "plugin": "figma",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/figma/c6ea566d/skills/figma-generate-design/SKILL.md",
+    "content_sha256": "13a3b8b9e2dd58e308b6f9da41b845bcf06f4b30f6e12c1b8b17a6bcd7060856"
+  },
+  {
+    "name": "figma-generate-diagram",
+    "description": "MANDATORY prerequisite — load this skill BEFORE every `generate_diagram` tool call. NEVER call `generate_diagram` directly without loading this skill first. Trigger whenever the user asks to create, generate, draw, render, sketch, or build a diagram — flowchart, architecture diagram, sequence diagram, ERD or entity-relationship diagram, state diagram or state machine, gantt chart, or timeline. Also trigger when the user mentions Mermaid syntax or wants a system architecture, decision tree, dependency graph, API call flow, auth handshake, schema, or pipeline visualized in FigJam. Routes to type-specific guidance, sets universal Mermaid constraints, and tells you when to use a different diagram type or skip the tool entirely (mindmaps, pie charts, class diagrams, etc.).",
+    "marketplace": "openai-curated",
+    "plugin": "figma",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/figma/c6ea566d/skills/figma-generate-diagram/SKILL.md",
+    "content_sha256": "0f2eab1454fac3c1fcde539fe07277cba248e2e79bc558601487e4195fd63570"
+  },
+  {
+    "name": "figma-generate-library",
+    "description": "Build or update a professional-grade design system in Figma from a codebase. Use when the user wants to create variables/tokens, build component libraries, create individual components with proper variant sets and variable bindings, set up theming (light/dark modes), document foundations, or reconcile gaps between code and Figma. Also use when the user asks to create or generate any component in Figma — even a single one — since components require proper variable foundations, variant states, and design token bindings to be production-quality. This skill teaches WHAT to build and in WHAT ORDER — it complements the `figma-use` skill which teaches HOW to call the Plugin API. Both skills should be loaded together.",
+    "marketplace": "openai-curated",
+    "plugin": "figma",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/figma/c6ea566d/skills/figma-generate-library/SKILL.md",
+    "content_sha256": "c75b81fa2c79908b074abae5aaf8bec58be96f94c457f9f59b6132fd15c66fbe"
+  },
+  {
+    "name": "figma-use",
+    "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `use_figma` tool call. NEVER call `use_figma` directly without loading this skill first. Skipping it causes common, hard-to-debug failures. Trigger whenever the user wants to perform a write action or a unique read action that requires JavaScript execution in the Figma file context — e.g. create/edit/delete nodes, set up variables or tokens, build components and variants, modify auto-layout or fills, bind variables to properties, or inspect file structure programmatically.",
+    "marketplace": "openai-curated",
+    "plugin": "figma",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/figma/c6ea566d/skills/figma-use/SKILL.md",
+    "content_sha256": "77a4a90809f374dc3067f842385d23152fccc97609c3f95238d6db7e83a7ae48"
+  },
+  {
+    "name": "figma-use-figjam",
+    "description": "This skill helps agents use Figma's use_figma MCP tool in the FigJam context. Can be used alongside figma-use which has foundational context for using the use_figma tool.",
+    "marketplace": "openai-curated",
+    "plugin": "figma",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/figma/c6ea566d/skills/figma-use-figjam/SKILL.md",
+    "content_sha256": "e8fa3ad2f9069ffb751b1ef7e56910994cc22a2a973d7d59c7bc1fbb885c6886"
+  },
+  {
+    "name": "figma-use-slides",
+    "description": "This skill helps agents use Figma's use_figma MCP tool in the Slides context. Can be used alongside figma-use which has foundational context for using the use_figma tool.",
+    "marketplace": "openai-curated",
+    "plugin": "figma",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/figma/c6ea566d/skills/figma-use-slides/SKILL.md",
+    "content_sha256": "b22fe899239e92c98462236c93d28f1ff4de5d94d89c733551b89cd83bd2fdc4"
+  },
+  {
+    "name": "gh-address-comments",
+    "description": "Address actionable GitHub pull request review feedback. Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.",
+    "marketplace": "openai-curated",
+    "plugin": "github",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/github/c6ea566d/skills/gh-address-comments/SKILL.md",
+    "content_sha256": "b70f8c4a1c1e48c39848ffb8d3e5867bffca84f4f70c297b4221c66b780c24bc"
+  },
+  {
+    "name": "gh-fix-ci",
+    "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions. Use the GitHub app from this plugin for PR metadata and patch context, and use `gh` for Actions check and log inspection before implementing any approved fix.",
+    "marketplace": "openai-curated",
+    "plugin": "github",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/github/c6ea566d/skills/gh-fix-ci/SKILL.md",
+    "content_sha256": "dabcc2a34dd5f1271e4ffded65b8c65ce53e84b98560b6e9ceaffcf1c50fc120"
+  },
+  {
+    "name": "github",
+    "description": "Triage and orient GitHub repository, pull request, and issue work through the connected GitHub app. Use when the user asks for general GitHub help, wants PR or issue summaries, or needs repository context before choosing a more specific GitHub workflow.",
+    "marketplace": "openai-curated",
+    "plugin": "github",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/github/c6ea566d/skills/github/SKILL.md",
+    "content_sha256": "380d663305eb74b44858f58d76bdb21173a4d4c63d5885299ad6005d6ffc80b9"
+  },
+  {
+    "name": "yeet",
+    "description": "Publish local changes to GitHub by confirming scope, committing intentionally, pushing the branch, and opening a draft PR through the GitHub app from this plugin, with `gh` used only as a fallback where connector coverage is insufficient.",
+    "marketplace": "openai-curated",
+    "plugin": "github",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/github/c6ea566d/skills/yeet/SKILL.md",
+    "content_sha256": "9d70c68282acbc7fbee678f142adbf84b4f1091890d6cb93b3106e5e629fc0cb"
+  },
+  {
+    "name": "gsap",
+    "description": "GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels, nesting, playback), and performance (transforms, will-change, quickTo). Use when writing GSAP animations in HyperFrames compositions.",
+    "marketplace": "openai-curated",
+    "plugin": "hyperframes",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/hyperframes/c6ea566d/skills/gsap/SKILL.md",
+    "content_sha256": "0ace76d56e2d2b021a7ee3f2ef7e69895cdef3b8787b58f4586e3959043ace17"
+  },
+  {
+    "name": "hyperframes",
+    "description": "Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML. Use when asked to build any HTML-based video content, add captions or subtitles synced to audio, generate text-to-speech narration, create audio-reactive animation (beat sync, glow, pulse driven by music), add animated text highlighting (marker sweeps, hand-drawn circles, burst lines, scribble, sketchout), or add transitions between scenes (crossfades, wipes, reveals, shader transitions). Covers composition authoring, timing, media, and the full video production workflow. For CLI commands (init, lint, preview, render, transcribe, tts) see the hyperframes-cli skill.",
+    "marketplace": "openai-curated",
+    "plugin": "hyperframes",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/hyperframes/c6ea566d/skills/hyperframes/SKILL.md",
+    "content_sha256": "b9125909126432cadf6ebe2bf57be78f26439aa5dac5b14e0dfaf7c3d8015da2"
+  },
+  {
+    "name": "hyperframes-cli",
+    "description": "HyperFrames CLI tool — hyperframes init, lint, inspect, preview, render, transcribe, tts, doctor, browser, info, upgrade, compositions, docs, benchmark. Use when scaffolding a project, linting, validating, inspecting visual layout in compositions, previewing in the studio, rendering to video, transcribing audio, generating TTS, or troubleshooting the HyperFrames environment.",
+    "marketplace": "openai-curated",
+    "plugin": "hyperframes",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/hyperframes/c6ea566d/skills/hyperframes-cli/SKILL.md",
+    "content_sha256": "4c56ecec7a01e48b31523b81c7819877daff9034509522c7dae76cbbabbf8982"
+  },
+  {
+    "name": "hyperframes-registry",
+    "description": "Install and wire registry blocks and components into HyperFrames compositions. Use when running hyperframes add, installing a block or component, wiring an installed item into index.html, or working with hyperframes.json. Covers the add command, install locations, block sub-composition wiring, component snippet merging, and registry discovery.",
+    "marketplace": "openai-curated",
+    "plugin": "hyperframes",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/hyperframes/c6ea566d/skills/hyperframes-registry/SKILL.md",
+    "content_sha256": "ef5008899d6154938f05384e4a51231cf1c20be02494e0c85538c4457fc5829b"
+  },
+  {
+    "name": "website-to-hyperframes",
+    "description": "Capture a website and create a HyperFrames video from it. Use when: (1) a user provides a URL and wants a video, (2) someone says \"capture this site\", \"turn this into a video\", \"make a promo from my site\", (3) the user wants a social ad, product tour, or any video based on an existing website, (4) the user shares a link and asks for any kind of video content. Even if the user just pastes a URL — this is the skill to use.",
+    "marketplace": "openai-curated",
+    "plugin": "hyperframes",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/hyperframes/c6ea566d/skills/website-to-hyperframes/SKILL.md",
+    "content_sha256": "ac62ba85b8ac6c834c359250e908e14bb18e4e278dcf98b2e9f2b05e3275ec1f"
+  },
+  {
+    "name": "linear",
+    "description": "Manage issues, projects & team workflows in Linear. Use when the user wants to read, create or updates tickets in Linear.",
+    "marketplace": "openai-curated",
+    "plugin": "linear",
+    "version": "2cb26e7b",
+    "path": "~/.codex/plugins/cache/openai-curated/linear/2cb26e7b/skills/linear/SKILL.md",
+    "content_sha256": "a36e9ae9d2ed3f08d3f310454b1832d2f911e47471cdaf0139007ad23c339a28"
+  },
+  {
+    "name": "aiq-deploy",
+    "description": "Use when asked to install, deploy, run, validate, troubleshoot, or stop NVIDIA AI-Q Blueprint infrastructure.",
+    "marketplace": "openai-curated",
+    "plugin": "nvidia",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/nvidia/c6ea566d/skills/aiq-deploy/SKILL.md",
+    "content_sha256": "438179376ae6f6070df58f14a8cb9d78a5afd0d4095198484fb7fb29de424cf9"
+  },
+  {
+    "name": "aiq-research",
+    "description": "Use when asked to run deep research or AI-Q research through a reachable NVIDIA AI-Q Blueprint backend.",
+    "marketplace": "openai-curated",
+    "plugin": "nvidia",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/nvidia/c6ea566d/skills/aiq-research/SKILL.md",
+    "content_sha256": "a13cdf3988247418e236c6ac470a1ade1bdf00bb83940b07c63280e206c55941"
+  },
+  {
+    "name": "cuopt-user-rules",
+    "description": "Base rules for end users calling NVIDIA cuOpt (routing/LP/MILP/QP/install/server). Not for cuOpt internals — use cuopt-developer for those.",
+    "marketplace": "openai-curated",
+    "plugin": "nvidia",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/nvidia/c6ea566d/skills/cuopt-user-rules/SKILL.md",
+    "content_sha256": "c6f859af390233487f1d0a1a449e243006b3d953181c423a11411b4e5868087b"
+  },
+  {
+    "name": "dynamo-interconnect-check",
+    "description": "Validate that a Dynamo deployment's NIXL/UCX/NCCL interconnect is ready for disaggregated serving over RDMA/NVLink. Use after recipe-runner brings a deployment up (especially disagg/multi-node) to confirm the KV transport is correct; use troubleshoot for diagnosing already-failed pods.",
+    "marketplace": "openai-curated",
+    "plugin": "nvidia",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/nvidia/c6ea566d/skills/dynamo-interconnect-check/SKILL.md",
+    "content_sha256": "727bff57fc862ddc99b8542dd19a391fdb2f5586f134ccab8302b8054789e2ea"
+  },
+  {
+    "name": "dynamo-router-starter",
+    "description": "Start or patch Dynamo router modes and run router endpoint smoke checks. Use for round-robin, KV-aware, least-loaded, or device-aware routing setup; use recipe-runner for recipe deployment and troubleshoot for failure diagnosis.",
+    "marketplace": "openai-curated",
+    "plugin": "nvidia",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/nvidia/c6ea566d/skills/dynamo-router-starter/SKILL.md",
+    "content_sha256": "5278203f4d8866b95cfeacf444d0a31e49e80d9ab7f290673c9c536ee24b4d99"
+  },
+  {
+    "name": "nemoclaw-user-get-started",
+    "description": "Installs NemoClaw, launches a sandbox, and runs the first agent prompt. Use when onboarding, installing, or launching a NemoClaw sandbox for the first time. Trigger keywords - nemoclaw quickstart, install nemoclaw openclaw sandbox, nemohermes quickstart, hermes agent nemoclaw, run hermes openshell sandbox, nemoclaw prerequisites, nemoclaw supported platforms, nemoclaw hardware software, nemoclaw windows wsl2 setup, nemoclaw install windows docker desktop.",
+    "marketplace": "openai-curated",
+    "plugin": "nvidia",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/nvidia/c6ea566d/skills/nemoclaw-user-get-started/SKILL.md",
+    "content_sha256": "87381efc993adfbc3c7cac001a0f419930d8342cf5df5ed6cab90d284f442709"
+  },
+  {
+    "name": "omniverse-cad-to-simready",
+    "description": "Coordinate the end-to-end CAD/source-asset to SimReady workflow. Use for broad requests such as CAD to SimReady, source asset to simulation-ready USD, or prop packaging that require conversion, material/physics assignment, SimReady conformance, validation, and optional package creation; deploy or verify Content Agents services first when property assignment is enabled; route single-stage work through nested references.",
+    "marketplace": "openai-curated",
+    "plugin": "nvidia",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/nvidia/c6ea566d/skills/omniverse-cad-to-simready/SKILL.md",
+    "content_sha256": "36a20a52589cc23e59f225e8796c3819217b0da7cc1aa301c610dca779c2c90e"
+  },
+  {
+    "name": "omniverse-realtime-viewer",
+    "description": "Use as the top-level router for Omniverse Realtime Viewer USD app requests and focused viewer reference documents.",
+    "marketplace": "openai-curated",
+    "plugin": "nvidia",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/nvidia/c6ea566d/skills/omniverse-realtime-viewer/SKILL.md",
+    "content_sha256": "bc3fadb94ab21e5a8439e58e80681468a286a97421e67284c964ce203705a161"
+  },
+  {
+    "name": "omniverse-usd-performance-tuning",
+    "description": "Top-level workflow skill for USD performance diagnosis and optimization. Use for slow loading, high memory, low FPS, or 'optimize my scene' requests; delegates auth/runtime setup to Phase 0 owners.",
+    "marketplace": "openai-curated",
+    "plugin": "nvidia",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/nvidia/c6ea566d/skills/omniverse-usd-performance-tuning/SKILL.md",
+    "content_sha256": "cb5b66e4a265fe6875baced4ea0078a998b93aba80f81361261b3cd407b21324"
+  },
+  {
+    "name": "physical-ai-infrastructure-setup-and-resilient-scaling",
+    "description": "Use when the user wants to set up, scale, validate, or harden NVIDIA physical AI infrastructure for synthetic data generation workflows across local MicroK8s or Azure AKS, including Kubernetes clusters, inference endpoint deployment, OSMO deployment, workload submission readiness, and infrastructure failure recovery. Trigger keywords: physical ai infrastructure, resilient scaling, SDG infrastructure, microk8s, azure aks, NVCF deployment, NIM Operator, OSMO deploy, workflow scaling. Don't trigger for: OSMO log summarization or workload-only operations unless infrastructure setup, scaling, validation, or recovery is requested.",
+    "marketplace": "openai-curated",
+    "plugin": "nvidia",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/nvidia/c6ea566d/skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md",
+    "content_sha256": "dfee683cda96f69ccf5b629f83c8cf5c943e0b7f502b9434733d0262fe9c7698"
+  },
+  {
+    "name": "physical-ai-neural-reconstruction",
+    "description": "Router for NVIDIA NuRec/NRE: USDZ rendering, NCore conversion, 3DGS, gRPC sensor sim, PhysicalAI HF datasets. Do NOT use for SimReady or infra setup.",
+    "marketplace": "openai-curated",
+    "plugin": "nvidia",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/nvidia/c6ea566d/skills/physical-ai-neural-reconstruction/SKILL.md",
+    "content_sha256": "05e782c13c513092a300a099f2ddceb4216fa0f2a9fe0a118256d254588287ac"
+  },
+  {
+    "name": "brainstorming",
+    "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/brainstorming/SKILL.md",
+    "content_sha256": "4625fbfaafb229d41364b77a3591f9559e0d9d73ab0ed3589bb8e3c63f0cb734"
+  },
+  {
+    "name": "dispatching-parallel-agents",
+    "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/dispatching-parallel-agents/SKILL.md",
+    "content_sha256": "ee429867974830f3fa1dc2a3b0cf5c98c742a1c33ec0fb156ac3727a255d24b5"
+  },
+  {
+    "name": "executing-plans",
+    "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/executing-plans/SKILL.md",
+    "content_sha256": "f24e0fdbcdb973b34f81ab481d10be0e494b5809d9e11f00fcf646a3e268c7a2"
+  },
+  {
+    "name": "finishing-a-development-branch",
+    "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/finishing-a-development-branch/SKILL.md",
+    "content_sha256": "604aedd210874565f91207829226305819f3b6cadc323e3de813a2d9d20aeafe"
+  },
+  {
+    "name": "receiving-code-review",
+    "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/receiving-code-review/SKILL.md",
+    "content_sha256": "bda6f19ebd6d4ec043e448c8d233de8308f76b72230de2297b306bc49b8a6e93"
+  },
+  {
+    "name": "requesting-code-review",
+    "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/requesting-code-review/SKILL.md",
+    "content_sha256": "59f0c7d3180a47946734c03afa975b417428c49edaf7526d8e589ef40bb3aa7e"
+  },
+  {
+    "name": "subagent-driven-development",
+    "description": "Use when executing implementation plans with independent tasks in the current session",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/subagent-driven-development/SKILL.md",
+    "content_sha256": "6bd8b947bad82cd59bd440b64a6f2a2e92e7c89282cf26187e6ea3ba44f1b199"
+  },
+  {
+    "name": "systematic-debugging",
+    "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/systematic-debugging/SKILL.md",
+    "content_sha256": "530855dfa2b10d5b9f92ac170fe41c5f8fbc4918957a564855b50a896ca625a2"
+  },
+  {
+    "name": "test-driven-development",
+    "description": "Use when implementing any feature or bugfix, before writing implementation code",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/test-driven-development/SKILL.md",
+    "content_sha256": "4f090e919b7310192864f1d046910c53fa7ca353f5cc2b8d07717c7a897f0183"
+  },
+  {
+    "name": "using-git-worktrees",
+    "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/using-git-worktrees/SKILL.md",
+    "content_sha256": "498ba68274da48e3b96473be8cbddcdc35399e0969d6933d6e7b8fe2d8e89c07"
+  },
+  {
+    "name": "using-superpowers",
+    "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/using-superpowers/SKILL.md",
+    "content_sha256": "8052a1248970aee7ddd272bf27e9873aec08177d5065b75ba8c53d9b68d89d5f"
+  },
+  {
+    "name": "verification-before-completion",
+    "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/verification-before-completion/SKILL.md",
+    "content_sha256": "c35ac975d145f74d9f3668c1b035a3754d3c0f4edb491cc80a6a0265cfdf7749"
+  },
+  {
+    "name": "writing-plans",
+    "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/writing-plans/SKILL.md",
+    "content_sha256": "cd8550405fc7fd224489f0b993fce822f69626fc0c612b3c9829d991cb4314c6"
+  },
+  {
+    "name": "writing-skills",
+    "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
+    "marketplace": "openai-curated",
+    "plugin": "superpowers",
+    "version": "c6ea566d",
+    "path": "~/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/writing-skills/SKILL.md",
+    "content_sha256": "4d99cd4e235947d27d58241335dfd5ca89b4e873af5051b19ae32a3ac92851ea"
+  },
+  {
+    "name": "canva-branded-presentation",
+    "description": "Create on-brand Canva presentations from a brief, outline, existing Canva doc, or design link. Use when the user wants a branded slide deck, wants to turn notes into a presentation, or needs a presentation generated in Canva with the right brand kit and a clear slide plan.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "canva",
+    "version": "1.0.2",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/canva/1.0.2/skills/canva-branded-presentation/SKILL.md",
+    "content_sha256": "110b3ba5a50c22e804067363881c2384f07a32bd704af79b894e04138c915713"
+  },
+  {
+    "name": "canva-resize-for-all-social-media",
+    "description": "Resize a Canva design into standard social media formats and prepare export-ready results. Use when the user wants one Canva design adapted across multiple social platforms such as Facebook, Instagram, and LinkedIn, especially when they want all variants produced in one pass.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "canva",
+    "version": "1.0.2",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/canva/1.0.2/skills/canva-resize-for-all-social-media/SKILL.md",
+    "content_sha256": "ca36f9b6cc9e1913b762663d1f68f6caf20cb98923783b3dfcea4aebe6d09ce8"
+  },
+  {
+    "name": "canva-translate-design",
+    "description": "Translate the text in a Canva design into another language while preserving the original layout as much as possible. Use when the user wants a localized or translated version of an existing Canva design and expects the original file to remain unchanged.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "canva",
+    "version": "1.0.2",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/canva/1.0.2/skills/canva-translate-design/SKILL.md",
+    "content_sha256": "950145361d04b50807954931549a4f40f8de945286cf304322c4d80a15493aac"
+  },
+  {
+    "name": "figma-code-connect",
+    "description": "Creates and maintains Figma Code Connect template files that map Figma components to code snippets. Use when the user mentions Code Connect, Figma component mapping, design-to-code translation, or asks to create/update .figma.ts or .figma.js files.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "figma",
+    "version": "2.0.9",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/figma/2.0.9/skills/figma-code-connect/SKILL.md",
+    "content_sha256": "d69cfc0e2080351f0182a8f3c2349349fb6696f63cede8972e12ca3b71bafe10"
+  },
+  {
+    "name": "figma-create-new-file",
+    "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `create_new_file` tool call. NEVER call `create_new_file` directly without loading this skill first. Trigger whenever the user wants a new blank Figma file — a new design, FigJam, or Slides file — or when you need a fresh file before calling `use_figma`. Usage — /figma-create-new-file [editorType] [fileName] (e.g. /figma-create-new-file figjam My Whiteboard, /figma-create-new-file slides Q3 Review)",
+    "marketplace": "openai-curated-remote",
+    "plugin": "figma",
+    "version": "2.0.9",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/figma/2.0.9/skills/figma-create-new-file/SKILL.md",
+    "content_sha256": "82e0a018692d3d009b5d2c83ecce9203a4ce7dfbdb98b7b13a4f7e5b11832bc2"
+  },
+  {
+    "name": "figma-generate-design",
+    "description": "Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout into Figma. Triggers: 'write to Figma', 'create in Figma from code', 'push page to Figma', 'take this app/page and build it in Figma', 'create a screen', 'build a landing page in Figma', 'update the Figma screen to match code', 'convert this modal/dialog/drawer/panel to Figma'. This is the preferred workflow skill whenever the user wants to build or update a full page, modal, dialog, drawer, sidebar, panel, or any composed multi-section view in Figma from code or a description. Discovers design system components, variables, and styles from Code Connect files, existing screens, and library search, then imports them and assembles views incrementally section-by-section using design system tokens instead of hardcoded values.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "figma",
+    "version": "2.0.9",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/figma/2.0.9/skills/figma-generate-design/SKILL.md",
+    "content_sha256": "04713c467ae5efce7ff916d83a736d98f523ff4bc779d701e97c050aabd93bae"
+  },
+  {
+    "name": "figma-generate-diagram",
+    "description": "MANDATORY prerequisite — load this skill BEFORE every `generate_diagram` tool call. NEVER call `generate_diagram` directly without loading this skill first. Trigger whenever the user asks to create, generate, draw, render, sketch, or build a diagram — flowchart, architecture diagram, sequence diagram, ERD or entity-relationship diagram, state diagram or state machine, gantt chart, or timeline. Also trigger when the user mentions Mermaid syntax or wants a system architecture, decision tree, dependency graph, API call flow, auth handshake, schema, or pipeline visualized in FigJam. Routes to type-specific guidance, sets universal Mermaid constraints, and tells you when to use a different diagram type or skip the tool entirely (mindmaps, pie charts, class diagrams, etc.).",
+    "marketplace": "openai-curated-remote",
+    "plugin": "figma",
+    "version": "2.0.9",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/figma/2.0.9/skills/figma-generate-diagram/SKILL.md",
+    "content_sha256": "7297638dbf2130d1b37bfd85df65d290a4dd0b11a11b54abafcf7d07565922b5"
+  },
+  {
+    "name": "figma-generate-library",
+    "description": "Build or update a professional-grade design system in Figma from a codebase. Use when the user wants to create variables/tokens, build component libraries, create individual components with proper variant sets and variable bindings, set up theming (light/dark modes), document foundations, or reconcile gaps between code and Figma. Also use when the user asks to create or generate any component in Figma — even a single one — since components require proper variable foundations, variant states, and design token bindings to be production-quality. This skill teaches WHAT to build and in WHAT ORDER — it complements the `figma-use` skill which teaches HOW to call the Plugin API. Both skills should be loaded together.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "figma",
+    "version": "2.0.9",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/figma/2.0.9/skills/figma-generate-library/SKILL.md",
+    "content_sha256": "e35e6d2f6624ea6fc062b4960ea74120b4d172edd8be4acab02c76e526e509fb"
+  },
+  {
+    "name": "figma-use",
+    "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `use_figma` tool call. NEVER call `use_figma` directly without loading this skill first. Skipping it causes common, hard-to-debug failures. Trigger whenever the user wants to perform a write action or a unique read action that requires JavaScript execution in the Figma file context — e.g. create/edit/delete nodes, set up variables or tokens, build components and variants, modify auto-layout or fills, bind variables to properties, or inspect file structure programmatically.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "figma",
+    "version": "2.0.9",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/figma/2.0.9/skills/figma-use/SKILL.md",
+    "content_sha256": "511a7b00228b6dc6e53e3ace27bfb9876b318807f1ebd12ad2b4e3b1ef61bfc1"
+  },
+  {
+    "name": "figma-use-figjam",
+    "description": "This skill helps agents use Figma's use_figma MCP tool in the FigJam context. Can be used alongside figma-use which has foundational context for using the use_figma tool.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "figma",
+    "version": "2.0.9",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/figma/2.0.9/skills/figma-use-figjam/SKILL.md",
+    "content_sha256": "4edee26ddf0856f59308c9f08519ae3bae537af2e677eeb3090e0d47422dee14"
+  },
+  {
+    "name": "figma-use-slides",
+    "description": "This skill helps agents use Figma's use_figma MCP tool in the Slides context. Can be used alongside figma-use which has foundational context for using the use_figma tool.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "figma",
+    "version": "2.0.9",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/figma/2.0.9/skills/figma-use-slides/SKILL.md",
+    "content_sha256": "b29d989acf8426ae718c210dce7c11c758ffe12b72c63e57bb5d30da45dcfba3"
+  },
+  {
+    "name": "gh-address-comments",
+    "description": "Address actionable GitHub pull request review feedback. Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "github",
+    "version": "0.1.2",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/github/0.1.2/skills/gh-address-comments/SKILL.md",
+    "content_sha256": "c1ebc337357402f7faabafe712e0c463981a65f736453efe52abd305bcb74769"
+  },
+  {
+    "name": "gh-fix-ci",
+    "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions. Use the GitHub app from this plugin for PR metadata and patch context, and use `gh` for Actions check and log inspection before implementing any approved fix.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "github",
+    "version": "0.1.2",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/github/0.1.2/skills/gh-fix-ci/SKILL.md",
+    "content_sha256": "7621a3560d788fb221d25f9753233fe0c393c5cfe63167c88b11f027c277b1f8"
+  },
+  {
+    "name": "github",
+    "description": "Triage and orient GitHub repository, pull request, and issue work through the connected GitHub app. Use when the user asks for general GitHub help, wants PR or issue summaries, or needs repository context before choosing a more specific GitHub workflow.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "github",
+    "version": "0.1.2",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/github/0.1.2/skills/github/SKILL.md",
+    "content_sha256": "81dbdd90934fe86a79ddc4790fd211e5fca866302a74090ad153395f56f2bd42"
+  },
+  {
+    "name": "yeet",
+    "description": "Publish local changes to GitHub by confirming scope, committing intentionally, pushing the branch, and opening a draft PR through the GitHub app from this plugin, with `gh` used only as a fallback where connector coverage is insufficient.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "github",
+    "version": "0.1.2",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/github/0.1.2/skills/yeet/SKILL.md",
+    "content_sha256": "93a0bcbc834c9b3ad6a8965c1a273b237b6d226e870cd0c16e08e87bc8769814"
+  },
+  {
+    "name": "google-docs",
+    "description": "Connector-first Google Docs creation and editing in local Codex plugin sessions, with direct native create and batchUpdate workflows for simple docs, DOCX-first import for polished deliverables, target-document checks, smart chip and building-block reconstruction, connector-readback verification, and reference routing for formatting, citations, tables, and write-safety.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "google-drive",
+    "version": "0.1.6",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.6/skills/google-docs/SKILL.md",
+    "content_sha256": "69cf5d43a24eaef327bbfad44ee7d2e5629ee621b4ed2bbde4d78afd536f5fe5"
+  },
+  {
+    "name": "google-drive",
+    "description": "Use connected Google Drive as the single entrypoint for Drive, Docs, Sheets, and Slides work. Use when the user wants to find, fetch, organize, share, export, copy, or delete Drive files, or summarize and edit Google Docs, Google Sheets, and Google Slides through one unified Google Drive plugin.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "google-drive",
+    "version": "0.1.6",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.6/skills/google-drive/SKILL.md",
+    "content_sha256": "4766e7fe25e6a5bf495028147f8108633bc5297d57f2a8864a2a76e5e78763ee"
+  },
+  {
+    "name": "google-drive-comments",
+    "description": "Write, reply to, and resolve Google Drive comments on Docs, Sheets, Slides, and Drive files with evidence-backed location context. Use when the user asks to leave comments, review a file with comments, respond to comment threads, or resolve Drive comments.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "google-drive",
+    "version": "0.1.6",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.6/skills/google-drive-comments/SKILL.md",
+    "content_sha256": "a3077375a8f7558b9e052c98047747b8a4a1a90a9a90b552009c28fcdadfe94a"
+  },
+  {
+    "name": "google-sheets",
+    "description": "Analyze and edit connected Google Sheets with range precision. Use when the user wants to create Google Sheets, find a spreadsheet, inspect tabs or ranges, search rows, plan formulas, create or repair charts, clean or restructure tables, write concise summaries, or make explicit cell-range updates.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "google-drive",
+    "version": "0.1.6",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.6/skills/google-sheets/SKILL.md",
+    "content_sha256": "39aac7f189cd19a21cc895a48700ee4d973fda3bca86253345806227f75f8bb2"
+  },
+  {
+    "name": "google-slides",
+    "description": "Google Slides work for finding, reading, summarizing, creating, importing, template following, visual cleanup, source-deck adaptation, structural repair, and content edits in native Slides decks.",
+    "marketplace": "openai-curated-remote",
+    "plugin": "google-drive",
+    "version": "0.1.6",
+    "path": "~/.codex/plugins/cache/openai-curated-remote/google-drive/0.1.6/skills/google-slides/SKILL.md",
+    "content_sha256": "f1a7954fb87ffa5353e0ecb97ae4f484c4ade70fafede68ec392085b73ccc292"
+  },
+  {
+    "name": "documents",
+    "description": "Create, edit, redline, and comment on `.docx`, Word, and Google Docs-targeted document artifacts inside the container, with a strict render-and-verify workflow. Use `render_docx.py` to generate page PNGs (and optional PDF) for visual QA, then iterate until layout is flawless before delivering the final document.",
+    "marketplace": "openai-primary-runtime",
+    "plugin": "documents",
+    "version": "26.601.10930",
+    "path": "~/.codex/plugins/cache/openai-primary-runtime/documents/26.601.10930/skills/documents/SKILL.md",
+    "content_sha256": "a0ecf8f4184ede9b20fa97be10cc1fc4094df8e16b31c6e0ed093b1eceb7fca2"
+  },
+  {
+    "name": "Presentations",
+    "description": "Build PowerPoint PPTX decks with artifact-tool presentation JSX",
+    "marketplace": "openai-primary-runtime",
+    "plugin": "presentations",
+    "version": "26.601.10930",
+    "path": "~/.codex/plugins/cache/openai-primary-runtime/presentations/26.601.10930/skills/presentations/SKILL.md",
+    "content_sha256": "a8936346d12e53badf5544d07ea0d5db68a74199e9ef11f1928fde82a0cc7374"
+  },
+  {
+    "name": "Spreadsheets",
+    "description": "Use this skill when a user requests to create, modify, analyze, visualize, or work with spreadsheet files (`.xlsx`, `.xls`, `.csv`, `.tsv`) or Google Sheets-targeted spreadsheet artifacts with formulas, formatting, charts, tables, and recalculation.",
+    "marketplace": "openai-primary-runtime",
+    "plugin": "spreadsheets",
+    "version": "26.601.10930",
+    "path": "~/.codex/plugins/cache/openai-primary-runtime/spreadsheets/26.601.10930/skills/spreadsheets/SKILL.md",
+    "content_sha256": "cdd0d8468e5b17678100f78269cf720ff64501e04659e49e35a08622d4b3b09f"
+  }
+]
