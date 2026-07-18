@@ -13,5 +13,5 @@ jobs:
         with:
           python-version: "3.12"
       - run: python scripts/verify.py
-      - run: python -m py_compile scripts/install.py scripts/snapshot.py scripts/verify.py
+      - run: python -m py_compile scripts/install.py scripts/reconcile.py scripts/snapshot.py scripts/verify.py
       - run: bash -n install.sh

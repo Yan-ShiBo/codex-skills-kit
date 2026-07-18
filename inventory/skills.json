@@ -1,13 +1,5 @@
 [
   {
-    "name": "find-skills",
-    "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
-    "layer": "system",
-    "source": "Codex built-in",
-    "path": "~/.codex/skills/.system/find-skills/SKILL.md",
-    "content_sha256": "1e85f6f9686e145aca4a124e3b704b9bbea9aa87e08515c1e352eee70f6e6e7a"
-  },
-  {
     "name": "imagegen",
     "description": "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas.",
     "layer": "system",
@@ -17,11 +9,11 @@
   },
   {
     "name": "openai-docs",
-    "description": "Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest model for a use case, or model upgrade and prompt-upgrade guidance; use OpenAI docs MCP tools for non-Codex docs questions, use the Codex manual helper first for broad Codex self-knowledge, and restrict fallback browsing to official OpenAI domains.",
+    "description": "Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest model for a use case, latest/current/default-model prompting guidance, or model upgrade and prompt-upgrade guidance; use OpenAI docs MCP tools for non-Codex docs questions, use the Codex manual helper first for broad Codex self-knowledge, and restrict fallback browsing to official OpenAI domains.",
     "layer": "system",
     "source": "Codex built-in",
     "path": "~/.codex/skills/.system/openai-docs/SKILL.md",
-    "content_sha256": "23edb0ee401944da55c6d57a88e4ae00c77e2ff3e3f79ac31c2741234a858b59"
+    "content_sha256": "f9bc031e9bd54a4659379b3fb0c09f0d8f81135d0770982febbe91836ef9ef03"
   },
   {
     "name": "plugin-creator",
@@ -30,6 +22,14 @@
     "source": "Codex built-in",
     "path": "~/.codex/skills/.system/plugin-creator/SKILL.md",
     "content_sha256": "40354d99ca66f16a8bd92b0e6b315b4cd773ebcb8a6348a70398a4b787b86213"
+  },
+  {
+    "name": "review-agent",
+    "description": "Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review instructions.",
+    "layer": "system",
+    "source": "Codex built-in",
+    "path": "~/.codex/skills/.system/review-agent/SKILL.md",
+    "content_sha256": "bb46315f6bc4b7051c05f807d19b1689b20418ac6c42590406d805c10fa2fd1a"
   },
   {
     "name": "skill-creator",
@@ -45,15 +45,15 @@
     "layer": "system",
     "source": "Codex built-in",
     "path": "~/.codex/skills/.system/skill-installer/SKILL.md",
-    "content_sha256": "2d3be2289274cbffb9eb632b25a1038aa7f369df6aaa0964077c77648547e01d"
+    "content_sha256": "2892d8b2fb11631132118f340aed80ae17e59d5a571fc2c4f4a4a7e73f139d52"
   },
   {
     "name": "academic-research-suite",
-    "description": "Codex-native Academic Research Skills suite for deep research, academic paper writing, manuscript review, full research-to-paper pipelines, and experiment planning or validation. Use when the user asks for deep research, literature review, systematic review, meta-analysis, research question refinement, academic paper drafting, paper revision, citation or integrity checks, reviewer simulation, peer review, editorial decision letters, research-to-paper workflows, experiment execution planning, statistical interpretation, or human study protocol support. Also use for Claude-style ARS command aliases such as /ars-plan, ars-plan, /ars-outline, /ars-abstract, /ars-lit-review, /ars-citation-check, /ars-disclosure, /ars-format-convert, /ars-revision-coach, /ars-revision, /ars-reviewer, /ars-mark-read, /ars-unmark-read, /ars-cache-invalidate, and /ars-full. This skill vendors ARS role prompts, references, templates, and shared handoff schemas under ars/.",
+    "description": "Codex-native Academic Research Skills suite for deep research, academic paper writing, manuscript review, full research-to-paper pipelines, and experiment planning or validation. Use when the user asks for deep research, literature review, systematic review, meta-analysis, research question refinement, academic paper drafting, paper revision, citation or integrity checks, reviewer simulation, peer review, editorial decision letters, research-to-paper workflows, experiment execution planning, statistical interpretation, or human study protocol support. Korean triggers include 논문 심사, 논문 수정, 초록 작성, 체계적 문헌고찰, and 연구부터 논문까지. Also use for Claude-style ARS command aliases such as /ars-plan, ars-plan, /ars-outline, /ars-abstract, /ars-lit-review, /ars-citation-check, /ars-disclosure, /ars-format-convert, /ars-3w, /ars-revision-coach, /ars-revision, /ars-reviewer, /ars-mark-read, /ars-unmark-read, /ars-cache-invalidate, /ars-rebuttal-audit, and /ars-full. This skill vendors ARS role prompts, references, templates, and shared handoff schemas under ars/.",
     "layer": "codex",
     "source": "Imbad0202/academic-research-skills-codex",
     "path": "~/.codex/skills/academic-research-suite/SKILL.md",
-    "content_sha256": "c232a35957aad22e2491168f816fd7d5270306b199ffb5b02458d6b6b565ba13"
+    "content_sha256": "19d67dd5799d9c9ba648f13cb11c646cfcd3ab807de927240c69010dea423b13"
   },
   {
     "name": "baoyu-article-illustrator",
@@ -61,7 +61,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-article-illustrator/SKILL.md",
-    "content_sha256": "948d85b4a2ddada46fe163e3ed8793800acb96e344351e92429aed8560f9efc6"
+    "content_sha256": "ce1c7bfe9b93e5afac1dbeac95a03f8abf8c102aeecc34a33d8f13dc10e64acd"
   },
   {
     "name": "baoyu-comic",
@@ -69,7 +69,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-comic/SKILL.md",
-    "content_sha256": "17759af8cc687056e39572097706ebccaa5c19443acfc790c35d4c90d06dd4b3"
+    "content_sha256": "98d5de8650a3401c1ee97b3f78ebacef72f3f570ef7fe7290b192ac7d24330bc"
   },
   {
     "name": "baoyu-compress-image",
@@ -77,7 +77,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-compress-image/SKILL.md",
-    "content_sha256": "13991e9dbfd3e7b9230e24cc53dbc65101ae8207841034c55a5e93523fabfe70"
+    "content_sha256": "b14b2ac50b798aa7cdac1ba489a5963312b0faf538fdb3f88e69733045c3f9dc"
   },
   {
     "name": "baoyu-cover-image",
@@ -85,7 +85,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-cover-image/SKILL.md",
-    "content_sha256": "bc1aadc670e73e3391e37f70a8abd30db8e93e68221989ee1fe0e1ed01893a1e"
+    "content_sha256": "36804fce98bcb9ebe4a51c26f6f276a807805aab980ca4a0718daa40a5cc7fda"
   },
   {
     "name": "baoyu-danger-gemini-web",
@@ -93,7 +93,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-danger-gemini-web/SKILL.md",
-    "content_sha256": "bcfaf152bc4a84091b7af868e74b598e51c2473f5399826e08f3897093788ad1"
+    "content_sha256": "290c0f8b3957a21de068f8732f324aa6c05a72bc2bf23f962fe9fa874b2c0271"
   },
   {
     "name": "baoyu-danger-x-to-markdown",
@@ -101,7 +101,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-danger-x-to-markdown/SKILL.md",
-    "content_sha256": "add54a4786070f422995ba0d991240f9e94f95d5a51579c6d27809b63d69d83f"
+    "content_sha256": "2b34a2e4d50cd201f5a7bbb856c9c04e2b04f0e0f28fca21f165270fec957cef"
   },
   {
     "name": "baoyu-diagram",
@@ -109,7 +109,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-diagram/SKILL.md",
-    "content_sha256": "91fb9e4164d3536bd7f7a625321805a6c9e1eab0a22056ad38a560fe0e7019fe"
+    "content_sha256": "55a2d050c3a2faea8721d1cec31749dfafa7e7d346a586e99e757f77a3526860"
   },
   {
     "name": "baoyu-electron-extract",
@@ -117,7 +117,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-electron-extract/SKILL.md",
-    "content_sha256": "44ebe2142e3f8b292b171b36016802899b0d7157dc9e8866f68d87e40f3685fb"
+    "content_sha256": "3f8714f3030dd12e2b11a60ed5e561c0b2297de5b31251b40f6da081e06ae4ee"
   },
   {
     "name": "baoyu-format-markdown",
@@ -125,15 +125,15 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-format-markdown/SKILL.md",
-    "content_sha256": "a8690ae5e05ddcc995247146cedc76f0aad634ad20eb860e367774058dda270e"
+    "content_sha256": "39bd9eeb5373365c84ac139b85a11311eab57710707e54b101e41085636b56bb"
   },
   {
     "name": "baoyu-image-gen",
-    "description": "AI image generation with OpenAI GPT Image 2, Azure OpenAI, Google, OpenRouter, DashScope, Z.AI GLM-Image, MiniMax, Jimeng, Seedream and Replicate APIs. Supports text-to-image, reference images, aspect ratios, and batch generation from saved prompt files. Sequential by default; use batch parallel generation when the user already has multiple prompts or wants stable multi-image throughput. Use when user asks to generate, create, or draw images.",
+    "description": "AI image generation with OpenAI GPT Image 2, Azure OpenAI, Google, OpenRouter, DashScope, Z.AI GLM-Image, MiniMax, Jimeng, Seedream, Replicate and Agnes APIs. Supports text-to-image, reference images, aspect ratios, and batch generation from saved prompt files. Sequential by default; use batch parallel generation when the user already has multiple prompts or wants stable multi-image throughput. Use when user asks to generate, create, or draw images.",
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-image-gen/SKILL.md",
-    "content_sha256": "da0b9f9ba9c8693241d1ed99af6a13dde54cff7de9b176acb72019d8eb4067aa"
+    "content_sha256": "de09b723bdc7b19d74e508d0b63e2306f03b4e48ab2b83c90ac6c99c0b7de4d0"
   },
   {
     "name": "baoyu-infographic",
@@ -141,7 +141,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-infographic/SKILL.md",
-    "content_sha256": "bc9fef6de2c260bd10417f67a2f91da6addddbcc81dc3f296a36bf207e762397"
+    "content_sha256": "1572aaa294c5f7547889f520b6efeed979aeaaf58b4e7c4bcaaa26ace2ee3564"
   },
   {
     "name": "baoyu-markdown-to-html",
@@ -149,7 +149,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-markdown-to-html/SKILL.md",
-    "content_sha256": "b3f0f70a4aeea75d42b1e11b132973c9b523ebf4218df29ea58b32a0f86becd3"
+    "content_sha256": "f4a5bb1697f9387557897a9c58b6406765728089a8d84cfbb6c40a93c3d136f7"
   },
   {
     "name": "baoyu-post-to-wechat",
@@ -157,7 +157,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-post-to-wechat/SKILL.md",
-    "content_sha256": "304c73fcf39c60ed7eb21ef511eae19a8aaa76c7707d1e40ac2a11fbf3afdaff"
+    "content_sha256": "e15f1b5a51b8443ef1c8191c036301fd9b3e028069b82b625f327b0344cbc9d8"
   },
   {
     "name": "baoyu-post-to-weibo",
@@ -165,7 +165,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-post-to-weibo/SKILL.md",
-    "content_sha256": "0106daec8d1a9a54909c8946e2e99a8b2be5cd8c9f899f314cd35c6ab3e13250"
+    "content_sha256": "afc5eb6d748f8d4ff521a3bec024e51fc77d35344a502555486f029871d262d0"
   },
   {
     "name": "baoyu-post-to-x",
@@ -173,7 +173,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-post-to-x/SKILL.md",
-    "content_sha256": "60e83ba382161a03f4da8fd5dcf68f4e9fc00db7a423934c5cf29bba7316364c"
+    "content_sha256": "6eca9de552dd0b7bebfbbab9192a915f73ac40396ca89501dfcfbb94efb141fc"
   },
   {
     "name": "baoyu-slide-deck",
@@ -181,7 +181,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-slide-deck/SKILL.md",
-    "content_sha256": "aacac8135cdcf94cc3b18d142f04662eb752e2e893cd2f313dfa573230925e46"
+    "content_sha256": "0e988f065a1886224a501614d059e90019360ccce9fc5f5417e8719e5777efd8"
   },
   {
     "name": "baoyu-translate",
@@ -189,7 +189,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-translate/SKILL.md",
-    "content_sha256": "1621b24b17b14124a0787166da21ab9f0a4cd15a853605623b4de3a3bf28cc77"
+    "content_sha256": "772f7170a61f1246d7505c97539579bb4d055f21653462e8cfaaddc65a3a5b31"
   },
   {
     "name": "baoyu-url-to-markdown",
@@ -197,15 +197,15 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-url-to-markdown/SKILL.md",
-    "content_sha256": "50a998784d39f27eb81a7b6440fd580fcaa65bf5a550b58c768cbd039dc1e01a"
+    "content_sha256": "40913749b0e95165b02771bdf17bb8ed9fa0a72787d3e09571341ab7148359d0"
   },
   {
     "name": "baoyu-wechat-summary",
-    "description": "Summarizes WeChat group chat highlights into a structured digest using the local wx-cli binary (https://github.com/jackwener/wx-cli). Generates a normal digest by default; a roast (毒舌) version is opt-in. Maintains per-group history (history.json + history-digests.jsonl) and per-user profiles across runs, with privacy guardrails baked in. Use when the user asks to \"总结群聊\", \"群聊精华\", \"群聊摘要\", \"summarize group chat\", \"group chat digest\", mentions a WeChat group name with a time range, says \"帮我看看 XX 群最近聊了什么\", \"XX 群有什么值得看的\", or asks to \"回溯画像\" / \"初始化画像\" / \"backfill profiles\". Adds the roast version when the user says \"毒舌版\", \"roast 版\", \"再来个毒舌的\", or similar.",
+    "description": "Summarizes WeChat group chat highlights into a structured digest using the local wx-cli binary (https://github.com/jackwener/wx-cli). Generates a normal digest by default; a roast (毒舌) version is opt-in. Maintains per-group history (history.json + history-digests.jsonl), per-user profiles, and per-group fact memory (memory.md) across runs, with privacy guardrails baked in. Use when the user asks to \"总结群聊\", \"群聊精华\", \"群聊摘要\", \"summarize group chat\", \"group chat digest\", mentions a WeChat group name with a time range, says \"帮我看看 XX 群最近聊了什么\", \"XX 群有什么值得看的\", or asks to \"回溯画像\" / \"初始化画像\" / \"backfill profiles\". Adds the roast version when the user says \"毒舌版\", \"roast 版\", \"再来个毒舌的\", or similar.",
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-wechat-summary/SKILL.md",
-    "content_sha256": "7f31aaff1bc049291d1cf47ee709e266d6adf9a2a4954628d864311e300ebaec"
+    "content_sha256": "6fe746670aedb1955dac6f74b096253f1935f916cc74a9709006205152c0bb86"
   },
   {
     "name": "baoyu-xhs-images",
@@ -213,7 +213,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-xhs-images/SKILL.md",
-    "content_sha256": "3191c10a6c03960bd92b79c7da94e86a44fdde22e126e034892285121364ce3c"
+    "content_sha256": "17bf5498641cc60cb98f0cc15fbea27fd42777d119a39fb54fd6418840442bba"
   },
   {
     "name": "baoyu-youtube-transcript",
@@ -221,103 +221,71 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/baoyu-youtube-transcript/SKILL.md",
-    "content_sha256": "3decb46af0c05a5d7256d1330e34dc11214db94f74fc89bc4b06bfeac757f357"
-  },
-  {
-    "name": "brainstorming",
-    "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/brainstorming/SKILL.md",
-    "content_sha256": "bba47904a7f6bbee3bf8a107ebbe84e65d392be683bbb898ded736b29e415f90"
+    "content_sha256": "b7085574c6bf72e07c578db14316682b9ebf1e841d9db62916d284efd84c96cc"
   },
   {
     "name": "brooks-audit",
-    "description": "Architecture audit that maps module dependencies, checks layering integrity, and flags structural decay across a codebase, drawing on twelve classic engineering books. Triggers when: user asks to audit architecture, review folder/module structure, check for circular imports, understand how the codebase is organized, or asks \"does this follow clean architecture?\", \"why does everything depend on everything?\", \"are our layers correct?\", \"where should this code live?\". Also triggers for onboarding requests: \"explain this codebase to a new developer\" or \"give me a codebase tour\" (use onboarding mode). Do NOT trigger for: PR-level code review (use brooks-review) or line-level refactoring questions — this skill analyzes structural/module-level concerns, not individual functions.",
+    "description": "Architecture audit that maps module dependencies, checks layering integrity, and flags structural decay across a codebase, drawing on twelve classic engineering books. Triggers when: user asks to audit architecture, review folder/module structure, check for circular imports, understand how the codebase is organized, or asks \"does this follow clean architecture?\" or \"why does everything depend on everything?\". Also triggers for onboarding requests: \"explain this codebase to a new developer\" or \"give me a codebase tour\" (use onboarding mode). Do NOT trigger for: PR-level code review (use brooks-review) or line-level refactoring questions — this skill analyzes structural/module-level concerns, not individual functions.",
     "layer": "codex",
     "source": "hyhmrright/brooks-lint",
     "path": "~/.codex/skills/brooks-audit/SKILL.md",
-    "content_sha256": "f85ab0f60c0f8537f03d737adf5cb4d60c7353a04dbb370a6f99eb1315171e1b"
+    "content_sha256": "4d6d42e35cf296acc570c8a19a4f7e0857cf3ad4698c4bc77a1a08a201d9f511"
   },
   {
     "name": "brooks-debt",
-    "description": "Tech debt assessment that identifies, classifies, and prioritizes maintainability problems — helping teams build a refactoring roadmap — drawing on twelve classic engineering books. Triggers when: user asks about tech debt, refactoring priorities, what to clean up first, or asks \"why is this so hard to change?\", \"where's the most painful part?\", \"what should we fix first?\", \"how do I justify refactoring to management?\", \"why is our velocity dropping?\". Do NOT trigger for: server health checks, HTTP /health endpoints, Kubernetes probes, database health, or application uptime — \"health\" in those contexts is infrastructure, not code quality. Also not for single-function refactoring questions.",
+    "description": "Tech debt assessment that identifies, classifies, and prioritizes maintainability problems — helping teams build a refactoring roadmap — drawing on twelve classic engineering books. Triggers when: user asks about tech debt, refactoring priorities, what to clean up first, or asks \"why is this so hard to change?\", \"what should we fix first?\", or \"how do I justify refactoring to management?\". Do NOT trigger for: server health checks, HTTP /health endpoints, Kubernetes probes, database health, or application uptime — \"health\" in those contexts is infrastructure, not code quality. Also not for single-function refactoring questions.",
     "layer": "codex",
     "source": "hyhmrright/brooks-lint",
     "path": "~/.codex/skills/brooks-debt/SKILL.md",
-    "content_sha256": "869845b9615edda600f42431b83af45a49188d70aeed527c7909f7472b857ace"
+    "content_sha256": "091ca429b0bdc243e9b1650eaaf672bf7fa0731b8cfc825b6bf868c65bc118df"
   },
   {
     "name": "brooks-health",
-    "description": "Combined codebase health dashboard that scores a project across all four quality dimensions — PR quality, architecture, tech debt, and test quality — in a single pass, drawing on twelve classic engineering books. Triggers when: user wants an overall quality assessment, asks \"how healthy is this codebase?\", \"run all the checks\", \"give me a big-picture quality report\", \"I need a health score before the release\", \"what's the overall state of our code?\", or wants to onboard a new team with a quality overview. Do NOT trigger for: server health checks, HTTP health endpoints, Kubernetes liveness/readiness probes, database health, or application uptime. Also do not trigger when the user specifically requests only one dimension — use the corresponding focused skill instead (brooks-review / brooks-audit / brooks-debt / brooks-test).",
+    "description": "Combined codebase health dashboard that scores a project across all four quality dimensions — PR quality, architecture, tech debt, and test quality — in a single pass, drawing on twelve classic engineering books. Triggers when: user wants an overall quality assessment, asks \"how healthy is this codebase?\", \"run all the checks\", \"I need a health score before the release\", or wants to onboard a new team with a quality overview. Do NOT trigger for: server health checks, HTTP health endpoints, Kubernetes liveness/readiness probes, database health, or application uptime. Also do not trigger when the user specifically requests only one dimension — use the corresponding focused skill instead (brooks-review / brooks-audit / brooks-debt / brooks-test).",
     "layer": "codex",
     "source": "hyhmrright/brooks-lint",
     "path": "~/.codex/skills/brooks-health/SKILL.md",
-    "content_sha256": "ea4dfc20596fcf2160bf269790b80f681d5d16535d11007022e2ca3d99566c7c"
+    "content_sha256": "7b7e1e74c9f0343af183dd22d899b93c9f10b8bc1073d572cea8a36038c85604"
   },
   {
     "name": "brooks-review",
-    "description": "PR code review that surfaces decay risks, design smells, and maintainability issues with concrete Symptom → Source → Consequence → Remedy findings, drawing on twelve classic engineering books. Triggers when: user asks to review code, check a PR, shares a diff or pastes code asking \"does this look right?\" / \"any issues here?\" / \"ready to merge?\", or asks for feedback on a function, class, or file. Also triggers when user mentions: code smells / refactoring / clean architecture / DDD / domain-driven design / SOLID principles / Hyrum's Law / deep modules / tactical programming / conceptual integrity / Brooks's Law / Mythical Man-Month / second system effect. Do NOT trigger for: questions about how to write code from scratch, language syntax questions, or framework/tool questions where no existing code is shared.",
+    "description": "PR code review that surfaces decay risks, design smells, and maintainability issues with concrete Symptom → Source → Consequence → Remedy findings, drawing on twelve classic engineering books. Triggers when: user asks to review code, check a PR, shares a diff or pastes code asking \"does this look right?\" / \"any issues here?\" / \"ready to merge?\", or asks for feedback on a function, class, or file. Also triggers when user mentions: code smells / refactoring / clean architecture / DDD / SOLID principles / Hyrum's Law / deep modules / tactical programming / conceptual integrity / Brooks's Law / Mythical Man-Month / second system effect. Do NOT trigger for: questions about how to write code from scratch, language syntax questions, or framework/tool questions where no existing code is shared.",
     "layer": "codex",
     "source": "hyhmrright/brooks-lint",
     "path": "~/.codex/skills/brooks-review/SKILL.md",
-    "content_sha256": "21c1ef33d40361ae98e150033978e4c5c1c3f66d498de92a6f088daf839591ec"
+    "content_sha256": "91e3497500fc38e18637850b706c65ec270ae09597545f2c31031062137f984e"
   },
   {
     "name": "brooks-sweep",
-    "description": "Full-sweep mode: runs a unified analysis across all quality dimensions — code decay, architecture, tech debt, and test quality — then applies fixes directly to the codebase. Safe changes are auto-applied; risky changes are confirmed before execution. Drawing on twelve classic engineering books. Triggers when: user wants to \"fix everything\", \"sweep the codebase\", \"auto-fix all issues\", \"run all checks and fix them\", \"clean up the whole project\", or asks for a single command that both diagnoses and remediates quality problems. Do NOT trigger for: read-only audits or health reports where the user only wants findings without code changes; single-dimension reviews (use the focused skill instead: brooks-review / brooks-audit / brooks-debt / brooks-test); server health checks, HTTP /health endpoints, Kubernetes probes, or application uptime.",
+    "description": "Full-sweep mode: runs a unified analysis across all quality dimensions — code decay, architecture, tech debt, and test quality — then applies fixes directly to the codebase. Safe changes are auto-applied; risky changes are confirmed before execution. Drawing on twelve classic engineering books. Triggers when: user wants to \"fix everything\", \"sweep the codebase\", \"auto-fix all issues\", \"clean up the whole project\", or asks for a single command that both diagnoses and remediates quality problems. Do NOT trigger for: read-only audits or health reports where the user only wants findings without code changes; single-dimension reviews (use the focused skill instead: brooks-review / brooks-audit / brooks-debt / brooks-test); server health checks, HTTP /health endpoints, Kubernetes probes, database health, or application uptime.",
     "layer": "codex",
     "source": "hyhmrright/brooks-lint",
     "path": "~/.codex/skills/brooks-sweep/SKILL.md",
-    "content_sha256": "ce6b63e8979c47834c0c07d7425c7093cf1081729b8499c2940f8632d9bf6368"
+    "content_sha256": "a728d41fef6fe2a41a286a0237884fa6f8c382f9d43c8fcfebccaa842cf9d687"
   },
   {
     "name": "brooks-test",
-    "description": "Test quality review drawing on twelve classic engineering books — with primary focus on xUnit Test Patterns, The Art of Unit Testing, How Google Tests Software, and Working Effectively with Legacy Code — that diagnoses structural problems in an existing test suite: brittleness, mock abuse, coverage illusions, slow execution, poor readability. Triggers when: user asks about test quality, shares test files for review, or expresses frustration: \"tests keep breaking whenever I change anything\", \"our tests take forever\", \"I can't understand what this test is doing\", \"tests pass but bugs still reach production\", \"we have too many mocks\". Do NOT trigger for: writing new tests from scratch (use the regular test-writing workflow) or testing framework/syntax questions — this skill reviews an existing suite for structural quality problems, not individual test authoring.",
+    "description": "Test quality review drawing on twelve classic engineering books — with primary focus on xUnit Test Patterns, The Art of Unit Testing, How Google Tests Software, and Working Effectively with Legacy Code — that diagnoses structural problems in an existing test suite: brittleness, mock abuse, coverage illusions, slow execution, poor readability. Triggers when: user asks about test quality, shares test files for review, or expresses frustration: \"tests keep breaking whenever I change anything\", \"our tests take forever\", \"tests pass but bugs still reach production\", or \"we have too many mocks\". Do NOT trigger for: writing new tests from scratch (use the regular test-writing workflow) or testing framework/syntax questions — this skill reviews an existing suite for structural quality problems, not individual test authoring.",
     "layer": "codex",
     "source": "hyhmrright/brooks-lint",
     "path": "~/.codex/skills/brooks-test/SKILL.md",
-    "content_sha256": "e529e10daf14626805049bddf3d209b5727f89942a7de2023065bb2453e15961"
+    "content_sha256": "9afcd7c83843f07b34a14804e8d5bf7e8c621669c5850bf5f10b4b9cef8799dc"
   },
   {
-    "name": "caveman",
-    "description": "Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Use when user says \"caveman mode\", \"talk like caveman\", \"use caveman\", \"less tokens\", \"be brief\", or invokes /caveman.",
+    "name": "code-review",
+    "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/PRD asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\".",
     "layer": "codex",
     "source": "mattpocock/skills",
-    "path": "~/.codex/skills/caveman/SKILL.md",
-    "content_sha256": "a9096751f7160680dd69708912259576afb4c40915b37f1ba002507686b84db7"
+    "path": "~/.codex/skills/code-review/SKILL.md",
+    "content_sha256": "6a65cc61114f96db07ec41e3920e67c9c5bf70dd6e0901eb9460ebcb2bdc209f"
   },
   {
-    "name": "design-an-interface",
-    "description": "Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module shapes, or mentions \"design it twice\".",
+    "name": "diagnosing-bugs",
+    "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
     "layer": "codex",
     "source": "mattpocock/skills",
-    "path": "~/.codex/skills/design-an-interface/SKILL.md",
-    "content_sha256": "88193ab179032918cdea0afe74b8610d6d079ac51191f286c10e9e47839a9e6b"
-  },
-  {
-    "name": "diagnose",
-    "description": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce → minimise → hypothesise → instrument → fix → regression-test. Use when user says \"diagnose this\" / \"debug this\", reports a bug, says something is broken/throwing/failing, or describes a performance regression.",
-    "layer": "codex",
-    "source": "mattpocock/skills",
-    "path": "~/.codex/skills/diagnose/SKILL.md",
-    "content_sha256": "dd1506e36aa87c8c462a08fe139033dca4eed6673fc62527acb20e00f55da6b1"
-  },
-  {
-    "name": "dispatching-parallel-agents",
-    "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/dispatching-parallel-agents/SKILL.md",
-    "content_sha256": "76806091c7f923ba2596546b19cccd98a08e57a68745df77c3a7b998fe838e2b"
-  },
-  {
-    "name": "docx",
-    "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation.",
-    "layer": "codex",
-    "source": "anthropics/skills",
-    "path": "~/.codex/skills/docx/SKILL.md",
-    "content_sha256": "cfbabd72b1aec7dfaad988fb6e5e16b27dc744b9a00cae15db9045e95f53903e"
+    "path": "~/.codex/skills/diagnosing-bugs/SKILL.md",
+    "content_sha256": "7a0779480f323a66d109404646bcc1a14bf0232b45b3e3ea93b652a035718acb"
   },
   {
     "name": "edit-article",
@@ -325,15 +293,7 @@
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/edit-article/SKILL.md",
-    "content_sha256": "3d6f8a603aeef1c6527e203e1a092725605ffe58d9084af8f3043b31ee4144d3"
-  },
-  {
-    "name": "executing-plans",
-    "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/executing-plans/SKILL.md",
-    "content_sha256": "e2102f11631433939f162d383d769f8257d859d6639e0e14969cda3ef0a95eca"
+    "content_sha256": "e10fba546f45357fe0aaa7494b9e186910d4525818d19f9b2ad6f28cc506aa5e"
   },
   {
     "name": "find-skills",
@@ -341,31 +301,15 @@
     "layer": "codex",
     "source": "vercel-labs/skills",
     "path": "~/.codex/skills/find-skills/SKILL.md",
-    "content_sha256": "1e85f6f9686e145aca4a124e3b704b9bbea9aa87e08515c1e352eee70f6e6e7a"
-  },
-  {
-    "name": "finishing-a-development-branch",
-    "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/finishing-a-development-branch/SKILL.md",
-    "content_sha256": "5c8d4b59aedb14c94e2f5d787a3265e858e8f53d4ceffe7ff1c15878a52b0e91"
+    "content_sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f"
   },
   {
     "name": "frontend-design",
-    "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+    "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.",
     "layer": "codex",
     "source": "anthropics/skills",
     "path": "~/.codex/skills/frontend-design/SKILL.md",
-    "content_sha256": "70044bbc8e4c21d23b8c8b864956aa1515c1c6cb2f9df14148dbb8c4af6187e5"
-  },
-  {
-    "name": "gh-fix-ci",
-    "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.",
-    "layer": "codex",
-    "source": "openai/skills",
-    "path": "~/.codex/skills/gh-fix-ci/SKILL.md",
-    "content_sha256": "7b326b4a2f0f5f85122144628ec02077e48841e0e0e82efce88b3415bcfb7c26"
+    "content_sha256": "1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd"
   },
   {
     "name": "git-guardrails-claude-code",
@@ -373,23 +317,23 @@
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/git-guardrails-claude-code/SKILL.md",
-    "content_sha256": "e8993a2b4453ac7e22e4e5e035e5a519532467a3a7a80c7335b76a25c1abc819"
+    "content_sha256": "03c4de7613c712aea336d64c467ea3ed14be2cbd52345925fe949c75c01c29f7"
   },
   {
     "name": "grill-me",
-    "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
+    "description": "A relentless interview to sharpen a plan or design.",
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/grill-me/SKILL.md",
-    "content_sha256": "c9df326c4ab635765ea884471d21f4e21d5b0ec85aec43a06c238307841eb4bc"
+    "content_sha256": "6189dfceb7304a6e5558f75d87e68fa3bc7fcf7ba120e44f21f8a61fe01eba54"
   },
   {
     "name": "grill-with-docs",
-    "description": "Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, ADRs) inline as decisions crystallise. Use when user wants to stress-test a plan against their project's language and documented decisions.",
+    "description": "A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.",
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/grill-with-docs/SKILL.md",
-    "content_sha256": "9602923616ce00904f1bece7455ec8d0cbb656c5deb466a76912556cfe24dc71"
+    "content_sha256": "610d091047bcfb9db0f75c057d15538481a721111579fc5ec7f83ad9131a2165"
   },
   {
     "name": "autoplan",
@@ -397,7 +341,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/autoplan/SKILL.md",
-    "content_sha256": "3ae19d8e97dcc15ecee496e35a86fbc166e6d2d55c219581598eb9051459a7e2"
+    "content_sha256": "73e2bf3e7b1868493fc162dccf9f26c182f50e4cfcad3e4f02efce0e3099e472"
   },
   {
     "name": "benchmark",
@@ -405,7 +349,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/benchmark/SKILL.md",
-    "content_sha256": "6a8a9ab2aceb839b11640c4a6e73f083cf0b0cf29bc925ad1244af810cfffa25"
+    "content_sha256": "e1061bb7f982966170b98fc1a75c17637af27dfd2f23e8a49c1d4c7d7a8baf08"
   },
   {
     "name": "benchmark-models",
@@ -413,7 +357,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/benchmark-models/SKILL.md",
-    "content_sha256": "5d4f0387f4cf103b6617f6d9955966015f6a0c86c25de7c4b27fe962eb85dbf0"
+    "content_sha256": "9b7af18a0b3886d68992e8b15e2b67eab642926c79cae8aad3d747b289eeadd9"
   },
   {
     "name": "browse",
@@ -421,7 +365,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/browse/SKILL.md",
-    "content_sha256": "6e6ee6c82daf0b837fdd5c1a6067d79eb0c0959c8f4edd7e7c73547d97c591aa"
+    "content_sha256": "a33632d9948aa65e207fcdcf6bd6c39d46fee8a4028cafc56a472481609d106f"
   },
   {
     "name": "hackernews-frontpage",
@@ -437,7 +381,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/canary/SKILL.md",
-    "content_sha256": "761ce6bb0c9d5b3f0f3216f3e7f5bcdeb78ab6647f28d567cf88b13a0fa2d34a"
+    "content_sha256": "b83f2a2f407d40e2c440857f0e5f6e0fbca071f6dd26f35eb2efd4009f2c2b5d"
   },
   {
     "name": "careful",
@@ -445,7 +389,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/careful/SKILL.md",
-    "content_sha256": "569c7d41b9c456ef0a6a0c23a5f3aba698b474b90741211517c29bab9e7fb00d"
+    "content_sha256": "64adcd299248c118b330d8d192b274ba608c1029405b0fd8bfa4d717b759a756"
   },
   {
     "name": "codex",
@@ -453,7 +397,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/codex/SKILL.md",
-    "content_sha256": "7bf3d7d1e3cc28a81e3b74d2731e7c5c1979d1297e3ddd2fc667505eafc4957e"
+    "content_sha256": "cec7ff8dba8bc118062bcfb2483def117797cb548c2405895958a709fca98323"
   },
   {
     "name": "context-restore",
@@ -461,7 +405,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/context-restore/SKILL.md",
-    "content_sha256": "3c455e85fc46f3a429a44e7cbdc7294751e96373f6f9fd0c532f036a3e9f2e90"
+    "content_sha256": "d006b63c8568258f7f3f0201447f806e87e0386ef2a17c9d3598411c8d974d1b"
   },
   {
     "name": "context-save",
@@ -469,7 +413,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/context-save/SKILL.md",
-    "content_sha256": "80b9f7d769a43bddda8ab823006e4ae292099c2e5972cd248a5bd3c9fc28747a"
+    "content_sha256": "1c5635797c27c30ad48593f87844138e4ed9da2a2ca80a6839c2f4ba91bdd776"
   },
   {
     "name": "cso",
@@ -477,7 +421,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/cso/SKILL.md",
-    "content_sha256": "7fdfbf45cd4a29a85842e8cd96212712e667523f1e1c9ac2f25290ace6b82d3c"
+    "content_sha256": "4d5da6367475aaad38bbf59f29e5c7fa2b184d48590951100b1d409b723133ea"
   },
   {
     "name": "design-consultation",
@@ -485,7 +429,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/design-consultation/SKILL.md",
-    "content_sha256": "00b02aca98695d4297a55f39fb7ef4ddb445769aa8e3114bd3ee2ff936a7768f"
+    "content_sha256": "44379ed9283c69638800ff35c93515065a097937196e3bf341d8db8c48405967"
   },
   {
     "name": "design-html",
@@ -493,7 +437,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/design-html/SKILL.md",
-    "content_sha256": "f2495e21669e4a2470fa6ae566ab368753a6695286fb4ad5e28fc6ff8d7a1984"
+    "content_sha256": "ed44f14e570bba140860cb6431b7a678b1c50ecc7b7b1933ae9659f1ca541eb0"
   },
   {
     "name": "design-review",
@@ -501,7 +445,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/design-review/SKILL.md",
-    "content_sha256": "8f10c58c790e86a393cea1cb83376b6b41098609ad5035194adf438d49d33bcd"
+    "content_sha256": "a7fb587db289843467c0008d1941ebd39eff57afed0eab422f08b7d6604107e5"
   },
   {
     "name": "design-shotgun",
@@ -509,7 +453,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/design-shotgun/SKILL.md",
-    "content_sha256": "d5eeef58ff1ba89117c7f08d1c739df710ae816e317e0715760160e394ce1538"
+    "content_sha256": "513d9e18dbe5048c8f42dde15f8053e9eee8224b1ac072c1b6cc533d908869e7"
   },
   {
     "name": "devex-review",
@@ -517,7 +461,15 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/devex-review/SKILL.md",
-    "content_sha256": "a66b1ea5f28885fba519be4a6100645c80e32c6314f0702d35cb7b4c662a385e"
+    "content_sha256": "aa162970e42dbca046f7f6ffb0b40167cf63b76b50d197d87fd4895937680513"
+  },
+  {
+    "name": "diagram",
+    "description": "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open (gstack)",
+    "layer": "codex",
+    "source": "garrytan/gstack",
+    "path": "~/.codex/skills/gstack/diagram/SKILL.md",
+    "content_sha256": "f57f8722f5668393a3761f209a778a5e92fe2949425ca26d58e96285ab110412"
   },
   {
     "name": "document-generate",
@@ -525,7 +477,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/document-generate/SKILL.md",
-    "content_sha256": "2d59aa477b41ff1b6d9b4492c7e14a76fbccee47f55787e8a30832a431f74d10"
+    "content_sha256": "3d97c417c753900f906369590d1721614a6df49530ec4c44c05ba895300f891b"
   },
   {
     "name": "document-release",
@@ -533,7 +485,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/document-release/SKILL.md",
-    "content_sha256": "15647b42a3c90ea86f5c17436c53e3f8c83a06e94114acc89d31303c02ad25d2"
+    "content_sha256": "4e33c59de9d6c942252f5f9ec4952853d41dba22e96fd1daab6d5faa86ebaf00"
   },
   {
     "name": "freeze",
@@ -541,7 +493,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/freeze/SKILL.md",
-    "content_sha256": "7437c5c3b0ba631b4cbeab4d093a3b8ece9a3df56164fbe4869654c52c87b441"
+    "content_sha256": "f8cb02804952392dc966954e089e3f934b148eddade4327ead3d1aa1af8229cb"
   },
   {
     "name": "gstack-upgrade",
@@ -557,7 +509,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/guard/SKILL.md",
-    "content_sha256": "7d5a1b360a3106ad246e4a2a3ee8d62b4d2a45979f82c4fcc95c12e8e5cb2caa"
+    "content_sha256": "ab22714e84c096eed506f314aa49f44161f08eb37a4b4651fb2725bab6ca07ff"
   },
   {
     "name": "health",
@@ -565,7 +517,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/health/SKILL.md",
-    "content_sha256": "adc0be77a7460d162934776c3841ad001eb89223c448bdb73aea202f5c6a4587"
+    "content_sha256": "505867059a06664334fb2ae1218b3deb814c8e7b42c837a626c3a062543611c8"
   },
   {
     "name": "investigate",
@@ -573,7 +525,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/investigate/SKILL.md",
-    "content_sha256": "4d811c633bd060ff7dff5d1e57392130c4d71a76c7ef210b89fe6a32f4fa2cb7"
+    "content_sha256": "6296d2cedc1dda85d55044f68a52bce2f6dbf867e770e255a9d3bb2b67dec747"
   },
   {
     "name": "ios-clean",
@@ -581,7 +533,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/ios-clean/SKILL.md",
-    "content_sha256": "5adda0378629e666fc6a258e29f6fe178aa2e6173d43a6acba64208896ae2eed"
+    "content_sha256": "72ddf6f3a7fd27a40f731bc83560faf009aa2921ad18cab49d219807d6ae7e18"
   },
   {
     "name": "ios-design-review",
@@ -589,7 +541,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/ios-design-review/SKILL.md",
-    "content_sha256": "bf830007caaef38e353a15abefbeb70a938be2c27e224ae35e370591cde93e99"
+    "content_sha256": "24245ba5b640dcfebdfa2ed0251a30d676f7a00a44b932802769c8d7b3cc2f10"
   },
   {
     "name": "ios-fix",
@@ -597,7 +549,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/ios-fix/SKILL.md",
-    "content_sha256": "c3779e270bb819454a838d4d3b009d1584525839be3d5834e3c0d83506946c4d"
+    "content_sha256": "381c4f7e8c86d346ff48655ea4e0f814127b87515fe48fac1ee3d9ef4975e2b6"
   },
   {
     "name": "ios-qa",
@@ -605,7 +557,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/ios-qa/SKILL.md",
-    "content_sha256": "7c0ee43c5edd87ae9640a96c557c5a93d75b04f23a38c13c604799c65c78aab1"
+    "content_sha256": "7d0702a9134e6d656cfcfdbb77f959d65136e2ef82e7ab2d62ef21a7a96d6905"
   },
   {
     "name": "ios-sync",
@@ -613,7 +565,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/ios-sync/SKILL.md",
-    "content_sha256": "2ee83dae7463453000b128fbd00fe46f12a45f0fcd13ed26a4ad78b350a87eb2"
+    "content_sha256": "fc071a92e8d96e421d50d9adddfe38703053cc660ac7f30e2858e11ad93a2066"
   },
   {
     "name": "land-and-deploy",
@@ -621,7 +573,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/land-and-deploy/SKILL.md",
-    "content_sha256": "6b2eba66df5c8eb004ba360c91135cb1e18e9afd1075f3e880792886f394cd90"
+    "content_sha256": "c81e6a392765f765990484c6cb1d7b60d7354359f4561655d15e86e3feb2169f"
   },
   {
     "name": "landing-report",
@@ -629,7 +581,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/landing-report/SKILL.md",
-    "content_sha256": "47e2a8c275c7fb86a1ee5d6ddeb12ed8cd415b0cbeb4381fa3c891927400a749"
+    "content_sha256": "bb328522f77372717e1d41c2ca1911586f0518c30c16f336f6eb8d51eaca1931"
   },
   {
     "name": "learn",
@@ -637,7 +589,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/learn/SKILL.md",
-    "content_sha256": "fb5614b755f3c1f60db0f0603103ef4516e48625922fb210902e24de76644bc0"
+    "content_sha256": "06b83fba2cc58296d896d43150c109601026e03f081ede6a40cc7d2185abdebf"
   },
   {
     "name": "make-pdf",
@@ -645,7 +597,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/make-pdf/SKILL.md",
-    "content_sha256": "150aeb1b48efa8a2c91c96a0026db8d38ea8e371baabb1deb4c9063971eda571"
+    "content_sha256": "7c00be6908b4bd4629042218ffbff8d91247fecb606c9885494f488dda45da3b"
   },
   {
     "name": "office-hours",
@@ -653,7 +605,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/office-hours/SKILL.md",
-    "content_sha256": "96193cb02b83afc762fa0c78414fe68baef99ca864272b19bffa7b6237759ce2"
+    "content_sha256": "b5a0b9d72f4a992ba0b52cd7b27d15e7e0e29e35c4b775477ec3a031c47f5c92"
   },
   {
     "name": "open-gstack-browser",
@@ -661,7 +613,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/open-gstack-browser/SKILL.md",
-    "content_sha256": "cec9c18d14d14ea4c212a3a3cf978e6d08aab4a5170e800d495b42e214ee4fb6"
+    "content_sha256": "76d4dca3906e248527b269e88a2e145ac5e4d93bc0a7f50e397028d419a88663"
   },
   {
     "name": "gstack-openclaw-ceo-review",
@@ -701,7 +653,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/pair-agent/SKILL.md",
-    "content_sha256": "5922ac8e8747c55dd1424db4159d3fe773146ec365f59736b6d1b618605e0671"
+    "content_sha256": "1f76495f2d135f4fdf1bea862d084b9a01dcd3c82b421d52052598865a104d5f"
   },
   {
     "name": "plan-ceo-review",
@@ -709,7 +661,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/plan-ceo-review/SKILL.md",
-    "content_sha256": "8a2479d1f24dfb3b9542ab85995d6340a34b5fb4374290a150af91d8f4d59d71"
+    "content_sha256": "c18016a320c7516814d41067936b9b239899e08f27b133a306f4de4c20921284"
   },
   {
     "name": "plan-design-review",
@@ -717,7 +669,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/plan-design-review/SKILL.md",
-    "content_sha256": "f9edb15e69dcf0e345e7f6d05bd037a87b9bdd367d9d56f67145dac0b62c13ad"
+    "content_sha256": "0f756585231f5630d80e3a3163ca664312acf78ea34e2bb535275816ffb1bfd0"
   },
   {
     "name": "plan-devex-review",
@@ -725,7 +677,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/plan-devex-review/SKILL.md",
-    "content_sha256": "d57b4cd163c14eb5a14c51e71b5d4d344ba7a0440af8fa2bda3aa499622ea379"
+    "content_sha256": "4d6cc577f07af1a0268e89ba0fdf45eb595583bdad306f809cbb8b6645c18951"
   },
   {
     "name": "plan-eng-review",
@@ -733,7 +685,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/plan-eng-review/SKILL.md",
-    "content_sha256": "1faea067dbf7cf4192a1013472b21c55c6c672edf5bfafa1954fe7916645df9d"
+    "content_sha256": "41c92a82319c081ef48a17733bcd5815d83637cf1e0390c45db5f9ccbbca08e9"
   },
   {
     "name": "plan-tune",
@@ -741,15 +693,15 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/plan-tune/SKILL.md",
-    "content_sha256": "cae6ae741f22fa725f6b8a2c7fbbddda7973740e21d0173fa4038e8396ce2b78"
+    "content_sha256": "2e6ed969370e9a31a017d97644658ce1e5906bbb6023e5a37ce0af08b6b5e3cb"
   },
   {
     "name": "qa",
     "description": "Systematically QA test a web application and fix bugs found. (gstack)",
     "layer": "codex",
-    "source": "mattpocock/skills",
+    "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/qa/SKILL.md",
-    "content_sha256": "2b58c240cc7821b67e4e8f8a352fadd3a8bcf11009d142b4914288b2d25a569f"
+    "content_sha256": "f80573f4bf3a9bf72e548589092d6ac75b083c06fb98367019f91222f13d5717"
   },
   {
     "name": "qa-only",
@@ -757,7 +709,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/qa-only/SKILL.md",
-    "content_sha256": "5ce5b9e4d8e36b1be0c9d035022e0559f7d9a94d04d7559d04ed71a0902979c6"
+    "content_sha256": "911aec7f512a8179c78979873d599c00e497c55f2385f221d9ab033bb23ee927"
   },
   {
     "name": "retro",
@@ -765,15 +717,15 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/retro/SKILL.md",
-    "content_sha256": "0882da5ae1bb6af7d8184b7d97cc5c449a055cb6b57a84dcb423e31cfc201977"
+    "content_sha256": "e9daa78ffc9629e2315be84c4c21c794b2c872c362d8e25455cc2ed697c91ca1"
   },
   {
     "name": "review",
     "description": "Pre-landing PR review. (gstack)",
     "layer": "codex",
-    "source": "mattpocock/skills",
+    "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/review/SKILL.md",
-    "content_sha256": "197f9c93f9c9cf499bde9011669fae916e47df994f641f5b37798dcb366f5bce"
+    "content_sha256": "92ee16af71d5e0088326869b0a211c50f94b9261eeae75656bc21f9bcfae2031"
   },
   {
     "name": "scrape",
@@ -781,7 +733,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/scrape/SKILL.md",
-    "content_sha256": "f36cc21d507458f7048422586c7bfb440e67e070dc2c564ea1e8d133ef626255"
+    "content_sha256": "16a367c64fe56687ea96f3ba91d733bb0eaaa0c33b2ab23be665cf004cbd2191"
   },
   {
     "name": "setup-browser-cookies",
@@ -789,7 +741,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/setup-browser-cookies/SKILL.md",
-    "content_sha256": "c2092d05ee12f19fa37e03596fa3919bd32dd35d5cf5a96376064a99229a57fb"
+    "content_sha256": "17363a8db951cb0e91bb1cc6e5d67721dfc06d6fc7823af44b981d79d4c5120b"
   },
   {
     "name": "setup-deploy",
@@ -797,7 +749,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/setup-deploy/SKILL.md",
-    "content_sha256": "7cb841c5a55592ba225e6bc4674164375b536eef3b1cb64667ab928b586d72ad"
+    "content_sha256": "f7d23f32dd76589cc3c0333650b0250ed7b9c48f6969b5e81a59dba7d4cc2876"
   },
   {
     "name": "setup-gbrain",
@@ -805,7 +757,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/setup-gbrain/SKILL.md",
-    "content_sha256": "2eebd9dda8fa532692a10f19afb2b09f62cf3e3d8351dc859553701927cf3e05"
+    "content_sha256": "36276112d28b76450d31552829d1ebae211e05da35b17298b75d8ae04881fec1"
   },
   {
     "name": "ship",
@@ -813,15 +765,15 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/ship/SKILL.md",
-    "content_sha256": "745ca7c26eb3bdd0bd7bec21fef9b79985873fc8c9b50ee202ec4d753c46103b"
+    "content_sha256": "b316ed89fa58128a4afbce92c374084e2a38dba0e58f0d18be3a330d7525fa62"
   },
   {
     "name": "gstack",
-    "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+    "description": "Router for the gstack skill suite. (gstack)",
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/SKILL.md",
-    "content_sha256": "d9a353cf217e8f00a3815936b1f7855b86276e3638cd0e08ecb72c8d3c4bb9ac"
+    "content_sha256": "b77bab43d1db15b6019f34506a204bca9f5e9632d314b70075c26fd07b13b173"
   },
   {
     "name": "skillify",
@@ -829,7 +781,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/skillify/SKILL.md",
-    "content_sha256": "6d31a1e9e0f3eae661899a267fc60136ba9b6b1eaddf1b077c430a95877ab86f"
+    "content_sha256": "0d33de2cb0d3f7be637630b06be821bf653cf565e3d543ea63a3fbf14a73e605"
   },
   {
     "name": "spec",
@@ -837,7 +789,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/spec/SKILL.md",
-    "content_sha256": "7beff83aea4ea305ec2614abd8726e4c2f2814017be74c634d49782c8ad03d84"
+    "content_sha256": "7ad290d73bb3a2556963b80fc22d6ea7322045356be6e0fc858f6e3b271bbcc9"
   },
   {
     "name": "sync-gbrain",
@@ -845,7 +797,7 @@
     "layer": "codex",
     "source": "garrytan/gstack",
     "path": "~/.codex/skills/gstack/sync-gbrain/SKILL.md",
-    "content_sha256": "2aff5e339ebbac8c7888e28640cdcf3dad4dff4b3a4fb6faa9b6231a65f64ed1"
+    "content_sha256": "55e9fe4af63e3e0ba7eacc718a2ce04028ddee19e3632555125ded1e1aa5df3a"
   },
   {
     "name": "unfreeze",
@@ -861,15 +813,31 @@
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/handoff/SKILL.md",
-    "content_sha256": "4292d4cf171abc00882d115b985a3945fb2b9bb67ebacd5e251bd7e5439ec106"
+    "content_sha256": "57c9f1f392d7352cdc85b1e39ca49eddc70ce1dc278bd9653fb4f23dfc2560fc"
+  },
+  {
+    "name": "hatch-pet",
+    "description": "Create, repair, validate, visually QA, and package Codex-compatible animated pets and pet spritesheets from character art, generated images, company or prospect brand cues, or visual references. Use when a user wants a lightweight-worker Codex pet workflow, a non-pixel custom pet style, a prospect or company mascot pet, or a full 8x9 animated pet atlas with transparent unused cells, QA contact sheets, and pet.json packaging. This skill composes the installed $imagegen system skill for visual generation and uses bundled scripts for deterministic spritesheet assembly.",
+    "layer": "codex",
+    "source": "openai/skills",
+    "path": "~/.codex/skills/hatch-pet/SKILL.md",
+    "content_sha256": "7ab0f01e8561085d1b494a6ca74abed766c655da8ec98284fb38a362c19d6871"
   },
   {
     "name": "improve-codebase-architecture",
-    "description": "Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/. Use when the user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more testable and AI-navigable.",
+    "description": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.",
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/improve-codebase-architecture/SKILL.md",
-    "content_sha256": "6d915caa3358bbb2f5e5d42f7424f65ed1aeceb2aa0480e1d009a275e3352d17"
+    "content_sha256": "4b4cb798c3863d5b6f5c0b4604af1ecb5beb6df82553c972898a91ba38bcf289"
+  },
+  {
+    "name": "jupyter-notebook",
+    "description": "Use when the user asks to create, scaffold, or edit Jupyter notebooks (`.ipynb`) for experiments, explorations, or tutorials; prefer the bundled templates and run the helper script `new_notebook.py` to generate a clean starting notebook.",
+    "layer": "codex",
+    "source": "openai/skills",
+    "path": "~/.codex/skills/jupyter-notebook/SKILL.md",
+    "content_sha256": "62f102e8554b25716dccef0ffab4572d4e3eaf05ccc76562d33a065bc9c521fb"
   },
   {
     "name": "markdown-to-html",
@@ -893,7 +861,7 @@
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/migrate-to-shoehorn/SKILL.md",
-    "content_sha256": "200c11163ecd56d908ec431154e4b452cd6afeb3de91e5b54434f543f0822201"
+    "content_sha256": "de4da4c11d924fac79c924b2ee3d2db4a5cb98386eb490a599119463d036ae72"
   },
   {
     "name": "obsidian-vault",
@@ -901,15 +869,7 @@
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/obsidian-vault/SKILL.md",
-    "content_sha256": "cf6fe426576d108207fdcf3ef3e6c2ba5de8e78f2b9c6bfa2d7e0d69d43b15e6"
-  },
-  {
-    "name": "pdf",
-    "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
-    "layer": "codex",
-    "source": "anthropics/skills",
-    "path": "~/.codex/skills/pdf/SKILL.md",
-    "content_sha256": "9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c"
+    "content_sha256": "7bed1d552aa5e9345e493cd62cb13e65c5d829d153c349afdb2cb91c809fa6c4"
   },
   {
     "name": "planning-with-files",
@@ -917,39 +877,15 @@
     "layer": "codex",
     "source": "davila7/claude-code-templates",
     "path": "~/.codex/skills/planning-with-files/SKILL.md",
-    "content_sha256": "19171dccabe8decd86f87dc55ed6e870fb21e0cd10a6b23cc15a76551b5cada5"
-  },
-  {
-    "name": "pptx",
-    "description": "Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \\\"deck,\\\" \\\"slides,\\\" \\\"presentation,\\\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill.",
-    "layer": "codex",
-    "source": "anthropics/skills",
-    "path": "~/.codex/skills/pptx/SKILL.md",
-    "content_sha256": "e5b0df918cbe9d62508b3cf808d73899633f82fc19f6258a25ef9f0de7e62125"
+    "content_sha256": "33533aac264cf31d22ac7a1a50b85cb9760a821a49401ad1bac8cbae9b1d369f"
   },
   {
     "name": "prototype",
-    "description": "Build a throwaway prototype to flesh out a design before committing to it. Routes between two branches — a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route. Use when the user wants to prototype, sanity-check a data model or state machine, mock up a UI, explore design options, or says \"prototype this\", \"let me play with it\", \"try a few designs\".",
+    "description": "Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.",
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/prototype/SKILL.md",
-    "content_sha256": "9923f050edb131e5604fcb6d63bd281221de121d48c500296b405ab9738c91a3"
-  },
-  {
-    "name": "qa",
-    "description": "Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the background for context and domain language. Use when user wants to report bugs, do QA, file issues conversationally, or mentions \"QA session\".",
-    "layer": "codex",
-    "source": "mattpocock/skills",
-    "path": "~/.codex/skills/qa/SKILL.md",
-    "content_sha256": "199b4d8cbea7a2b69de091e221f42b7835a3d0b3215d4d1eff53f6e9fd7f3a6c"
-  },
-  {
-    "name": "receiving-code-review",
-    "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/receiving-code-review/SKILL.md",
-    "content_sha256": "c9382e92b8f32363566068ecfed19d3b2651eaf40d3942b24840f839dedfc406"
+    "content_sha256": "03074862d4b6e4eaf472aa75146e1d193dd9e3bba0e4303a9b2425562d1d44cc"
   },
   {
     "name": "release-skills",
@@ -957,31 +893,7 @@
     "layer": "codex",
     "source": "jimliu/baoyu-skills",
     "path": "~/.codex/skills/release-skills/SKILL.md",
-    "content_sha256": "53e33eb4a717adc6f016017fd67e4b72c5b96e03ff4f1c228236cf6381256f7b"
-  },
-  {
-    "name": "request-refactor-plan",
-    "description": "Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.",
-    "layer": "codex",
-    "source": "mattpocock/skills",
-    "path": "~/.codex/skills/request-refactor-plan/SKILL.md",
-    "content_sha256": "4de61540351fee4db9b18352c53023a9c586f574e7291fafa0e88793a3f6609a"
-  },
-  {
-    "name": "requesting-code-review",
-    "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/requesting-code-review/SKILL.md",
-    "content_sha256": "5a3a44a3667800e2dc836829c6b92fada51e6dc58ac144ec05fe59f47d6bcd84"
-  },
-  {
-    "name": "review",
-    "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/PRD asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\".",
-    "layer": "codex",
-    "source": "mattpocock/skills",
-    "path": "~/.codex/skills/review/SKILL.md",
-    "content_sha256": "143a9baa874edce4357233d41a828ea48edfa28ae11c9ac73a2aedf4ee005000"
+    "content_sha256": "f320492bbc9ced7d00d07c55c4adf5b20e34214a42bf037b68ccaa4a6c62e377"
   },
   {
     "name": "scaffold-exercises",
@@ -989,15 +901,15 @@
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/scaffold-exercises/SKILL.md",
-    "content_sha256": "de28db7a0954db55c11ba1e3cc0fd4c037bf0f5cb8313cb292e319bcce47f424"
+    "content_sha256": "75f5c9d771606fb9762f16522efc954df11c324f87148d8ff069bce166257de9"
   },
   {
     "name": "setup-matt-pocock-skills",
-    "description": "Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md and `docs/agents/` so the engineering skills know this repo's issue tracker (GitHub or local markdown), triage label vocabulary, and domain doc layout. Run before first use of `to-issues`, `to-prd`, `triage`, `diagnose`, `tdd`, `improve-codebase-architecture`, or `zoom-out` — or if those skills appear to be missing context about the issue tracker, triage labels, or domain docs.",
+    "description": "Configure this repo for the engineering skills — set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.",
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/setup-matt-pocock-skills/SKILL.md",
-    "content_sha256": "285193911e7ad513418901c4d96ce9d6591e7786f333eaccfbab3ae289e60579"
+    "content_sha256": "def265a8b15ffb8afc3f335d69e175ba9a7fe3991218984b0e49e8345cde3b20"
   },
   {
     "name": "setup-pre-commit",
@@ -1005,31 +917,15 @@
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/setup-pre-commit/SKILL.md",
-    "content_sha256": "b2380f2334a7b3cc14521070a41e14d0b5fdcbc1236f872c35f8543fa3e1421b"
-  },
-  {
-    "name": "subagent-driven-development",
-    "description": "Use when executing implementation plans with independent tasks in the current session",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/subagent-driven-development/SKILL.md",
-    "content_sha256": "905a2b9be59b734dbe166525ad31dcaaf712a75926135adee1f554557aba5744"
-  },
-  {
-    "name": "systematic-debugging",
-    "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/systematic-debugging/SKILL.md",
-    "content_sha256": "4999cb851360485eca5074e727bbdd62ef20549c5d5b01216fcbf5831badb473"
+    "content_sha256": "872f4037cb7e6e0e340d4175c086550072959925dffc87b160d1a30dc9f63bbd"
   },
   {
     "name": "tdd",
-    "description": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, or asks for test-first development.",
+    "description": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests.",
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/tdd/SKILL.md",
-    "content_sha256": "95f66cc273f0dff4919d4251cd6572f0029cd551167d38024b4867f6b2816eba"
+    "content_sha256": "5363bb2775679fe9311fbb67947f95359169c6e7f1fac77c0f25e190bca6cf2f"
   },
   {
     "name": "teach",
@@ -1037,79 +933,39 @@
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/teach/SKILL.md",
-    "content_sha256": "f760d5ca9b4dbfd6fcc249d3b24b01527f14a2ed5b404e99c90ede38ea36330d"
+    "content_sha256": "6d2dbe5e03084cf26fef66b535127b36cd1bcbe9478e26b0626029cd51dc2259"
   },
   {
-    "name": "test-driven-development",
-    "description": "Use when implementing any feature or bugfix, before writing implementation code",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/test-driven-development/SKILL.md",
-    "content_sha256": "7dee67b4af6bdccc7a914ca34533184d64592d0f5b23aeae631538168db14994"
-  },
-  {
-    "name": "to-issues",
-    "description": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues, create implementation tickets, or break down work into issues.",
+    "name": "to-spec",
+    "description": "Turn the current conversation into a spec and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.",
     "layer": "codex",
     "source": "mattpocock/skills",
-    "path": "~/.codex/skills/to-issues/SKILL.md",
-    "content_sha256": "28b5742cc0d8bdc27284edd18d6f9b86107f8935487a76ee1ef7dcb9d151281f"
+    "path": "~/.codex/skills/to-spec/SKILL.md",
+    "content_sha256": "267638edd513b5918de626ad5605d261952abb7428cb308869c663ca924e93e7"
   },
   {
-    "name": "to-prd",
-    "description": "Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the current context.",
+    "name": "to-tickets",
+    "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker — edges as text in one file per ticket locally, or native blocking links on a real tracker.",
     "layer": "codex",
     "source": "mattpocock/skills",
-    "path": "~/.codex/skills/to-prd/SKILL.md",
-    "content_sha256": "59166820a40cf7ac84c76b7ac3b3a06cca11a469490ac174ae490f2cd50b739a"
+    "path": "~/.codex/skills/to-tickets/SKILL.md",
+    "content_sha256": "1846d215e24ec1219b199a708329ca915db93138d4f3675af29db4d32ee41391"
   },
   {
     "name": "triage",
-    "description": "Triage issues through a state machine driven by triage roles. Use when user wants to create an issue, triage issues, review incoming bugs or feature requests, prepare issues for an AFK agent, or manage issue workflow.",
+    "description": "Move issues and external PRs through a state machine of triage roles — categorise, verify, grill if needed, and write agent-ready briefs.",
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/triage/SKILL.md",
-    "content_sha256": "acdc9b0a40f8821ce9a6479e5781c37c30ac2e1e1e27a8377437af09472c16fe"
-  },
-  {
-    "name": "ubiquitous-language",
-    "description": "Extract a DDD-style ubiquitous language glossary from the current conversation, flagging ambiguities and proposing canonical terms. Saves to UBIQUITOUS_LANGUAGE.md. Use when user wants to define domain terms, build a glossary, harden terminology, create a ubiquitous language, or mentions \"domain model\" or \"DDD\".",
-    "layer": "codex",
-    "source": "mattpocock/skills",
-    "path": "~/.codex/skills/ubiquitous-language/SKILL.md",
-    "content_sha256": "a1efafd7ec7a630ed2b0753be2ddbcf53e50573e5c20a3d43e98056da25afce2"
+    "content_sha256": "d45827c299c021f77b0f146fefa3ee679b13f99e9a2ffdf48e8de2347adeefe1"
   },
   {
     "name": "ui-ux-pro-max",
-    "description": "UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, and HTML/CSS). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, and check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, and mobile app. Elements: button, modal, navbar, sidebar, card, table, form, and chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, and flat design. Topics: color systems, accessibility, animation, layout, typography, font pairing, spacing, interaction states, shadow, and gradient. Integrations: shadcn/ui MCP for component search and examples.",
+    "description": "UI/UX design intelligence for web and mobile. Searchable local database with 84 styles, 192 color palettes, 74 font pairings, 192 product types, 98 UX guidelines, 104 icon entries, 16 GSAP motion presets, and 25 chart types across 22 stacks (React, Next.js, Vue, Nuxt, Svelte, Astro, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, Jetpack Compose, Angular, Laravel, JavaFX, WPF, WinUI, Avalonia, Uno Platform, UWP, Three.js, and HTML/CSS). Use when designing, building, or reviewing UI: pages, components, color schemes, typography, layout, accessibility, animation, or data visualization.",
     "layer": "codex",
     "source": "nextlevelbuilder/ui-ux-pro-max-skill",
     "path": "~/.codex/skills/ui-ux-pro-max/SKILL.md",
-    "content_sha256": "4d89e171a3edc39386ce5df27d4ff1446fc20c2dd41702154c93b5535d4cac31"
-  },
-  {
-    "name": "using-git-worktrees",
-    "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/using-git-worktrees/SKILL.md",
-    "content_sha256": "085a45ee3de432bdb2768011591d9a882cb6c759e2317f379226451c5618fe8e"
-  },
-  {
-    "name": "using-superpowers",
-    "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/using-superpowers/SKILL.md",
-    "content_sha256": "316e29381219adf0cac62190c67aeabf427d6e6e5f2735541d502b3d339be7aa"
-  },
-  {
-    "name": "verification-before-completion",
-    "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/verification-before-completion/SKILL.md",
-    "content_sha256": "ea52d15aabaf72bc6b558efe2c126f161b53961090ddcd712000273bfe8c7b6c"
+    "content_sha256": "305a7527fcb2f5b6e4129ab22cd839b5172d26df7f14d3324bfdec8fc1763560"
   },
   {
     "name": "webapp-testing",
@@ -1120,1083 +976,27 @@
     "content_sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2"
   },
   {
-    "name": "write-a-skill",
-    "description": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.",
-    "layer": "codex",
-    "source": "mattpocock/skills",
-    "path": "~/.codex/skills/write-a-skill/SKILL.md",
-    "content_sha256": "eae171cbfca83dea0914ff6a2278059e2eafac11b5164f1d654511179d08241d"
-  },
-  {
     "name": "writing-beats",
-    "description": "Shape an article as a journey of beats, choose-your-own-adventure style. The user picks a starting beat from the raw material, you write only that beat, then offer options for where to pivot next, beat by beat, until the article reaches a natural end. Use when the user has raw material and wants to assemble it as a narrative rather than an argument.",
+    "description": "Writing, exploit — assemble raw material into a journey of beats, grounding each term before a beat leans on it.",
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/writing-beats/SKILL.md",
-    "content_sha256": "12d9814382433baa63029c9693960b389e6c8b799c4f779320fdcde5eee5818e"
+    "content_sha256": "668185cfb6eb6a324b8d864404c398e21f3cddbb637b760e39b7784c8c5e4fee"
   },
   {
     "name": "writing-fragments",
-    "description": "Grilling session that mines the user for fragments — heterogeneous nuggets of writing (claims, vignettes, sharp sentences, half-thoughts) — and appends them to a single document as raw material for a future article. Use when the user wants to develop ideas before imposing structure, or mentions \"fragments\", \"ideate\", or \"raw material\" for writing.",
+    "description": "Writing, explore — mine raw fragments, no structure yet.",
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/writing-fragments/SKILL.md",
-    "content_sha256": "81b4c95de7d0a029b6d1da008d4d0142f4fed9638c3e55923bff3287e62db2e9"
-  },
-  {
-    "name": "writing-plans",
-    "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/writing-plans/SKILL.md",
-    "content_sha256": "4fd4627d2c02367879c0307d7249270bed633317ff9be82e926a6d57bf5d331b"
+    "content_sha256": "c61b6608f227b0eee1b832273360cf5088ad68c343c15ec9c06673086662e64e"
   },
   {
     "name": "writing-shape",
-    "description": "Take a markdown file of raw material and shape it into an article through a conversational session — drafting candidate openings, growing the piece paragraph by paragraph, arguing about format (lists, tables, callouts, quotes) at each step. Use when the user has a pile of notes, fragments, or a rough draft and wants help turning it into something publishable.",
+    "description": "Writing, exploit — shape raw material into an article, paragraph by paragraph.",
     "layer": "codex",
     "source": "mattpocock/skills",
     "path": "~/.codex/skills/writing-shape/SKILL.md",
-    "content_sha256": "6d591a4af6f77ac5d42e79d2b6e7a13b24498b985e15065512b7644cfa41e637"
-  },
-  {
-    "name": "writing-skills",
-    "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
-    "layer": "codex",
-    "source": "obra/superpowers",
-    "path": "~/.codex/skills/writing-skills/SKILL.md",
-    "content_sha256": "38ba648975ae6ba512d6695676f146163db61a496b867f716f4bdfb0ee3aca3e"
-  },
-  {
-    "name": "xlsx",
-    "description": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \\\"the xlsx in my downloads\\\") — and wants something done to it or produced from it. Also trigger for cleaning or restructuring messy tabular data files (malformed rows, misplaced headers, junk data) into proper spreadsheets. The deliverable must be a spreadsheet file. Do NOT trigger when the primary deliverable is a Word document, HTML report, standalone Python script, database pipeline, or Google Sheets API integration, even if tabular data is involved.",
-    "layer": "codex",
-    "source": "anthropics/skills",
-    "path": "~/.codex/skills/xlsx/SKILL.md",
-    "content_sha256": "dd316db7785a6be12966c2a2d848931fbf5f518b3cdb0a66fa62ee835ead1cfc"
-  },
-  {
-    "name": "zoom-out",
-    "description": "Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the bigger picture.",
-    "layer": "codex",
-    "source": "mattpocock/skills",
-    "path": "~/.codex/skills/zoom-out/SKILL.md",
-    "content_sha256": "4fc05cfa89129515f6f01f52a31bbe36f327c54b322dbd3cb2c31f46a824b002"
-  },
-  {
-    "name": "baoyu-article-illustrator",
-    "description": "Analyzes article structure, identifies positions requiring visual aids, generates illustrations with Type × Style × Palette three-dimension approach. Use when user asks to \"illustrate article\", \"add images\", \"generate images for article\", or \"为文章配图\".",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-article-illustrator/SKILL.md",
-    "content_sha256": "948d85b4a2ddada46fe163e3ed8793800acb96e344351e92429aed8560f9efc6"
-  },
-  {
-    "name": "baoyu-comic",
-    "description": "Knowledge comic creator supporting multiple art styles and tones. Creates original educational comics with detailed panel layouts and batch-capable image generation. Use when user asks to create \"知识漫画\", \"教育漫画\", \"biography comic\", \"tutorial comic\", or \"Logicomix-style comic\".",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-comic/SKILL.md",
-    "content_sha256": "17759af8cc687056e39572097706ebccaa5c19443acfc790c35d4c90d06dd4b3"
-  },
-  {
-    "name": "baoyu-compress-image",
-    "description": "Compresses images to WebP (default) or PNG with automatic tool selection. Use when user asks to \"compress image\", \"optimize image\", \"convert to webp\", or reduce image file size.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-compress-image/SKILL.md",
-    "content_sha256": "13991e9dbfd3e7b9230e24cc53dbc65101ae8207841034c55a5e93523fabfe70"
-  },
-  {
-    "name": "baoyu-cover-image",
-    "description": "Generates article cover images with 5 dimensions (type, palette, rendering, text, mood) combining 11 color palettes and 7 rendering styles. Supports cinematic (2.35:1), widescreen (16:9), and square (1:1) aspects. Use when user asks to \"generate cover image\", \"create article cover\", or \"make cover\".",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-cover-image/SKILL.md",
-    "content_sha256": "bc1aadc670e73e3391e37f70a8abd30db8e93e68221989ee1fe0e1ed01893a1e"
-  },
-  {
-    "name": "baoyu-danger-gemini-web",
-    "description": "Generates images and text via reverse-engineered Gemini Web API. Supports text generation, image generation from prompts, reference images for vision input, and multi-turn conversations. Use when other skills need image generation backend, or when user requests \"generate image with Gemini\", \"Gemini text generation\", or needs vision-capable AI generation.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-danger-gemini-web/SKILL.md",
-    "content_sha256": "bcfaf152bc4a84091b7af868e74b598e51c2473f5399826e08f3897093788ad1"
-  },
-  {
-    "name": "baoyu-danger-x-to-markdown",
-    "description": "Converts X (Twitter) tweets and articles to markdown with YAML front matter. Uses reverse-engineered API requiring user consent. Use when user mentions \"X to markdown\", \"tweet to markdown\", \"save tweet\", or provides x.com/twitter.com URLs for conversion.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-danger-x-to-markdown/SKILL.md",
-    "content_sha256": "add54a4786070f422995ba0d991240f9e94f95d5a51579c6d27809b63d69d83f"
-  },
-  {
-    "name": "baoyu-diagram",
-    "description": "Create professional, dark-themed SVG diagrams of any type — architecture diagrams, flowcharts, sequence diagrams, structural diagrams, mind maps, timelines, illustrative/conceptual diagrams, and more. Use this skill whenever the user asks for any kind of technical or conceptual diagram, visualization of a system, process flow, data flow, component relationship, network topology, decision tree, org chart, state machine, or any visual representation of structure/logic/process. Also trigger when the user says \"画个图\" \"画一个架构图\" \"diagram\" \"flowchart\" \"sequence diagram\" \"draw me a ...\" or uploads content and asks to visualize it. Output is always a standalone .svg file.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-diagram/SKILL.md",
-    "content_sha256": "91fb9e4164d3536bd7f7a625321805a6c9e1eab0a22056ad38a560fe0e7019fe"
-  },
-  {
-    "name": "baoyu-electron-extract",
-    "description": "Extracts resources and JavaScript from any installed Electron app (`.asar` bundle), restoring original sources from `.js.map` files when available or formatting minified code with Prettier otherwise. Use when user wants to \"extract Electron app\", \"decompile Electron\", \"get the source code of <app>\", \"inspect app.asar\", \"看 Electron 应用源码\", \"提取 .asar\", or asks how a desktop Electron app is built. Skips `node_modules` and supports both macOS and Windows.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-electron-extract/SKILL.md",
-    "content_sha256": "44ebe2142e3f8b292b171b36016802899b0d7157dc9e8866f68d87e40f3685fb"
-  },
-  {
-    "name": "baoyu-format-markdown",
-    "description": "Formats plain text or markdown files with frontmatter, titles, summaries, headings, bold, lists, and code blocks. Use when user asks to \"format markdown\", \"beautify article\", \"add formatting\", or improve article layout. Outputs to {filename}-formatted.md.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-format-markdown/SKILL.md",
-    "content_sha256": "a8690ae5e05ddcc995247146cedc76f0aad634ad20eb860e367774058dda270e"
-  },
-  {
-    "name": "baoyu-image-gen",
-    "description": "AI image generation with OpenAI GPT Image 2, Azure OpenAI, Google, OpenRouter, DashScope, Z.AI GLM-Image, MiniMax, Jimeng, Seedream and Replicate APIs. Supports text-to-image, reference images, aspect ratios, and batch generation from saved prompt files. Sequential by default; use batch parallel generation when the user already has multiple prompts or wants stable multi-image throughput. Use when user asks to generate, create, or draw images.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-image-gen/SKILL.md",
-    "content_sha256": "da0b9f9ba9c8693241d1ed99af6a13dde54cff7de9b176acb72019d8eb4067aa"
-  },
-  {
-    "name": "baoyu-infographic",
-    "description": "Generate professional infographics with 21 layout types and 22 visual styles. Analyzes content, recommends layout×style combinations, and generates publication-ready infographics. Use when user asks to create \"infographic\", \"信息图\", \"visual summary\", \"可视化\", or \"高密度信息大图\".",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-infographic/SKILL.md",
-    "content_sha256": "bc9fef6de2c260bd10417f67a2f91da6addddbcc81dc3f296a36bf207e762397"
-  },
-  {
-    "name": "baoyu-markdown-to-html",
-    "description": "Converts Markdown to styled HTML with WeChat-compatible themes. Supports code highlighting, math, Mermaid (rendered to PNG via headless Chrome), PlantUML, footnotes, alerts, infographics, and optional bottom citations for external links. Use when user asks for \"markdown to html\", \"convert md to html\", \"md 转 html\", \"微信外链转底部引用\", or needs styled HTML output from markdown.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-markdown-to-html/SKILL.md",
-    "content_sha256": "b3f0f70a4aeea75d42b1e11b132973c9b523ebf4218df29ea58b32a0f86becd3"
-  },
-  {
-    "name": "baoyu-post-to-wechat",
-    "description": "Posts content to WeChat Official Account (微信公众号) via API or Chrome CDP. Supports article posting (文章) with HTML, markdown, or plain text input, and image-text posting (贴图, formerly 图文) with multiple images. Markdown article workflows default to converting ordinary external links into bottom citations for WeChat-friendly output. Use when user mentions \"发布公众号\", \"post to wechat\", \"微信公众号\", or \"贴图/图文/文章\".",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-post-to-wechat/SKILL.md",
-    "content_sha256": "304c73fcf39c60ed7eb21ef511eae19a8aaa76c7707d1e40ac2a11fbf3afdaff"
-  },
-  {
-    "name": "baoyu-post-to-weibo",
-    "description": "Posts content to Weibo (微博). Supports regular posts with text, images, and videos, and headline articles (头条文章) with Markdown input via Chrome CDP. Use when user asks to \"post to Weibo\", \"发微博\", \"发布微博\", \"publish to Weibo\", \"share on Weibo\", \"写微博\", or \"微博头条文章\".",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-post-to-weibo/SKILL.md",
-    "content_sha256": "0106daec8d1a9a54909c8946e2e99a8b2be5cd8c9f899f314cd35c6ab3e13250"
-  },
-  {
-    "name": "baoyu-post-to-x",
-    "description": "Posts content and articles to X (Twitter). Supports regular posts with images/videos and X Articles (long-form Markdown). In Codex, honor explicit requests for the Codex Chrome plugin/@chrome by using the Chrome Extension workflow; otherwise use Chrome Computer Use when available and fall back to real Chrome CDP scripts only when allowed. Use when user asks to \"post to X\", \"tweet\", \"publish to Twitter\", or \"share on X\".",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-post-to-x/SKILL.md",
-    "content_sha256": "60e83ba382161a03f4da8fd5dcf68f4e9fc00db7a423934c5cf29bba7316364c"
-  },
-  {
-    "name": "baoyu-slide-deck",
-    "description": "Generates professional slide deck images from content. Creates outlines with style instructions, then generates individual slide images. Use when user asks to \"create slides\", \"make a presentation\", \"generate deck\", \"slide deck\", or \"PPT\".",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-slide-deck/SKILL.md",
-    "content_sha256": "aacac8135cdcf94cc3b18d142f04662eb752e2e893cd2f313dfa573230925e46"
-  },
-  {
-    "name": "baoyu-translate",
-    "description": "This skill should be used when the user asks to \"translate\", \"翻译\", \"精翻\", \"translate article\", \"translate to Chinese\", \"translate to English\", \"改成中文\", \"改成英文\", \"convert to Chinese\", \"localize\", \"本地化\", \"refined translation\", \"精细翻译\", \"proofread translation\", \"快速翻译\", \"快翻\", \"这篇文章翻译一下\", or provides a URL/file with translation intent. Supports three modes (quick/normal/refined) with custom glossary support.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-translate/SKILL.md",
-    "content_sha256": "1621b24b17b14124a0787166da21ab9f0a4cd15a853605623b4de3a3bf28cc77"
-  },
-  {
-    "name": "baoyu-url-to-markdown",
-    "description": "Fetch any URL and convert to markdown using baoyu-fetch CLI (Chrome CDP with site-specific adapters). Built-in adapters for X/Twitter, YouTube transcripts, Hacker News threads, and generic pages via Defuddle. Handles login/CAPTCHA via interaction wait modes. Use when user wants to save a webpage as markdown.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-url-to-markdown/SKILL.md",
-    "content_sha256": "50a998784d39f27eb81a7b6440fd580fcaa65bf5a550b58c768cbd039dc1e01a"
-  },
-  {
-    "name": "baoyu-wechat-summary",
-    "description": "Summarizes WeChat group chat highlights into a structured digest using the local wx-cli binary (https://github.com/jackwener/wx-cli). Generates a normal digest by default; a roast (毒舌) version is opt-in. Maintains per-group history (history.json + history-digests.jsonl) and per-user profiles across runs, with privacy guardrails baked in. Use when the user asks to \"总结群聊\", \"群聊精华\", \"群聊摘要\", \"summarize group chat\", \"group chat digest\", mentions a WeChat group name with a time range, says \"帮我看看 XX 群最近聊了什么\", \"XX 群有什么值得看的\", or asks to \"回溯画像\" / \"初始化画像\" / \"backfill profiles\". Adds the roast version when the user says \"毒舌版\", \"roast 版\", \"再来个毒舌的\", or similar.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-wechat-summary/SKILL.md",
-    "content_sha256": "7f31aaff1bc049291d1cf47ee709e266d6adf9a2a4954628d864311e300ebaec"
-  },
-  {
-    "name": "baoyu-xhs-images",
-    "description": "Generates infographic image card series with 12 visual styles, 8 layouts, and 3 color palettes. Breaks content into 1-10 cartoon-style image cards optimized for social media engagement. Use when user mentions \"小红书图片\", \"小红书种草\", \"小绿书\", \"微信图文\", \"微信贴图\", \"image cards\", \"图片卡片\", baoyu-xhs-images, or wants social media infographic series.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-xhs-images/SKILL.md",
-    "content_sha256": "3191c10a6c03960bd92b79c7da94e86a44fdde22e126e034892285121364ce3c"
-  },
-  {
-    "name": "baoyu-youtube-transcript",
-    "description": "Downloads YouTube video transcripts/subtitles and cover images by URL or video ID. Supports multiple languages, translation, chapters, and speaker identification. Caches raw data for fast re-formatting. Use when user asks to \"get YouTube transcript\", \"download subtitles\", \"get captions\", \"YouTube字幕\", \"YouTube封面\", \"视频封面\", \"video thumbnail\", \"video cover image\", or provides a YouTube URL and wants the transcript/subtitle text or cover image extracted.",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/baoyu-youtube-transcript/SKILL.md",
-    "content_sha256": "3decb46af0c05a5d7256d1330e34dc11214db94f74fc89bc4b06bfeac757f357"
-  },
-  {
-    "name": "brainstorming",
-    "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/brainstorming/SKILL.md",
-    "content_sha256": "bba47904a7f6bbee3bf8a107ebbe84e65d392be683bbb898ded736b29e415f90"
-  },
-  {
-    "name": "caveman",
-    "description": "Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Use when user says \"caveman mode\", \"talk like caveman\", \"use caveman\", \"less tokens\", \"be brief\", or invokes /caveman.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/caveman/SKILL.md",
-    "content_sha256": "a9096751f7160680dd69708912259576afb4c40915b37f1ba002507686b84db7"
-  },
-  {
-    "name": "design-an-interface",
-    "description": "Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module shapes, or mentions \"design it twice\".",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/design-an-interface/SKILL.md",
-    "content_sha256": "88193ab179032918cdea0afe74b8610d6d079ac51191f286c10e9e47839a9e6b"
-  },
-  {
-    "name": "diagnose",
-    "description": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce → minimise → hypothesise → instrument → fix → regression-test. Use when user says \"diagnose this\" / \"debug this\", reports a bug, says something is broken/throwing/failing, or describes a performance regression.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/diagnose/SKILL.md",
-    "content_sha256": "dd1506e36aa87c8c462a08fe139033dca4eed6673fc62527acb20e00f55da6b1"
-  },
-  {
-    "name": "dispatching-parallel-agents",
-    "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/dispatching-parallel-agents/SKILL.md",
-    "content_sha256": "76806091c7f923ba2596546b19cccd98a08e57a68745df77c3a7b998fe838e2b"
-  },
-  {
-    "name": "edit-article",
-    "description": "Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improve an article draft.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/edit-article/SKILL.md",
-    "content_sha256": "3d6f8a603aeef1c6527e203e1a092725605ffe58d9084af8f3043b31ee4144d3"
-  },
-  {
-    "name": "executing-plans",
-    "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/executing-plans/SKILL.md",
-    "content_sha256": "e2102f11631433939f162d383d769f8257d859d6639e0e14969cda3ef0a95eca"
-  },
-  {
-    "name": "find-skills",
-    "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
-    "layer": "agents",
-    "source": "vercel-labs/skills",
-    "path": "~/.agents/skills/find-skills/SKILL.md",
-    "content_sha256": "1e85f6f9686e145aca4a124e3b704b9bbea9aa87e08515c1e352eee70f6e6e7a"
-  },
-  {
-    "name": "finishing-a-development-branch",
-    "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/finishing-a-development-branch/SKILL.md",
-    "content_sha256": "5c8d4b59aedb14c94e2f5d787a3265e858e8f53d4ceffe7ff1c15878a52b0e91"
-  },
-  {
-    "name": "frontend-design",
-    "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
-    "layer": "agents",
-    "source": "anthropics/skills",
-    "path": "~/.agents/skills/frontend-design/SKILL.md",
-    "content_sha256": "70044bbc8e4c21d23b8c8b864956aa1515c1c6cb2f9df14148dbb8c4af6187e5"
-  },
-  {
-    "name": "git-guardrails-claude-code",
-    "description": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/git-guardrails-claude-code/SKILL.md",
-    "content_sha256": "e8993a2b4453ac7e22e4e5e035e5a519532467a3a7a80c7335b76a25c1abc819"
-  },
-  {
-    "name": "grill-me",
-    "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/grill-me/SKILL.md",
-    "content_sha256": "c9df326c4ab635765ea884471d21f4e21d5b0ec85aec43a06c238307841eb4bc"
-  },
-  {
-    "name": "grill-with-docs",
-    "description": "Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, ADRs) inline as decisions crystallise. Use when user wants to stress-test a plan against their project's language and documented decisions.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/grill-with-docs/SKILL.md",
-    "content_sha256": "9602923616ce00904f1bece7455ec8d0cbb656c5deb466a76912556cfe24dc71"
-  },
-  {
-    "name": "autoplan",
-    "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/autoplan/SKILL.md",
-    "content_sha256": "3ae19d8e97dcc15ecee496e35a86fbc166e6d2d55c219581598eb9051459a7e2"
-  },
-  {
-    "name": "benchmark",
-    "description": "Performance regression detection using the browse daemon. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/benchmark/SKILL.md",
-    "content_sha256": "6a8a9ab2aceb839b11640c4a6e73f083cf0b0cf29bc925ad1244af810cfffa25"
-  },
-  {
-    "name": "benchmark-models",
-    "description": "Cross-model benchmark for gstack skills. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/benchmark-models/SKILL.md",
-    "content_sha256": "5d4f0387f4cf103b6617f6d9955966015f6a0c86c25de7c4b27fe962eb85dbf0"
-  },
-  {
-    "name": "browse",
-    "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/browse/SKILL.md",
-    "content_sha256": "6e6ee6c82daf0b837fdd5c1a6067d79eb0c0959c8f4edd7e7c73547d97c591aa"
-  },
-  {
-    "name": "hackernews-frontpage",
-    "description": "Scrape the Hacker News front page (titles, points, comment counts).",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/browser-skills/hackernews-frontpage/SKILL.md",
-    "content_sha256": "1a4e91d00ffdbdd38d2dc2986cf764b6d7d4d9348fdce19f2c60e92fa4a564da"
-  },
-  {
-    "name": "canary",
-    "description": "Post-deploy canary monitoring. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/canary/SKILL.md",
-    "content_sha256": "761ce6bb0c9d5b3f0f3216f3e7f5bcdeb78ab6647f28d567cf88b13a0fa2d34a"
-  },
-  {
-    "name": "careful",
-    "description": "Safety guardrails for destructive commands. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/careful/SKILL.md",
-    "content_sha256": "569c7d41b9c456ef0a6a0c23a5f3aba698b474b90741211517c29bab9e7fb00d"
-  },
-  {
-    "name": "codex",
-    "description": "OpenAI Codex CLI wrapper — three modes. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/codex/SKILL.md",
-    "content_sha256": "7bf3d7d1e3cc28a81e3b74d2731e7c5c1979d1297e3ddd2fc667505eafc4957e"
-  },
-  {
-    "name": "context-restore",
-    "description": "Restore working context saved earlier by /context-save. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/context-restore/SKILL.md",
-    "content_sha256": "3c455e85fc46f3a429a44e7cbdc7294751e96373f6f9fd0c532f036a3e9f2e90"
-  },
-  {
-    "name": "context-save",
-    "description": "Save working context. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/context-save/SKILL.md",
-    "content_sha256": "80b9f7d769a43bddda8ab823006e4ae292099c2e5972cd248a5bd3c9fc28747a"
-  },
-  {
-    "name": "cso",
-    "description": "Chief Security Officer mode. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/cso/SKILL.md",
-    "content_sha256": "7fdfbf45cd4a29a85842e8cd96212712e667523f1e1c9ac2f25290ace6b82d3c"
-  },
-  {
-    "name": "design-consultation",
-    "description": "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview... (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/design-consultation/SKILL.md",
-    "content_sha256": "00b02aca98695d4297a55f39fb7ef4ddb445769aa8e3114bd3ee2ff936a7768f"
-  },
-  {
-    "name": "design-html",
-    "description": "Design finalization: generates production-quality Pretext-native HTML/CSS. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/design-html/SKILL.md",
-    "content_sha256": "f2495e21669e4a2470fa6ae566ab368753a6695286fb4ad5e28fc6ff8d7a1984"
-  },
-  {
-    "name": "design-review",
-    "description": "Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/design-review/SKILL.md",
-    "content_sha256": "8f10c58c790e86a393cea1cb83376b6b41098609ad5035194adf438d49d33bcd"
-  },
-  {
-    "name": "design-shotgun",
-    "description": "Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/design-shotgun/SKILL.md",
-    "content_sha256": "d5eeef58ff1ba89117c7f08d1c739df710ae816e317e0715760160e394ce1538"
-  },
-  {
-    "name": "devex-review",
-    "description": "Live developer experience audit. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/devex-review/SKILL.md",
-    "content_sha256": "a66b1ea5f28885fba519be4a6100645c80e32c6314f0702d35cb7b4c662a385e"
-  },
-  {
-    "name": "document-generate",
-    "description": "Generate missing documentation from scratch for a feature, module, or entire project. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/document-generate/SKILL.md",
-    "content_sha256": "2d59aa477b41ff1b6d9b4492c7e14a76fbccee47f55787e8a30832a431f74d10"
-  },
-  {
-    "name": "document-release",
-    "description": "Post-ship documentation update. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/document-release/SKILL.md",
-    "content_sha256": "15647b42a3c90ea86f5c17436c53e3f8c83a06e94114acc89d31303c02ad25d2"
-  },
-  {
-    "name": "freeze",
-    "description": "Restrict file edits to a specific directory for the session. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/freeze/SKILL.md",
-    "content_sha256": "7437c5c3b0ba631b4cbeab4d093a3b8ece9a3df56164fbe4869654c52c87b441"
-  },
-  {
-    "name": "gstack-upgrade",
-    "description": "Upgrade gstack to the latest version.",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/gstack-upgrade/SKILL.md",
-    "content_sha256": "aa78f4af40338c0dc27f2eb6049a6eb6af23781fd88ff250d46aa3144fc2f0e4"
-  },
-  {
-    "name": "guard",
-    "description": "Full safety mode: destructive command warnings + directory-scoped edits. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/guard/SKILL.md",
-    "content_sha256": "7d5a1b360a3106ad246e4a2a3ee8d62b4d2a45979f82c4fcc95c12e8e5cb2caa"
-  },
-  {
-    "name": "health",
-    "description": "Code quality dashboard. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/health/SKILL.md",
-    "content_sha256": "adc0be77a7460d162934776c3841ad001eb89223c448bdb73aea202f5c6a4587"
-  },
-  {
-    "name": "investigate",
-    "description": "Systematic debugging with root cause investigation. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/investigate/SKILL.md",
-    "content_sha256": "4d811c633bd060ff7dff5d1e57392130c4d71a76c7ef210b89fe6a32f4fa2cb7"
-  },
-  {
-    "name": "ios-clean",
-    "description": "Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/ios-clean/SKILL.md",
-    "content_sha256": "5adda0378629e666fc6a258e29f6fe178aa2e6173d43a6acba64208896ae2eed"
-  },
-  {
-    "name": "ios-design-review",
-    "description": "Visual design audit for iOS apps on real hardware. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/ios-design-review/SKILL.md",
-    "content_sha256": "bf830007caaef38e353a15abefbeb70a938be2c27e224ae35e370591cde93e99"
-  },
-  {
-    "name": "ios-fix",
-    "description": "Autonomous iOS bug fixer. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/ios-fix/SKILL.md",
-    "content_sha256": "c3779e270bb819454a838d4d3b009d1584525839be3d5834e3c0d83506946c4d"
-  },
-  {
-    "name": "ios-qa",
-    "description": "Live-device iOS QA for SwiftUI apps. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/ios-qa/SKILL.md",
-    "content_sha256": "7c0ee43c5edd87ae9640a96c557c5a93d75b04f23a38c13c604799c65c78aab1"
-  },
-  {
-    "name": "ios-sync",
-    "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/ios-sync/SKILL.md",
-    "content_sha256": "2ee83dae7463453000b128fbd00fe46f12a45f0fcd13ed26a4ad78b350a87eb2"
-  },
-  {
-    "name": "land-and-deploy",
-    "description": "Land and deploy workflow. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/land-and-deploy/SKILL.md",
-    "content_sha256": "6b2eba66df5c8eb004ba360c91135cb1e18e9afd1075f3e880792886f394cd90"
-  },
-  {
-    "name": "landing-report",
-    "description": "Read-only queue dashboard for workspace-aware ship. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/landing-report/SKILL.md",
-    "content_sha256": "47e2a8c275c7fb86a1ee5d6ddeb12ed8cd415b0cbeb4381fa3c891927400a749"
-  },
-  {
-    "name": "learn",
-    "description": "Manage project learnings.",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/learn/SKILL.md",
-    "content_sha256": "fb5614b755f3c1f60db0f0603103ef4516e48625922fb210902e24de76644bc0"
-  },
-  {
-    "name": "make-pdf",
-    "description": "Turn any markdown file into a publication-quality PDF. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/make-pdf/SKILL.md",
-    "content_sha256": "150aeb1b48efa8a2c91c96a0026db8d38ea8e371baabb1deb4c9063971eda571"
-  },
-  {
-    "name": "office-hours",
-    "description": "YC Office Hours — two modes. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/office-hours/SKILL.md",
-    "content_sha256": "96193cb02b83afc762fa0c78414fe68baef99ca864272b19bffa7b6237759ce2"
-  },
-  {
-    "name": "open-gstack-browser",
-    "description": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in.",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/open-gstack-browser/SKILL.md",
-    "content_sha256": "cec9c18d14d14ea4c212a3a3cf978e6d08aab4a5170e800d495b42e214ee4fb6"
-  },
-  {
-    "name": "gstack-openclaw-ceo-review",
-    "description": "Use when asked to review a plan, challenge a proposal, run a CEO review, poke holes in an approach, think bigger about scope, or decide whether to expand or reduce the plan.",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/openclaw/skills/gstack-openclaw-ceo-review/SKILL.md",
-    "content_sha256": "5c4442aec4ffd0673dce28bf966a2825507cdcfaebefccc027572fe0b8b7d6b6"
-  },
-  {
-    "name": "gstack-openclaw-investigate",
-    "description": "Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users report errors, stack traces, unexpected behavior, or say something stopped working.",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/openclaw/skills/gstack-openclaw-investigate/SKILL.md",
-    "content_sha256": "ab4ef9f9482a1463cdd550333fc76be38ba5e786f901ce2888bee8452d94be20"
-  },
-  {
-    "name": "gstack-openclaw-office-hours",
-    "description": "Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think through a new product idea or design direction before any code is written.",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/openclaw/skills/gstack-openclaw-office-hours/SKILL.md",
-    "content_sha256": "a98c457ce55cc5adca6776710d47c9ff1f0a67771d6f03e5bc56e0fcfb4ad138"
-  },
-  {
-    "name": "gstack-openclaw-retro",
-    "description": "Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and growth areas. Use when asked for weekly retro, what shipped this week, or engineering retrospective.",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/openclaw/skills/gstack-openclaw-retro/SKILL.md",
-    "content_sha256": "be57f1de434235b066c9e271de4993e5bb9b519987c1bb6b45386a4f8a5c637d"
-  },
-  {
-    "name": "pair-agent",
-    "description": "Pair a remote AI agent with your browser. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/pair-agent/SKILL.md",
-    "content_sha256": "5922ac8e8747c55dd1424db4159d3fe773146ec365f59736b6d1b618605e0671"
-  },
-  {
-    "name": "plan-ceo-review",
-    "description": "CEO/founder-mode plan review. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/plan-ceo-review/SKILL.md",
-    "content_sha256": "8a2479d1f24dfb3b9542ab85995d6340a34b5fb4374290a150af91d8f4d59d71"
-  },
-  {
-    "name": "plan-design-review",
-    "description": "Designer's eye plan review — interactive, like CEO and Eng review. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/plan-design-review/SKILL.md",
-    "content_sha256": "f9edb15e69dcf0e345e7f6d05bd037a87b9bdd367d9d56f67145dac0b62c13ad"
-  },
-  {
-    "name": "plan-devex-review",
-    "description": "Interactive developer experience plan review. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/plan-devex-review/SKILL.md",
-    "content_sha256": "d57b4cd163c14eb5a14c51e71b5d4d344ba7a0440af8fa2bda3aa499622ea379"
-  },
-  {
-    "name": "plan-eng-review",
-    "description": "Eng manager-mode plan review. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/plan-eng-review/SKILL.md",
-    "content_sha256": "1faea067dbf7cf4192a1013472b21c55c6c672edf5bfafa1954fe7916645df9d"
-  },
-  {
-    "name": "plan-tune",
-    "description": "Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/plan-tune/SKILL.md",
-    "content_sha256": "cae6ae741f22fa725f6b8a2c7fbbddda7973740e21d0173fa4038e8396ce2b78"
-  },
-  {
-    "name": "qa",
-    "description": "Systematically QA test a web application and fix bugs found. (gstack)",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/gstack/qa/SKILL.md",
-    "content_sha256": "2b58c240cc7821b67e4e8f8a352fadd3a8bcf11009d142b4914288b2d25a569f"
-  },
-  {
-    "name": "qa-only",
-    "description": "Report-only QA testing. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/qa-only/SKILL.md",
-    "content_sha256": "5ce5b9e4d8e36b1be0c9d035022e0559f7d9a94d04d7559d04ed71a0902979c6"
-  },
-  {
-    "name": "retro",
-    "description": "Weekly engineering retrospective. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/retro/SKILL.md",
-    "content_sha256": "0882da5ae1bb6af7d8184b7d97cc5c449a055cb6b57a84dcb423e31cfc201977"
-  },
-  {
-    "name": "review",
-    "description": "Pre-landing PR review. (gstack)",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/gstack/review/SKILL.md",
-    "content_sha256": "197f9c93f9c9cf499bde9011669fae916e47df994f641f5b37798dcb366f5bce"
-  },
-  {
-    "name": "scrape",
-    "description": "Pull data from a web page. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/scrape/SKILL.md",
-    "content_sha256": "f36cc21d507458f7048422586c7bfb440e67e070dc2c564ea1e8d133ef626255"
-  },
-  {
-    "name": "setup-browser-cookies",
-    "description": "Import cookies from your real Chromium browser into the headless browse session. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/setup-browser-cookies/SKILL.md",
-    "content_sha256": "c2092d05ee12f19fa37e03596fa3919bd32dd35d5cf5a96376064a99229a57fb"
-  },
-  {
-    "name": "setup-deploy",
-    "description": "Configure deployment settings for /land-and-deploy.",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/setup-deploy/SKILL.md",
-    "content_sha256": "7cb841c5a55592ba225e6bc4674164375b536eef3b1cb64667ab928b586d72ad"
-  },
-  {
-    "name": "setup-gbrain",
-    "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/setup-gbrain/SKILL.md",
-    "content_sha256": "2eebd9dda8fa532692a10f19afb2b09f62cf3e3d8351dc859553701927cf3e05"
-  },
-  {
-    "name": "ship",
-    "description": "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/ship/SKILL.md",
-    "content_sha256": "745ca7c26eb3bdd0bd7bec21fef9b79985873fc8c9b50ee202ec4d753c46103b"
-  },
-  {
-    "name": "gstack",
-    "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/SKILL.md",
-    "content_sha256": "d9a353cf217e8f00a3815936b1f7855b86276e3638cd0e08ecb72c8d3c4bb9ac"
-  },
-  {
-    "name": "skillify",
-    "description": "Codify the most recent successful /scrape flow into a permanent browser-skill on disk. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/skillify/SKILL.md",
-    "content_sha256": "6d31a1e9e0f3eae661899a267fc60136ba9b6b1eaddf1b077c430a95877ab86f"
-  },
-  {
-    "name": "spec",
-    "description": "Turn vague intent into a precise, executable spec in five phases. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/spec/SKILL.md",
-    "content_sha256": "7beff83aea4ea305ec2614abd8726e4c2f2814017be74c634d49782c8ad03d84"
-  },
-  {
-    "name": "sync-gbrain",
-    "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/sync-gbrain/SKILL.md",
-    "content_sha256": "2aff5e339ebbac8c7888e28640cdcf3dad4dff4b3a4fb6faa9b6231a65f64ed1"
-  },
-  {
-    "name": "unfreeze",
-    "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)",
-    "layer": "agents",
-    "source": "garrytan/gstack",
-    "path": "~/.agents/skills/gstack/unfreeze/SKILL.md",
-    "content_sha256": "e0a396b1304d002e83880a780cf17e0704c3ada205f6f3f0d6e5e7cf5d15f340"
-  },
-  {
-    "name": "handoff",
-    "description": "Compact the current conversation into a handoff document for another agent to pick up.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/handoff/SKILL.md",
-    "content_sha256": "4292d4cf171abc00882d115b985a3945fb2b9bb67ebacd5e251bd7e5439ec106"
-  },
-  {
-    "name": "improve-codebase-architecture",
-    "description": "Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/. Use when the user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more testable and AI-navigable.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/improve-codebase-architecture/SKILL.md",
-    "content_sha256": "6d915caa3358bbb2f5e5d42f7424f65ed1aeceb2aa0480e1d009a275e3352d17"
-  },
-  {
-    "name": "markdown-to-html",
-    "description": "Convert Markdown files to HTML similar to `marked.js`, `pandoc`, `gomarkdown/markdown`, or similar tools; or writing custom script to convert markdown to html and/or working on web template systems like `jekyll/jekyll`, `gohugoio/hugo`, or similar web templating systems that utilize markdown documents, converting them to html. Use when asked to \"convert markdown to html\", \"transform md to html\", \"render markdown\", \"generate html from markdown\", or when working with .md files and/or web a templating system that converts markdown to HTML output. Supports CLI and Node.js workflows with GFM, CommonMark, and standard Markdown flavors.",
-    "layer": "agents",
-    "source": "github/awesome-copilot",
-    "path": "~/.agents/skills/markdown-to-html/SKILL.md",
-    "content_sha256": "a51376b7c8e88e009c60f20af5b9c1157d4e5c3b40dd62f43abc0e873381e0e4"
-  },
-  {
-    "name": "migrate-to-shoehorn",
-    "description": "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/migrate-to-shoehorn/SKILL.md",
-    "content_sha256": "200c11163ecd56d908ec431154e4b452cd6afeb3de91e5b54434f543f0822201"
-  },
-  {
-    "name": "obsidian-vault",
-    "description": "Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/obsidian-vault/SKILL.md",
-    "content_sha256": "cf6fe426576d108207fdcf3ef3e6c2ba5de8e78f2b9c6bfa2d7e0d69d43b15e6"
-  },
-  {
-    "name": "prototype",
-    "description": "Build a throwaway prototype to flesh out a design before committing to it. Routes between two branches — a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route. Use when the user wants to prototype, sanity-check a data model or state machine, mock up a UI, explore design options, or says \"prototype this\", \"let me play with it\", \"try a few designs\".",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/prototype/SKILL.md",
-    "content_sha256": "9923f050edb131e5604fcb6d63bd281221de121d48c500296b405ab9738c91a3"
-  },
-  {
-    "name": "qa",
-    "description": "Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the background for context and domain language. Use when user wants to report bugs, do QA, file issues conversationally, or mentions \"QA session\".",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/qa/SKILL.md",
-    "content_sha256": "199b4d8cbea7a2b69de091e221f42b7835a3d0b3215d4d1eff53f6e9fd7f3a6c"
-  },
-  {
-    "name": "receiving-code-review",
-    "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/receiving-code-review/SKILL.md",
-    "content_sha256": "c9382e92b8f32363566068ecfed19d3b2651eaf40d3942b24840f839dedfc406"
-  },
-  {
-    "name": "release-skills",
-    "description": "Universal release workflow. Auto-detects version files and changelogs. Supports Node.js, Python, Rust, Claude Plugin, GitHub Releases, annotated tags, historical release backfill, and generic projects. Use when user says \"release\", \"发布\", \"new version\", \"bump version\", \"push\", \"推送\", \"release notes\", \"GitHub Release\", or \"回填 Release\".",
-    "layer": "agents",
-    "source": "jimliu/baoyu-skills",
-    "path": "~/.agents/skills/release-skills/SKILL.md",
-    "content_sha256": "53e33eb4a717adc6f016017fd67e4b72c5b96e03ff4f1c228236cf6381256f7b"
-  },
-  {
-    "name": "request-refactor-plan",
-    "description": "Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/request-refactor-plan/SKILL.md",
-    "content_sha256": "4de61540351fee4db9b18352c53023a9c586f574e7291fafa0e88793a3f6609a"
-  },
-  {
-    "name": "requesting-code-review",
-    "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/requesting-code-review/SKILL.md",
-    "content_sha256": "5a3a44a3667800e2dc836829c6b92fada51e6dc58ac144ec05fe59f47d6bcd84"
-  },
-  {
-    "name": "review",
-    "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/PRD asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\".",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/review/SKILL.md",
-    "content_sha256": "143a9baa874edce4357233d41a828ea48edfa28ae11c9ac73a2aedf4ee005000"
-  },
-  {
-    "name": "scaffold-exercises",
-    "description": "Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/scaffold-exercises/SKILL.md",
-    "content_sha256": "de28db7a0954db55c11ba1e3cc0fd4c037bf0f5cb8313cb292e319bcce47f424"
-  },
-  {
-    "name": "setup-matt-pocock-skills",
-    "description": "Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md and `docs/agents/` so the engineering skills know this repo's issue tracker (GitHub or local markdown), triage label vocabulary, and domain doc layout. Run before first use of `to-issues`, `to-prd`, `triage`, `diagnose`, `tdd`, `improve-codebase-architecture`, or `zoom-out` — or if those skills appear to be missing context about the issue tracker, triage labels, or domain docs.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/setup-matt-pocock-skills/SKILL.md",
-    "content_sha256": "285193911e7ad513418901c4d96ce9d6591e7786f333eaccfbab3ae289e60579"
-  },
-  {
-    "name": "setup-pre-commit",
-    "description": "Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/setup-pre-commit/SKILL.md",
-    "content_sha256": "b2380f2334a7b3cc14521070a41e14d0b5fdcbc1236f872c35f8543fa3e1421b"
-  },
-  {
-    "name": "subagent-driven-development",
-    "description": "Use when executing implementation plans with independent tasks in the current session",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/subagent-driven-development/SKILL.md",
-    "content_sha256": "905a2b9be59b734dbe166525ad31dcaaf712a75926135adee1f554557aba5744"
-  },
-  {
-    "name": "systematic-debugging",
-    "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/systematic-debugging/SKILL.md",
-    "content_sha256": "4999cb851360485eca5074e727bbdd62ef20549c5d5b01216fcbf5831badb473"
-  },
-  {
-    "name": "tdd",
-    "description": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, or asks for test-first development.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/tdd/SKILL.md",
-    "content_sha256": "95f66cc273f0dff4919d4251cd6572f0029cd551167d38024b4867f6b2816eba"
-  },
-  {
-    "name": "teach",
-    "description": "Teach the user a new skill or concept, within this workspace.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/teach/SKILL.md",
-    "content_sha256": "f760d5ca9b4dbfd6fcc249d3b24b01527f14a2ed5b404e99c90ede38ea36330d"
-  },
-  {
-    "name": "test-driven-development",
-    "description": "Use when implementing any feature or bugfix, before writing implementation code",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/test-driven-development/SKILL.md",
-    "content_sha256": "7dee67b4af6bdccc7a914ca34533184d64592d0f5b23aeae631538168db14994"
-  },
-  {
-    "name": "to-issues",
-    "description": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues, create implementation tickets, or break down work into issues.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/to-issues/SKILL.md",
-    "content_sha256": "28b5742cc0d8bdc27284edd18d6f9b86107f8935487a76ee1ef7dcb9d151281f"
-  },
-  {
-    "name": "to-prd",
-    "description": "Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the current context.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/to-prd/SKILL.md",
-    "content_sha256": "59166820a40cf7ac84c76b7ac3b3a06cca11a469490ac174ae490f2cd50b739a"
-  },
-  {
-    "name": "triage",
-    "description": "Triage issues through a state machine driven by triage roles. Use when user wants to create an issue, triage issues, review incoming bugs or feature requests, prepare issues for an AFK agent, or manage issue workflow.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/triage/SKILL.md",
-    "content_sha256": "acdc9b0a40f8821ce9a6479e5781c37c30ac2e1e1e27a8377437af09472c16fe"
-  },
-  {
-    "name": "ubiquitous-language",
-    "description": "Extract a DDD-style ubiquitous language glossary from the current conversation, flagging ambiguities and proposing canonical terms. Saves to UBIQUITOUS_LANGUAGE.md. Use when user wants to define domain terms, build a glossary, harden terminology, create a ubiquitous language, or mentions \"domain model\" or \"DDD\".",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/ubiquitous-language/SKILL.md",
-    "content_sha256": "a1efafd7ec7a630ed2b0753be2ddbcf53e50573e5c20a3d43e98056da25afce2"
-  },
-  {
-    "name": "ui-ux-pro-max",
-    "description": "UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, and HTML/CSS). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, and check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, and mobile app. Elements: button, modal, navbar, sidebar, card, table, form, and chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, and flat design. Topics: color systems, accessibility, animation, layout, typography, font pairing, spacing, interaction states, shadow, and gradient. Integrations: shadcn/ui MCP for component search and examples.",
-    "layer": "agents",
-    "source": "nextlevelbuilder/ui-ux-pro-max-skill",
-    "path": "~/.agents/skills/ui-ux-pro-max/SKILL.md",
-    "content_sha256": "4d89e171a3edc39386ce5df27d4ff1446fc20c2dd41702154c93b5535d4cac31"
-  },
-  {
-    "name": "using-git-worktrees",
-    "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/using-git-worktrees/SKILL.md",
-    "content_sha256": "085a45ee3de432bdb2768011591d9a882cb6c759e2317f379226451c5618fe8e"
-  },
-  {
-    "name": "using-superpowers",
-    "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/using-superpowers/SKILL.md",
-    "content_sha256": "316e29381219adf0cac62190c67aeabf427d6e6e5f2735541d502b3d339be7aa"
-  },
-  {
-    "name": "verification-before-completion",
-    "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/verification-before-completion/SKILL.md",
-    "content_sha256": "ea52d15aabaf72bc6b558efe2c126f161b53961090ddcd712000273bfe8c7b6c"
-  },
-  {
-    "name": "write-a-skill",
-    "description": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/write-a-skill/SKILL.md",
-    "content_sha256": "eae171cbfca83dea0914ff6a2278059e2eafac11b5164f1d654511179d08241d"
-  },
-  {
-    "name": "writing-beats",
-    "description": "Shape an article as a journey of beats, choose-your-own-adventure style. The user picks a starting beat from the raw material, you write only that beat, then offer options for where to pivot next, beat by beat, until the article reaches a natural end. Use when the user has raw material and wants to assemble it as a narrative rather than an argument.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/writing-beats/SKILL.md",
-    "content_sha256": "12d9814382433baa63029c9693960b389e6c8b799c4f779320fdcde5eee5818e"
-  },
-  {
-    "name": "writing-fragments",
-    "description": "Grilling session that mines the user for fragments — heterogeneous nuggets of writing (claims, vignettes, sharp sentences, half-thoughts) — and appends them to a single document as raw material for a future article. Use when the user wants to develop ideas before imposing structure, or mentions \"fragments\", \"ideate\", or \"raw material\" for writing.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/writing-fragments/SKILL.md",
-    "content_sha256": "81b4c95de7d0a029b6d1da008d4d0142f4fed9638c3e55923bff3287e62db2e9"
-  },
-  {
-    "name": "writing-plans",
-    "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/writing-plans/SKILL.md",
-    "content_sha256": "4fd4627d2c02367879c0307d7249270bed633317ff9be82e926a6d57bf5d331b"
-  },
-  {
-    "name": "writing-shape",
-    "description": "Take a markdown file of raw material and shape it into an article through a conversational session — drafting candidate openings, growing the piece paragraph by paragraph, arguing about format (lists, tables, callouts, quotes) at each step. Use when the user has a pile of notes, fragments, or a rough draft and wants help turning it into something publishable.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/writing-shape/SKILL.md",
-    "content_sha256": "6d591a4af6f77ac5d42e79d2b6e7a13b24498b985e15065512b7644cfa41e637"
-  },
-  {
-    "name": "writing-skills",
-    "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
-    "layer": "agents",
-    "source": "obra/superpowers",
-    "path": "~/.agents/skills/writing-skills/SKILL.md",
-    "content_sha256": "38ba648975ae6ba512d6695676f146163db61a496b867f716f4bdfb0ee3aca3e"
-  },
-  {
-    "name": "zoom-out",
-    "description": "Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the bigger picture.",
-    "layer": "agents",
-    "source": "mattpocock/skills",
-    "path": "~/.agents/skills/zoom-out/SKILL.md",
-    "content_sha256": "4fc05cfa89129515f6f01f52a31bbe36f327c54b322dbd3cb2c31f46a824b002"
+    "content_sha256": "67d34422bbe43cfd523dea9fe7b3ec5260791aed8ea52309b5b85f9d76f32745"
   }
 ]

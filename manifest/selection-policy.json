@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-07-18",
+  "install_root": "~/.codex/skills",
+  "profile": {
+    "primary_domains": [
+      "Python and PyTorch research engineering",
+      "stochastic control and reinforcement learning",
+      "PAC approximation and SOS formal verification",
+      "reproducible Jupyter experiment workflows",
+      "remote GPU and solver execution",
+      "academic research and paper production"
+    ],
+    "selection_rules": [
+      "Prefer official or high-reputation upstream sources.",
+      "Do not duplicate a skill already supplied by an enabled Codex plugin.",
+      "Reject generic skills that conflict with project-specific execution rules.",
+      "Keep one strong workflow per capability unless implementations are materially different.",
+      "Install user-managed skills only under ~/.codex/skills."
+    ]
+  },
+  "added_skills": [
+    {
+      "name": "jupyter-notebook",
+      "source": "openai/skills",
+      "reason": "Official reproducible notebook templates and helpers directly match the project's thin, clean Jupyter entrypoints."
+    }
+  ],
+  "renamed_replacements": [
+    {
+      "old_name": "diagnose",
+      "new_name": "diagnosing-bugs",
+      "source": "mattpocock/skills"
+    },
+    {
+      "old_name": "review",
+      "new_name": "code-review",
+      "source": "mattpocock/skills"
+    },
+    {
+      "old_name": "to-issues",
+      "new_name": "to-tickets",
+      "source": "mattpocock/skills"
+    },
+    {
+      "old_name": "to-prd",
+      "new_name": "to-spec",
+      "source": "mattpocock/skills"
+    }
+  ],
+  "retired_skills": [
+    {
+      "name": "brainstorming",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "caveman",
+      "reason": "Removed upstream; no current skill has the same terse-response semantics."
+    },
+    {
+      "name": "design-an-interface",
+      "reason": "Upstream explicitly classifies it as deprecated."
+    },
+    {
+      "name": "diagnose",
+      "reason": "Replaced upstream by diagnosing-bugs."
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "docx",
+      "reason": "Replaced by the enabled Documents runtime plugin."
+    },
+    {
+      "name": "executing-plans",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "gh-fix-ci",
+      "reason": "Replaced by the enabled GitHub plugin skill."
+    },
+    {
+      "name": "pdf",
+      "reason": "Replaced by the enabled PDF runtime plugin."
+    },
+    {
+      "name": "pptx",
+      "reason": "Replaced by the enabled Presentations runtime plugin."
+    },
+    {
+      "name": "qa",
+      "reason": "Upstream explicitly classifies it as deprecated."
+    },
+    {
+      "name": "receiving-code-review",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "request-refactor-plan",
+      "reason": "Upstream explicitly classifies it as deprecated."
+    },
+    {
+      "name": "requesting-code-review",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "review",
+      "reason": "Replaced upstream by code-review."
+    },
+    {
+      "name": "subagent-driven-development",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "systematic-debugging",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "test-driven-development",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "to-issues",
+      "reason": "Replaced upstream by to-tickets."
+    },
+    {
+      "name": "to-prd",
+      "reason": "Replaced upstream by to-spec."
+    },
+    {
+      "name": "ubiquitous-language",
+      "reason": "Upstream explicitly classifies it as deprecated."
+    },
+    {
+      "name": "using-git-worktrees",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "using-superpowers",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "verification-before-completion",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "write-a-skill",
+      "reason": "Removed upstream and superseded by Codex's built-in skill-creator."
+    },
+    {
+      "name": "writing-plans",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "writing-skills",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "xlsx",
+      "reason": "Replaced by the enabled Spreadsheets runtime plugin."
+    },
+    {
+      "name": "zoom-out",
+      "reason": "Removed upstream; the current wayfinder skill is not semantically equivalent."
+    }
+  ],
+  "evaluated_not_added": [
+    {
+      "name": "scientific-writing",
+      "reason": "Substantially overlaps the installed academic-research-suite."
+    },
+    {
+      "name": "latex-paper-en",
+      "reason": "Useful, but the current academic suite already covers LaTeX paper planning, revision, citations, and formatting."
+    },
+    {
+      "name": "python-testing-patterns",
+      "reason": "High quality but generic; the research repository has stricter serial, remote-only, and temporary-output testing rules."
+    },
+    {
+      "name": "experiment-plan",
+      "reason": "Overlaps the academic suite experiment workflow and the repository's existing experiment specifications."
+    }
+  ]
+}

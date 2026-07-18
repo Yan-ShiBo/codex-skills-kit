@@ -1,80 +1,57 @@
 {
-  "schema_version": 1,
-  "snapshot_date": "2026-06-16",
-  "description": "Reproducible source manifest for Yan-ShiBo's Codex skills setup.",
+  "schema_version": 2,
+  "snapshot_date": "2026-07-18",
+  "install_root": "~/.codex/skills",
+  "description": "Reproducible source manifest for Yan-ShiBo's curated Codex skills setup.",
   "sources": [
     {
       "source": "Imbad0202/academic-research-skills-codex",
       "url": "https://github.com/Imbad0202/academic-research-skills-codex.git",
-      "ref": "763bccdf5d4187a779354d801b69b3cf591eea41",
+      "ref": "60b836f19705b9b42225b9f2cc3423f632c52e17",
       "items": [
         {
           "name": "academic-research-suite",
           "source_path": "skills/academic-research-suite",
           "destination": "academic-research-suite",
-          "snapshot_hash": null
+          "snapshot_hash": "aa0c7ea83aae03332a545378d4e4053548344aeb780cfc2ef6731d5feeaf7f6b"
         }
       ]
     },
     {
       "source": "anthropics/skills",
       "url": "https://github.com/anthropics/skills.git",
-      "ref": "57546260929473d4e0d1c1bb75297be2fdfa1949",
+      "ref": "fa0fa64bdc967915dc8399e803be67759e1e62b8",
       "items": [
-        {
-          "name": "docx",
-          "source_path": "skills/docx",
-          "destination": "docx",
-          "snapshot_hash": null
-        },
         {
           "name": "frontend-design",
           "source_path": "skills/frontend-design",
           "destination": "frontend-design",
-          "snapshot_hash": "928950704df8a8b885c03de5da626331e6f29cf8"
+          "snapshot_hash": "e6cfd86e419a2b8239e94ba025b0fba0c7d199c4560c678d2b72d3098153cb18"
         },
         {
           "name": "mcp-builder",
           "source_path": "skills/mcp-builder",
           "destination": "mcp-builder",
-          "snapshot_hash": null
-        },
-        {
-          "name": "pdf",
-          "source_path": "skills/pdf",
-          "destination": "pdf",
-          "snapshot_hash": null
-        },
-        {
-          "name": "pptx",
-          "source_path": "skills/pptx",
-          "destination": "pptx",
-          "snapshot_hash": null
+          "snapshot_hash": "b80076b564da93c8b54fd7309223e6ccbff640f651bf97d771b8740fc8226f48"
         },
         {
           "name": "webapp-testing",
           "source_path": "skills/webapp-testing",
           "destination": "webapp-testing",
-          "snapshot_hash": null
-        },
-        {
-          "name": "xlsx",
-          "source_path": "skills/xlsx",
-          "destination": "xlsx",
-          "snapshot_hash": null
+          "snapshot_hash": "f20d2091fe7e0b938eccbea296a6c1348dc72b1b88c676b9f9be6838baa03781"
         }
       ]
     },
     {
       "source": "davila7/claude-code-templates",
       "url": "https://github.com/davila7/claude-code-templates.git",
-      "ref": "6772ba97d5b016c87f70610429c7c44df934cfe1",
+      "ref": "e4efa5367903f06d8be0320b88a95c1224b87f7e",
       "items": [
         {
           "name": "planning-with-files",
           "source_path": "cli-tool/components/skills/productivity/planning-with-files",
           "destination": "planning-with-files",
-          "snapshot_hash": null,
+          "snapshot_hash": "19d1f889a99b3c9d41726a05261f8ff5a5473489bca7e622206354a84785a9c0",
           "single_file": "SKILL.md"
         }
       ]
@@ -82,555 +59,404 @@
     {
       "source": "garrytan/gstack",
       "url": "https://github.com/garrytan/gstack.git",
-      "ref": "c7ae63201ab193a7dc7fb7e0d81238645111ffac",
+      "ref": "a3259400a366593e0c909dd9ac3e59752efd2488",
       "items": [
         {
           "name": "gstack",
           "source_path": ".",
           "destination": "gstack",
-          "snapshot_hash": "cab774cced06e0a36b3b4b1518b8c968707f7e2f"
+          "snapshot_hash": "f24b6b70b1855a6d3dbbff3b97ee1d059ae6a865c0ce2d1f8ef1256037bb96bc"
         }
       ]
     },
     {
       "source": "github/awesome-copilot",
       "url": "https://github.com/github/awesome-copilot.git",
-      "ref": "b4b9beb69d9e8b21c0dfcfd9c86a835997b6a83b",
+      "ref": "26fe2d126bf79aafb38f43344d450b69632200f8",
       "items": [
         {
           "name": "markdown-to-html",
           "source_path": "skills/markdown-to-html",
           "destination": "markdown-to-html",
-          "snapshot_hash": "bd8cd071f08f841753283719eeaa28adbb167051"
+          "snapshot_hash": "d8f5226267c7e2940d424b8c816939249e07e60d7ee85492533b10372202d91b"
         }
       ]
     },
     {
       "source": "hyhmrright/brooks-lint",
       "url": "https://github.com/hyhmrright/brooks-lint.git",
-      "ref": "8501ba4411a9db67bcf42080b0380953b7fc90a9",
+      "ref": "141f45ebb70bfa5a67e0dc8ee33b56e40067836d",
       "items": [
         {
           "name": "_brooks-shared",
           "source_path": "skills/_shared",
           "destination": "_shared",
           "runtime_support": true,
-          "snapshot_hash": null
+          "snapshot_hash": "d187c31c381d5079764f643dce1f4c3d65ce18bad2e3a81bfde5250827af65c7"
         },
         {
           "name": "brooks-audit",
           "source_path": "skills/brooks-audit",
           "destination": "brooks-audit",
-          "snapshot_hash": null
+          "snapshot_hash": "3689cb380b8c0abdf8c0087421f30ae2764d6335512806bdd296d350eb0e4ea4"
         },
         {
           "name": "brooks-debt",
           "source_path": "skills/brooks-debt",
           "destination": "brooks-debt",
-          "snapshot_hash": null
+          "snapshot_hash": "a9014b31625f44e1f077244fe460f537d2ede20bb380e2e2549299f23588bf89"
         },
         {
           "name": "brooks-health",
           "source_path": "skills/brooks-health",
           "destination": "brooks-health",
-          "snapshot_hash": null
+          "snapshot_hash": "dad9a024d569de283efdedd4d4a80fbfa266cf902f81fa3378ce1c8163b96582"
         },
         {
           "name": "brooks-review",
           "source_path": "skills/brooks-review",
           "destination": "brooks-review",
-          "snapshot_hash": null
+          "snapshot_hash": "cc636d8209f02c64ed4e303d810abfe2caec4a9cbc02a615d4d1d7579c7d67f1"
         },
         {
           "name": "brooks-sweep",
           "source_path": "skills/brooks-sweep",
           "destination": "brooks-sweep",
-          "snapshot_hash": null
+          "snapshot_hash": "25c0872fcb11c2e8d31265bf7c899c210f9e12705816aa73f050e1d6c9ed896c"
         },
         {
           "name": "brooks-test",
           "source_path": "skills/brooks-test",
           "destination": "brooks-test",
-          "snapshot_hash": null
+          "snapshot_hash": "06697d5cfbbadc9ec53fba461e5eacc1a8c234dd80c61c36459b54cd8a87ddef"
         }
       ]
     },
     {
       "source": "jimliu/baoyu-skills",
       "url": "https://github.com/jimliu/baoyu-skills.git",
-      "ref": "441ca307a60c594e8eda0ac156609503687544c0",
+      "ref": "6b7a2e417500561a5ecdd0b168332f4142584617",
       "items": [
         {
           "name": "baoyu-article-illustrator",
           "source_path": "skills/baoyu-article-illustrator",
           "destination": "baoyu-article-illustrator",
-          "snapshot_hash": "c129e1d844873151ad0f80c2d564dd104856b514"
+          "snapshot_hash": "d7dd2dc44311cdc51b5b351301d235381f7b6945af2a9a016ce9ef59f4f5d06c"
         },
         {
           "name": "baoyu-comic",
           "source_path": "skills/baoyu-comic",
           "destination": "baoyu-comic",
-          "snapshot_hash": "6bdeddd8d84120b5674e94235f1f1cd35ce4d7e0"
+          "snapshot_hash": "16211fcaa7e7acb5015aaea7a3f7067f7fe8fd422b3ade45eaa70c3276420ffe"
         },
         {
           "name": "baoyu-compress-image",
           "source_path": "skills/baoyu-compress-image",
           "destination": "baoyu-compress-image",
-          "snapshot_hash": "20c6b0e332dd370d45859d995f1c89835270138d"
+          "snapshot_hash": "3ddbee7bc6ed07863b6a8b17adfd3a96ae3dcd003aa51683fe9e8417e7d019fa"
         },
         {
           "name": "baoyu-cover-image",
           "source_path": "skills/baoyu-cover-image",
           "destination": "baoyu-cover-image",
-          "snapshot_hash": "04399a90a493490e03098f53e118f1f55456bca9"
+          "snapshot_hash": "44186726d5a0441a9f29a8d73a9c41bd2178ad24ad21a65c3fbb69a80da75305"
         },
         {
           "name": "baoyu-danger-gemini-web",
           "source_path": "skills/baoyu-danger-gemini-web",
           "destination": "baoyu-danger-gemini-web",
-          "snapshot_hash": "ddb3aed23a15f76f6df1e33d3988eef735082c26"
+          "snapshot_hash": "00887cc57026105dc2687d92612f550126cc2e611c3242611357cd3582200b3c"
         },
         {
           "name": "baoyu-danger-x-to-markdown",
           "source_path": "skills/baoyu-danger-x-to-markdown",
           "destination": "baoyu-danger-x-to-markdown",
-          "snapshot_hash": "825a8dc9283332d52ca8798d127a4be32b3540fa"
+          "snapshot_hash": "0fe39a78bbf6002f8623c145ced08bd46a398187c5643efcb9e400c41b7adb1d"
         },
         {
           "name": "baoyu-diagram",
           "source_path": "skills/baoyu-diagram",
           "destination": "baoyu-diagram",
-          "snapshot_hash": "7c6c263e274d463c06cedc0e060a8b7c9b0fa403"
+          "snapshot_hash": "a8e1f0b9f390088221bd7862302652141925006b5bbcd0b9a2cf13c7b7772735"
         },
         {
           "name": "baoyu-electron-extract",
           "source_path": "skills/baoyu-electron-extract",
           "destination": "baoyu-electron-extract",
-          "snapshot_hash": "d821d00d9d6e12ce310fffcd6395f78af8f3b8d6"
+          "snapshot_hash": "544e08de9f8d8cd217693bc88c5efc42cd6485dd1e88e9d53a7d217ba2ed5fd6"
         },
         {
           "name": "baoyu-format-markdown",
           "source_path": "skills/baoyu-format-markdown",
           "destination": "baoyu-format-markdown",
-          "snapshot_hash": "4973ce35522c3ca6a3dd4238e73ac431fcac2207"
+          "snapshot_hash": "42f956ebae4d57fc6a55a79e12d56fec8e7831424e44e4a851feaad39a911e8b"
         },
         {
           "name": "baoyu-image-gen",
           "source_path": "skills/baoyu-image-gen",
           "destination": "baoyu-image-gen",
-          "snapshot_hash": "eef3dbd5b0a6edbed63bf3733f6add1187d499f5"
+          "snapshot_hash": "ef414f71c1a5dd46abeebad7b4be4d427277ce71047d18dc602314a7af225acd"
         },
         {
           "name": "baoyu-infographic",
           "source_path": "skills/baoyu-infographic",
           "destination": "baoyu-infographic",
-          "snapshot_hash": "3d8b4158cc11ffe9c83dc72f509e931ef5311cfb"
+          "snapshot_hash": "9c0624eaa269f4d59f13289058677cfbae6204b7ed2976c95032b912da04aabc"
         },
         {
           "name": "baoyu-markdown-to-html",
           "source_path": "skills/baoyu-markdown-to-html",
           "destination": "baoyu-markdown-to-html",
-          "snapshot_hash": "441d1137bd34e485c94aebb1c4b10d92169a7d2d"
+          "snapshot_hash": "8e49633e1f65c45680d2377b6d04f6a54fcfbfdb0255acffd2ce43ff88541ca6"
         },
         {
           "name": "baoyu-post-to-wechat",
           "source_path": "skills/baoyu-post-to-wechat",
           "destination": "baoyu-post-to-wechat",
-          "snapshot_hash": "ba92a3d48524297f21b3306feafc56552fe99696"
+          "snapshot_hash": "84746a80ee3e6bb1fe53d78fc881cff29ffcc36bf3fdf9fb4e36fe8c42409d5a"
         },
         {
           "name": "baoyu-post-to-weibo",
           "source_path": "skills/baoyu-post-to-weibo",
           "destination": "baoyu-post-to-weibo",
-          "snapshot_hash": "4ea5f4d08ada74e173da6be085b486c222faeac6"
+          "snapshot_hash": "6173873b2469aaeff28df62e1c1f88598cd296d21911714396ea0ab2e036eb82"
         },
         {
           "name": "baoyu-post-to-x",
           "source_path": "skills/baoyu-post-to-x",
           "destination": "baoyu-post-to-x",
-          "snapshot_hash": "9a4e31a30ee413804acfb8074069118a076d462c"
+          "snapshot_hash": "9dbcdec146e36de495c698fc546b9d391e28a2595430aceacfa3228acdf1cd00"
         },
         {
           "name": "baoyu-slide-deck",
           "source_path": "skills/baoyu-slide-deck",
           "destination": "baoyu-slide-deck",
-          "snapshot_hash": "fe191f9ec9c640868f33117d35e909eee3317e96"
+          "snapshot_hash": "99d6040fddac54172610dd995f3fe0d76a9b790e965409a45dde88bb4478fcd8"
         },
         {
           "name": "baoyu-translate",
           "source_path": "skills/baoyu-translate",
           "destination": "baoyu-translate",
-          "snapshot_hash": "5b3015814885fbda03ed535034a8580996af8c95"
+          "snapshot_hash": "bd2662a6aa305a6d35971a594a7b5516d295d63ecef5c3cd2e5e600834a51d51"
         },
         {
           "name": "baoyu-url-to-markdown",
           "source_path": "skills/baoyu-url-to-markdown",
           "destination": "baoyu-url-to-markdown",
-          "snapshot_hash": "33b1cda80aa387d3e48b7525daf1c74d92ca8179"
+          "snapshot_hash": "08c28d36a2d5c69f56cc9d23491b0cd05efbf2f56a64c193c6e8e47e857fedce"
         },
         {
           "name": "baoyu-wechat-summary",
           "source_path": "skills/baoyu-wechat-summary",
           "destination": "baoyu-wechat-summary",
-          "snapshot_hash": "e8fdf130357eb30775f8913575401b315f96f576"
+          "snapshot_hash": "ba5656c09a1a17aef26e33ea3ae6a5428a27388e8371b1ca1872ec7ea2058506"
         },
         {
           "name": "baoyu-xhs-images",
           "source_path": "skills/baoyu-xhs-images",
           "destination": "baoyu-xhs-images",
-          "snapshot_hash": "67176eac6d2498d9c54bc5e75c2d92f826e43915"
+          "snapshot_hash": "369abdc3181c215f6c7b9a5caa9940f473b9eee40b92b72f43272786cd6ebca5"
         },
         {
           "name": "baoyu-youtube-transcript",
           "source_path": "skills/baoyu-youtube-transcript",
           "destination": "baoyu-youtube-transcript",
-          "snapshot_hash": "223f52d803e2180720600d621ce0d395fad1983a"
+          "snapshot_hash": "a3dee5ea17594bb433c4eab2a12aa3a2aa19241dd425835f160c0c0d6a74f365"
         },
         {
           "name": "release-skills",
           "source_path": ".claude/skills/release-skills",
           "destination": "release-skills",
-          "snapshot_hash": "97438b3170eb850ba3a92de132d6866616cf338e"
+          "snapshot_hash": "c633021a481e943b58d366a49c188cba5e92cc266c66fdf723f68bf041ec657f"
         }
       ]
     },
     {
       "source": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills.git",
-      "ref": "694fa30311e02c2639942308513555e61ee84a6f",
+      "ref": "9603c1cc8118d08bc1b3bf34cf714f62178dea3b",
       "items": [
         {
-          "name": "caveman",
-          "source_path": "skills/productivity/caveman",
-          "destination": "caveman",
-          "snapshot_hash": "17972a1bdbf5909b9dbdc435ad348f0bf45f8664"
+          "name": "code-review",
+          "source_path": "skills/engineering/code-review",
+          "destination": "code-review",
+          "snapshot_hash": "f7cd71d9bb846fbc1e816c0625b1ed6c8cc6b75ae4ecaaaad71a877ee0c8aebe"
         },
         {
-          "name": "design-an-interface",
-          "source_path": "skills/deprecated/design-an-interface",
-          "destination": "design-an-interface",
-          "snapshot_hash": "59d5eca0fd23930d3d3821aa9da507f1bdb8a348"
-        },
-        {
-          "name": "diagnose",
-          "source_path": "skills/engineering/diagnose",
-          "destination": "diagnose",
-          "snapshot_hash": "43d464d0e9d1049b9d525975c0f7367ab7e01a5f"
+          "name": "diagnosing-bugs",
+          "source_path": "skills/engineering/diagnosing-bugs",
+          "destination": "diagnosing-bugs",
+          "snapshot_hash": "6495366141dc9c48717b0b471bf937c28e84725a34fbff6954fe76ede3282a0c"
         },
         {
           "name": "edit-article",
           "source_path": "skills/personal/edit-article",
           "destination": "edit-article",
-          "snapshot_hash": "d86427caec7ecdccd963eb5dabc300e2c2e243a4"
+          "snapshot_hash": "12602cf2e116ede3fd04264488a9e474ac00c6a065f5265bbb7d292157d94076"
         },
         {
           "name": "git-guardrails-claude-code",
           "source_path": "skills/misc/git-guardrails-claude-code",
           "destination": "git-guardrails-claude-code",
-          "snapshot_hash": "f02ae7c2de75270e93a200e11a7e466ece897353"
+          "snapshot_hash": "9ec0c5fd0d2550ef0b7ade9951ea01aade6978c0a03de5b6c17bf6825e944b92"
         },
         {
           "name": "grill-me",
           "source_path": "skills/productivity/grill-me",
           "destination": "grill-me",
-          "snapshot_hash": "2a1ad17028306ebe45f0e49703fa28b9b2e7f499"
+          "snapshot_hash": "f4c170299e933df0a4319a9dab04b2d53dde3fb52b0949a91f5b992b39c2c33a"
         },
         {
           "name": "grill-with-docs",
           "source_path": "skills/engineering/grill-with-docs",
           "destination": "grill-with-docs",
-          "snapshot_hash": "2c3a4e48571bfe42203ed7b49cae85f31ef4b6f2"
+          "snapshot_hash": "4ed0119f67f3662f81184eba3f73da069f4c276fe3fb3fc6a181291cba5e8881"
         },
         {
           "name": "handoff",
           "source_path": "skills/productivity/handoff",
           "destination": "handoff",
-          "snapshot_hash": "7bbb60d64c911617cee7f71b2ba9e24364faa14e"
+          "snapshot_hash": "e74ae9460e244e0007f3bf53ce2fafeb2f5ee4fbd52281aedc5e6e295a3cdcc9"
         },
         {
           "name": "improve-codebase-architecture",
           "source_path": "skills/engineering/improve-codebase-architecture",
           "destination": "improve-codebase-architecture",
-          "snapshot_hash": "688c17ec27fe9309d84987716aca37b5ce7f3a88"
+          "snapshot_hash": "65071b08a01f90495e84640fe89cefaafac9f9c6e6ac479d7894bf0ef9ac328e"
         },
         {
           "name": "migrate-to-shoehorn",
           "source_path": "skills/misc/migrate-to-shoehorn",
           "destination": "migrate-to-shoehorn",
-          "snapshot_hash": "ad722b79beb1c1fb998678d498ba11760d53714b"
+          "snapshot_hash": "a1818bdc87af34ec77e223fca338e8119de65f52e72e20f1e5200991f1ddcfeb"
         },
         {
           "name": "obsidian-vault",
           "source_path": "skills/personal/obsidian-vault",
           "destination": "obsidian-vault",
-          "snapshot_hash": "1e814d168a215762391895aee58f4de06c8e3b7f"
+          "snapshot_hash": "b169b1abea1edc2c78c6d07e6de20d67a305747ae43b1f1bdb6ba5963c25d25c"
         },
         {
           "name": "prototype",
           "source_path": "skills/engineering/prototype",
           "destination": "prototype",
-          "snapshot_hash": "c91bdc5d02d42ed88a3082a8fa83338895b55bd4"
-        },
-        {
-          "name": "qa",
-          "source_path": "skills/deprecated/qa",
-          "destination": "qa",
-          "snapshot_hash": "3eed5beeb18e77776349782ed087ee4560fd69c5"
-        },
-        {
-          "name": "request-refactor-plan",
-          "source_path": "skills/deprecated/request-refactor-plan",
-          "destination": "request-refactor-plan",
-          "snapshot_hash": "b0617c9cf69ac1e73a6b30f78c82ff81372079fd"
-        },
-        {
-          "name": "review",
-          "source_path": "skills/in-progress/review",
-          "destination": "review",
-          "snapshot_hash": "756c8dd5c0f097682b45ff10d64ca23087b19159"
+          "snapshot_hash": "a43ab951f2423356e324690892ff6ef8fa0d8db2a7f2330cb0cae413a7c232cc"
         },
         {
           "name": "scaffold-exercises",
           "source_path": "skills/misc/scaffold-exercises",
           "destination": "scaffold-exercises",
-          "snapshot_hash": "ef19ca90ec6645b23dc7e68601552ab795e3e6ee"
+          "snapshot_hash": "059d2b8b4f26cd56b9075125ec3e2f77bfb023538147aee1ed5215a958b119ce"
         },
         {
           "name": "setup-matt-pocock-skills",
           "source_path": "skills/engineering/setup-matt-pocock-skills",
           "destination": "setup-matt-pocock-skills",
-          "snapshot_hash": "77638955bebe492948244f1338e54ca1a9445c29"
+          "snapshot_hash": "e11670e4bdb55397da1aceb1e13cc4bc0e20eeb017797d4e72de7b908a9605e2"
         },
         {
           "name": "setup-pre-commit",
           "source_path": "skills/misc/setup-pre-commit",
           "destination": "setup-pre-commit",
-          "snapshot_hash": "5e6e9301b4826bd820401ea4114a797adb169f47"
+          "snapshot_hash": "f7921f6bac652a5fc0b544f5552a2d2ec14b1c656d6944930e1eb06c1719ce56"
         },
         {
           "name": "tdd",
           "source_path": "skills/engineering/tdd",
           "destination": "tdd",
-          "snapshot_hash": "75beb3030b4c979205dd771ff85ac600baeb68f4"
+          "snapshot_hash": "970355d8194316c68dcdf772d2e79f228c43b79ce392b7ee23b8e0cd98cd8b45"
         },
         {
           "name": "teach",
           "source_path": "skills/productivity/teach",
           "destination": "teach",
-          "snapshot_hash": "fdc61615b4d56a04d88a69a135337f0cad9df235"
+          "snapshot_hash": "0d42b408345de19fb7df95add7db7b6a6b40ae05c1f664deeb5c4ae2e36d40d6"
         },
         {
-          "name": "to-issues",
-          "source_path": "skills/engineering/to-issues",
-          "destination": "to-issues",
-          "snapshot_hash": "b38c5aa6ae5d6903e60d3f74a7aafd32d02f2c06"
+          "name": "to-spec",
+          "source_path": "skills/engineering/to-spec",
+          "destination": "to-spec",
+          "snapshot_hash": "bdf3c677a1ca7b23e446d322785085772380094fbadeebdb36b9df33bccf5a8b"
         },
         {
-          "name": "to-prd",
-          "source_path": "skills/engineering/to-prd",
-          "destination": "to-prd",
-          "snapshot_hash": "fb4503f54bc618da08df2fd74109fbe57e4d8150"
+          "name": "to-tickets",
+          "source_path": "skills/engineering/to-tickets",
+          "destination": "to-tickets",
+          "snapshot_hash": "b703cecfe0a4091e473a7233c39518cb948a07c33d7db03d42ad680d3739a55a"
         },
         {
           "name": "triage",
           "source_path": "skills/engineering/triage",
           "destination": "triage",
-          "snapshot_hash": "de4f182c30876a2460ca307e2f601b9b892527e5"
-        },
-        {
-          "name": "ubiquitous-language",
-          "source_path": "skills/deprecated/ubiquitous-language",
-          "destination": "ubiquitous-language",
-          "snapshot_hash": "483fe10b01bed81b7eba7ee26df3f1bef9540c88"
-        },
-        {
-          "name": "write-a-skill",
-          "source_path": "skills/productivity/write-a-skill",
-          "destination": "write-a-skill",
-          "snapshot_hash": "2f252b35aa238879afc5a230ac30343708dee0b3"
+          "snapshot_hash": "e59c5afeba0e1cb32763f2458afc4fc6f99d6d1805fc19d77afb2d614a59efdc"
         },
         {
           "name": "writing-beats",
           "source_path": "skills/in-progress/writing-beats",
           "destination": "writing-beats",
-          "snapshot_hash": "5e947c333ec8502246992f3e7ad340545796ac67"
+          "snapshot_hash": "165dba1122898aa8f9f705d72dfffebc77a3ff0ebf61d382330e618dbd0aba77"
         },
         {
           "name": "writing-fragments",
           "source_path": "skills/in-progress/writing-fragments",
           "destination": "writing-fragments",
-          "snapshot_hash": "d12fe507a3226039cfb74894ff67411051aef974"
+          "snapshot_hash": "bf317e48153390788f923e0cbc5f46deff3cf3a0cc10a216f5b6f70e2ca28f38"
         },
         {
           "name": "writing-shape",
           "source_path": "skills/in-progress/writing-shape",
           "destination": "writing-shape",
-          "snapshot_hash": "3da82ab342a9fef004368cd48a9aa80ac1dd7b29"
-        },
-        {
-          "name": "zoom-out",
-          "source_path": "skills/engineering/zoom-out",
-          "destination": "zoom-out",
-          "snapshot_hash": "6ecebabdea814d12888f56a611da7bf182b5fb26"
+          "snapshot_hash": "911f869999aad50361ad612431632066ed1a39b5513e029dd95d7edeac7def19"
         }
       ]
     },
     {
       "source": "nextlevelbuilder/ui-ux-pro-max-skill",
       "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
-      "ref": "b7e3af80f6e331f6fb456667b82b12cade7c9d35",
+      "ref": "f8ac5e1266dba8354ea96e19994d9f4345e7ec31",
       "items": [
         {
           "name": "ui-ux-pro-max",
           "source_path": ".claude/skills/ui-ux-pro-max",
           "destination": "ui-ux-pro-max",
-          "snapshot_hash": "75e1acaafe8b08e59d4b86fc253ac7873aff6bba"
-        }
-      ]
-    },
-    {
-      "source": "obra/superpowers",
-      "url": "https://github.com/obra/superpowers.git",
-      "ref": "6fd4507659784c351abbd2bc264c7162cfd386dc",
-      "items": [
-        {
-          "name": "brainstorming",
-          "source_path": "skills/brainstorming",
-          "destination": "brainstorming",
-          "snapshot_hash": "f260c775073816860fef8a37c032ac77e2ff5821"
-        },
-        {
-          "name": "dispatching-parallel-agents",
-          "source_path": "skills/dispatching-parallel-agents",
-          "destination": "dispatching-parallel-agents",
-          "snapshot_hash": "ebd0490e6b0bccfdb9f9c0cc9dd6a066036c8d89"
-        },
-        {
-          "name": "executing-plans",
-          "source_path": "skills/executing-plans",
-          "destination": "executing-plans",
-          "snapshot_hash": "7c20d2bd7ff7b166ea3064e21b1e5f0455750878"
-        },
-        {
-          "name": "finishing-a-development-branch",
-          "source_path": "skills/finishing-a-development-branch",
-          "destination": "finishing-a-development-branch",
-          "snapshot_hash": "782e09faa5dcf7e9a7a173bd14b5622e35b80169"
-        },
-        {
-          "name": "receiving-code-review",
-          "source_path": "skills/receiving-code-review",
-          "destination": "receiving-code-review",
-          "snapshot_hash": "7750c56fddb8b2f1cbdb1550a6e3e40d2eeac5f1"
-        },
-        {
-          "name": "requesting-code-review",
-          "source_path": "skills/requesting-code-review",
-          "destination": "requesting-code-review",
-          "snapshot_hash": "ff419ec159bdf5ff2f2d83c7e544c586bcde69bb"
-        },
-        {
-          "name": "subagent-driven-development",
-          "source_path": "skills/subagent-driven-development",
-          "destination": "subagent-driven-development",
-          "snapshot_hash": "73b43347c1bdc10f6ab81a5cdb036dd1c8098cc0"
-        },
-        {
-          "name": "systematic-debugging",
-          "source_path": "skills/systematic-debugging",
-          "destination": "systematic-debugging",
-          "snapshot_hash": "e96f5f2620c17069d668be1880d5492e34c84ceb"
-        },
-        {
-          "name": "test-driven-development",
-          "source_path": "skills/test-driven-development",
-          "destination": "test-driven-development",
-          "snapshot_hash": "98904a7d8e0e04b9bd46220b9b17298f45fe0b72"
-        },
-        {
-          "name": "using-git-worktrees",
-          "source_path": "skills/using-git-worktrees",
-          "destination": "using-git-worktrees",
-          "snapshot_hash": "13a9643fb9e4b236173f7d4b56b15dac10394f1b"
-        },
-        {
-          "name": "using-superpowers",
-          "source_path": "skills/using-superpowers",
-          "destination": "using-superpowers",
-          "snapshot_hash": "225dd70596c396940ff158335a954a64d93ece40"
-        },
-        {
-          "name": "verification-before-completion",
-          "source_path": "skills/verification-before-completion",
-          "destination": "verification-before-completion",
-          "snapshot_hash": "ceb2f1f67f4cadb29b32a06e54d3d0be832071f5"
-        },
-        {
-          "name": "writing-plans",
-          "source_path": "skills/writing-plans",
-          "destination": "writing-plans",
-          "snapshot_hash": "8fe8e8b6ee9e5cbe53cb172a36f0dc31f9875847"
-        },
-        {
-          "name": "writing-skills",
-          "source_path": "skills/writing-skills",
-          "destination": "writing-skills",
-          "snapshot_hash": "80e8c7d3be99d55d5d76c9516cc45a1e7f48f281"
+          "snapshot_hash": "e8acd0ed35400e27be3adcef6b8b0e6e9287787886ecbf57be1f086c96cb9820"
         }
       ]
     },
     {
       "source": "openai/skills",
       "url": "https://github.com/openai/skills.git",
-      "ref": "a8924c2a35cfa290458852c4fad17c9133054c2e",
+      "ref": "49f948faa9258a0c61caceaf225e179651397431",
       "items": [
         {
-          "name": "gh-fix-ci",
-          "source_path": "skills/.curated/gh-fix-ci",
-          "destination": "gh-fix-ci",
-          "snapshot_hash": null
+          "name": "hatch-pet",
+          "source_path": "skills/.curated/hatch-pet",
+          "destination": "hatch-pet",
+          "snapshot_hash": "0b4005e526f4396f129f791cbb131825f1bc46f3dbd141564db2264acdb6bf24"
+        },
+        {
+          "name": "jupyter-notebook",
+          "source_path": "skills/.curated/jupyter-notebook",
+          "destination": "jupyter-notebook",
+          "snapshot_hash": "a52c46980aed9f93cce1c4caaf33dee0325a7809ac256715d237000382d144ce"
         }
       ]
     },
     {
       "source": "vercel-labs/skills",
       "url": "https://github.com/vercel-labs/skills.git",
-      "ref": "be0dd25b4a8665894a56f45ef582cc02ca802c39",
+      "ref": "777599e1159e401b11ce4c8a57c20f09a8f1596e",
       "items": [
         {
           "name": "find-skills",
           "source_path": "skills/find-skills",
           "destination": "find-skills",
-          "snapshot_hash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d"
+          "snapshot_hash": "aeacfcbfeb7855c5b15790e996fb6b62dc72d4c920947f6b46764e25eb6bd855"
         }
       ]
     }
   ],
   "plugins": [
-    {
-      "selector": "github@openai-curated"
-    },
-    {
-      "selector": "documents@openai-primary-runtime"
-    },
-    {
-      "selector": "spreadsheets@openai-primary-runtime"
-    },
-    {
-      "selector": "presentations@openai-primary-runtime"
-    },
-    {
-      "selector": "hyperframes@openai-curated"
-    },
-    {
-      "selector": "computer-use@openai-bundled"
-    },
-    {
-      "selector": "superpowers@openai-curated"
-    },
-    {
-      "selector": "figma@openai-curated"
-    },
     {
       "selector": "biorender@openai-curated"
     },
@@ -638,21 +464,204 @@
       "selector": "canva@openai-curated"
     },
     {
-      "selector": "nvidia@openai-curated"
-    },
-    {
       "selector": "chrome@openai-bundled"
     },
     {
-      "selector": "browser@openai-bundled"
+      "selector": "computer-use@openai-bundled"
     },
     {
-      "selector": "google-drive@openai-curated-remote"
+      "selector": "documents@openai-primary-runtime"
+    },
+    {
+      "selector": "figma@openai-curated"
+    },
+    {
+      "selector": "github@openai-curated"
+    },
+    {
+      "selector": "hyperframes@openai-curated"
+    },
+    {
+      "selector": "nvidia@openai-curated"
+    },
+    {
+      "selector": "pdf@openai-primary-runtime"
+    },
+    {
+      "selector": "presentations@openai-primary-runtime"
+    },
+    {
+      "selector": "sites@openai-bundled"
+    },
+    {
+      "selector": "spreadsheets@openai-primary-runtime"
+    },
+    {
+      "selector": "superpowers@openai-curated"
+    },
+    {
+      "selector": "template-creator@openai-primary-runtime"
+    },
+    {
+      "selector": "visualize@openai-bundled"
+    }
+  ],
+  "retired_skills": [
+    {
+      "name": "brainstorming",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "caveman",
+      "scope": "top_level_destination",
+      "reason": "Removed upstream; no current skill has the same terse-response semantics."
+    },
+    {
+      "name": "design-an-interface",
+      "scope": "top_level_destination",
+      "reason": "Upstream explicitly classifies it as deprecated."
+    },
+    {
+      "name": "diagnose",
+      "scope": "top_level_destination",
+      "reason": "Replaced upstream by diagnosing-bugs."
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "docx",
+      "scope": "top_level_destination",
+      "reason": "Replaced by the enabled Documents runtime plugin."
+    },
+    {
+      "name": "executing-plans",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "gh-fix-ci",
+      "scope": "top_level_destination",
+      "reason": "Replaced by the enabled GitHub plugin skill."
+    },
+    {
+      "name": "pdf",
+      "scope": "top_level_destination",
+      "reason": "Replaced by the enabled PDF runtime plugin."
+    },
+    {
+      "name": "pptx",
+      "scope": "top_level_destination",
+      "reason": "Replaced by the enabled Presentations runtime plugin."
+    },
+    {
+      "name": "qa",
+      "scope": "top_level_destination",
+      "reason": "Upstream explicitly classifies it as deprecated."
+    },
+    {
+      "name": "receiving-code-review",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "request-refactor-plan",
+      "scope": "top_level_destination",
+      "reason": "Upstream explicitly classifies it as deprecated."
+    },
+    {
+      "name": "requesting-code-review",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "review",
+      "scope": "top_level_destination",
+      "reason": "Replaced upstream by code-review."
+    },
+    {
+      "name": "subagent-driven-development",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "systematic-debugging",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "test-driven-development",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "to-issues",
+      "scope": "top_level_destination",
+      "reason": "Replaced upstream by to-tickets."
+    },
+    {
+      "name": "to-prd",
+      "scope": "top_level_destination",
+      "reason": "Replaced upstream by to-spec."
+    },
+    {
+      "name": "ubiquitous-language",
+      "scope": "top_level_destination",
+      "reason": "Upstream explicitly classifies it as deprecated."
+    },
+    {
+      "name": "using-git-worktrees",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "using-superpowers",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "verification-before-completion",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "write-a-skill",
+      "scope": "top_level_destination",
+      "reason": "Removed upstream and superseded by Codex's built-in skill-creator."
+    },
+    {
+      "name": "writing-plans",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "writing-skills",
+      "scope": "top_level_destination",
+      "reason": "Provided byte-for-byte by the enabled Superpowers plugin."
+    },
+    {
+      "name": "xlsx",
+      "scope": "top_level_destination",
+      "reason": "Replaced by the enabled Spreadsheets runtime plugin."
+    },
+    {
+      "name": "zoom-out",
+      "scope": "top_level_destination",
+      "reason": "Removed upstream; the current wayfinder skill is not semantically equivalent."
     }
   ],
   "notes": [
-    "Codex system skills are bundled with Codex and are not downloaded.",
-    "Third-party skill source code is downloaded from its original repository.",
-    "Plugin installation is best-effort because connectors may require login."
+    "User-managed skills install only to ~/.codex/skills.",
+    "Codex system and plugin skills remain in Codex-managed locations.",
+    "Third-party source code is downloaded from its original repository.",
+    "Replacement backups are stored under ~/.codex/skill-backups, outside the active skills directory."
   ]
 }

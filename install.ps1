@@ -1,6 +1,7 @@
 param(
     [switch]$Latest,
     [switch]$Force,
+    [switch]$PruneRetired,
     [switch]$SkipPlugins,
     [string]$CodexHome
 )
@@ -33,6 +34,7 @@ function Copy-SkillDirectory {
     param(
         [Parameter(Mandatory = $true)][string]$Source,
         [Parameter(Mandatory = $true)][string]$Destination,
+        [Parameter(Mandatory = $true)][string]$BackupRoot,
         [switch]$Replace
     )
 
@@ -40,8 +42,13 @@ function Copy-SkillDirectory {
         if (-not $Replace) {
             return "skipped"
         }
-        $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
-        $backup = "$Destination.backup-$timestamp"
+        New-Item -ItemType Directory -Path $BackupRoot -Force | Out-Null
+        $backup = Join-Path $BackupRoot (Split-Path -Leaf $Destination)
+        $suffix = 1
+        while (Test-Path -LiteralPath $backup) {
+            $backup = Join-Path $BackupRoot ((Split-Path -Leaf $Destination) + "-$suffix")
+            $suffix++
+        }
         Move-Item -LiteralPath $Destination -Destination $backup
     }
     Copy-Item -LiteralPath $Source -Destination $Destination -Recurse
@@ -58,6 +65,8 @@ if ([string]::IsNullOrWhiteSpace($CodexHome)) {
 
 $CodexHome = [System.IO.Path]::GetFullPath($CodexHome)
 $SkillsRoot = Join-Path $CodexHome "skills"
+$RunStamp = Get-Date -Format "yyyyMMdd-HHmmss"
+$BackupRoot = Join-Path $CodexHome "skill-backups\$RunStamp"
 New-Item -ItemType Directory -Path $SkillsRoot -Force | Out-Null
 
 $localManifest = if ($PSScriptRoot) {
@@ -76,6 +85,27 @@ try {
         $manifestPath = Join-Path $tempRoot "install-manifest.json"
         Get-WithRetry "$RawBase/manifest/install-manifest.json" $manifestPath
         $manifest = Get-Content -Raw -LiteralPath $manifestPath | ConvertFrom-Json
+    }
+
+    if ($PruneRetired) {
+        $retiredCount = 0
+        $retiredBackup = Join-Path $BackupRoot "retired"
+        Write-Host "Retiring superseded skills"
+        foreach ($item in $manifest.retired_skills) {
+            $destination = Join-Path $SkillsRoot $item.name
+            if (-not (Test-Path -LiteralPath $destination)) {
+                continue
+            }
+            New-Item -ItemType Directory -Path $retiredBackup -Force | Out-Null
+            $backup = Join-Path $retiredBackup $item.name
+            if (Test-Path -LiteralPath $backup) {
+                throw "Backup collision: $backup"
+            }
+            Move-Item -LiteralPath $destination -Destination $backup
+            Write-Host "  RETIRED   $($item.name): $($item.reason)"
+            $retiredCount++
+        }
+        Write-Host "Retired skills moved: $retiredCount"
     }
 
     $installed = 0
@@ -117,7 +147,7 @@ try {
                     $relative = "$($item.source_path.TrimEnd('/'))/$($item.single_file)"
                     Get-WithRetry "https://raw.githubusercontent.com/$($package.source)/$ref/$relative" (Join-Path $sourcePath $item.single_file)
                     $destination = Join-Path $SkillsRoot $item.destination
-                    $result = Copy-SkillDirectory -Source $sourcePath -Destination $destination -Replace:$Force
+                    $result = Copy-SkillDirectory -Source $sourcePath -Destination $destination -BackupRoot (Join-Path $BackupRoot "replaced") -Replace:$Force
                     Write-Host ("  {0,-9} {1} -> {2}" -f $result.ToUpperInvariant(), $item.name, $destination)
                     if ($result -eq "installed") { $installed++ } else { $skipped++ }
                 }
@@ -144,7 +174,7 @@ try {
                     $failed++
                     continue
                 }
-                $result = Copy-SkillDirectory -Source $sourcePath -Destination $destination -Replace:$Force
+                $result = Copy-SkillDirectory -Source $sourcePath -Destination $destination -BackupRoot (Join-Path $BackupRoot "replaced") -Replace:$Force
                 Write-Host ("  {0,-9} {1} -> {2}" -f $result.ToUpperInvariant(), $item.name, $destination)
                 if ($result -eq "installed") { $installed++ } else { $skipped++ }
             }
@@ -181,11 +211,15 @@ try {
             }
             Write-Host "`nRestoring Codex plugins (best effort)"
             foreach ($plugin in $manifest.plugins) {
-                & $codexPath plugin add $plugin.selector --json
-                if ($LASTEXITCODE -eq 0) {
-                    Write-Host "  INSTALLED $($plugin.selector)"
-                } else {
-                    Write-Warning "Plugin restore failed: $($plugin.selector)"
+                try {
+                    & $codexPath plugin add $plugin.selector --json
+                    if ($LASTEXITCODE -eq 0) {
+                        Write-Host "  INSTALLED $($plugin.selector)"
+                    } else {
+                        Write-Warning "Plugin restore failed: $($plugin.selector)"
+                    }
+                } catch {
+                    Write-Warning "Plugin restore failed: $($plugin.selector): $($_.Exception.Message)"
                 }
             }
         } else {

@@ -46,19 +46,61 @@ def load_manifest(script_root: Path) -> dict:
         return json.loads(path.read_text(encoding="utf-8"))
 
 
-def safe_replace(source: Path, destination: Path, force: bool) -> str:
+def next_backup_path(backup_root: Path, name: str) -> Path:
+    candidate = backup_root / name
+    suffix = 1
+    while candidate.exists():
+        candidate = backup_root / f"{name}-{suffix}"
+        suffix += 1
+    return candidate
+
+
+def safe_replace(
+    source: Path,
+    destination: Path,
+    force: bool,
+    backup_root: Path,
+) -> str:
     if destination.exists():
         if not force:
             return "skipped"
-        timestamp = time.strftime("%Y%m%d-%H%M%S")
-        backup = destination.with_name(f"{destination.name}.backup-{timestamp}")
-        destination.rename(backup)
+        backup_root.mkdir(parents=True, exist_ok=True)
+        destination.rename(next_backup_path(backup_root, destination.name))
     destination.parent.mkdir(parents=True, exist_ok=True)
     shutil.copytree(source, destination)
     return "installed"
 
 
-def install_sources(manifest: dict, codex_home: Path, latest: bool, force: bool) -> None:
+def safe_extract(bundle: zipfile.ZipFile, destination: Path) -> None:
+    root = destination.resolve()
+    for member in bundle.infolist():
+        target = (destination / member.filename).resolve()
+        if target != root and root not in target.parents:
+            raise RuntimeError(f"Unsafe archive path: {member.filename}")
+    bundle.extractall(destination)
+
+
+def prune_retired(manifest: dict, codex_home: Path, backup_root: Path) -> int:
+    skills_root = codex_home / "skills"
+    moved = 0
+    for item in manifest.get("retired_skills", []):
+        destination = skills_root / item["name"]
+        if not destination.exists():
+            continue
+        backup_root.mkdir(parents=True, exist_ok=True)
+        destination.rename(next_backup_path(backup_root, destination.name))
+        print(f"  RETIRED   {item['name']}: {item['reason']}")
+        moved += 1
+    return moved
+
+
+def install_sources(
+    manifest: dict,
+    codex_home: Path,
+    latest: bool,
+    force: bool,
+    backup_root: Path,
+) -> None:
     skills_root = codex_home / "skills"
     skills_root.mkdir(parents=True, exist_ok=True)
     installed = skipped = failed = 0
@@ -93,7 +135,9 @@ def install_sources(manifest: dict, codex_home: Path, latest: bool, force: bool)
                             source_path / item["single_file"],
                         )
                         destination = skills_root / item["destination"]
-                        result = safe_replace(source_path, destination, force)
+                        result = safe_replace(
+                            source_path, destination, force, backup_root
+                        )
                         print(
                             f"  {result.upper():9} {item['name']} -> {destination}"
                         )
@@ -107,7 +151,7 @@ def install_sources(manifest: dict, codex_home: Path, latest: bool, force: bool)
                     f"https://codeload.github.com/{owner}/{repo}/zip/{ref}", archive
                 )
                 with zipfile.ZipFile(archive) as bundle:
-                    bundle.extractall(temp_path / "expanded")
+                    safe_extract(bundle, temp_path / "expanded")
                 roots = [
                     path for path in (temp_path / "expanded").iterdir() if path.is_dir()
                 ]
@@ -121,7 +165,9 @@ def install_sources(manifest: dict, codex_home: Path, latest: bool, force: bool)
                         print(f"  FAILED {item['name']}: missing {item['source_path']}")
                         failed += 1
                         continue
-                    result = safe_replace(source_path, destination, force)
+                    result = safe_replace(
+                        source_path, destination, force, backup_root
+                    )
                     print(f"  {result.upper():9} {item['name']} -> {destination}")
                     if result == "installed":
                         installed += 1
@@ -157,12 +203,17 @@ def install_plugins(manifest: dict) -> None:
     failures = []
     for item in manifest.get("plugins", []):
         selector = item["selector"]
-        result = subprocess.run(
-            [codex, "plugin", "add", selector, "--json"],
-            text=True,
-            capture_output=True,
-            check=False,
-        )
+        try:
+            result = subprocess.run(
+                [codex, "plugin", "add", selector, "--json"],
+                text=True,
+                capture_output=True,
+                check=False,
+            )
+        except OSError as error:
+            failures.append(selector)
+            print(f"  WARNING   {selector}: {error}")
+            continue
         if result.returncode == 0:
             print(f"  INSTALLED {selector}")
         else:
@@ -172,7 +223,7 @@ def install_plugins(manifest: dict) -> None:
             print(f"  WARNING   {selector}: {suffix}")
     if failures:
         print(
-            "\nSome plugins require a newer Codex build, marketplace access, or connector login:"
+            "\nSome plugins could not be restored automatically; existing configuration is unchanged:"
         )
         for selector in failures:
             print(f"  - {selector}")
@@ -183,6 +234,7 @@ def main() -> None:
     parser.add_argument("--codex-home", type=Path)
     parser.add_argument("--latest", action="store_true")
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--prune-retired", action="store_true")
     parser.add_argument("--skip-plugins", action="store_true")
     args = parser.parse_args()
 
@@ -196,7 +248,13 @@ def main() -> None:
     codex_home = codex_home.expanduser().resolve()
 
     manifest = load_manifest(Path(__file__).resolve().parent)
-    install_sources(manifest, codex_home, args.latest, args.force)
+    run_stamp = time.strftime("%Y%m%d-%H%M%S")
+    backup_root = codex_home / "skill-backups" / run_stamp
+    if args.prune_retired:
+        print("Retiring superseded skills")
+        moved = prune_retired(manifest, codex_home, backup_root / "retired")
+        print(f"Retired skills moved: {moved}")
+    install_sources(manifest, codex_home, args.latest, args.force, backup_root / "replaced")
     if not args.skip_plugins:
         install_plugins(manifest)
     print("\nRestart Codex to load the installed skills.")
