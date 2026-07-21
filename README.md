@@ -20,6 +20,28 @@
 - [Codex 插件 skills](inventory/PLUGINS.md)
 - [上游仓库与锁定 commit](inventory/REPOSITORIES.md)
 
+## 能力治理与薄路由
+
+完整清单负责回答“仓库里有什么、从哪里安装、锁定到哪个版本”；[Capability Router](inventory/CAPABILITY_ROUTER.md) 负责回答“当前任务先考虑哪 1-3 个能力、什么时候不应该调用”。两者刻意分开，避免 Agent 每次为一个简单任务扫描全部 125 个用户与系统条目以及插件缓存。
+
+薄路由按 10 类常用任务组织：直接作答、科研实验、软件工程、架构交付、办公文档、数据可视化、产品设计、浏览器桌面、GitHub 发布和 Skills 治理。每个可路由入口分别记录：
+
+- 部署状态：内置、已安装或已配置
+- 管理状态：是否进入当前薄路由
+- 健康状态：`healthy`、`unverified`、`degraded`、`broken` 或 `missing`
+- 调用策略：自动、条件触发、仅显式调用或禁用
+- 风险与授权：普通、写入、安装、登录态、发布或配置门禁
+- 触发条件、禁止条件和回退方案
+
+`manifest/capability-registry.json` 是机器事实源，Markdown 路由由脚本生成。它是**软决策层**，不会自行隐藏、禁用、安装 Skill，也不会修改 Codex 插件、Hook 或隐式调用配置。
+
+```bash
+python scripts/capability_router.py --check
+python scripts/capability_router.py --write
+```
+
+路由设计参考了 [`Table-GitHub-Capability-Router`](inventory/evaluations/TABLE_GITHUB_CAPABILITY_ROUTER.md)，但没有把该项目安装成 Skill：本仓库吸收其分层路由、生命周期和风险模型，并用现有 JSON 清单、校验器和 CI 提供机械约束。
+
 ## 一键安装
 
 ### Windows PowerShell
@@ -339,12 +361,16 @@ python3 ./scripts/reconcile.py --apply
 | [inventory/PLUGINS.md](inventory/PLUGINS.md) | 插件选择器、缓存版本和插件 skill 说明 |
 | [inventory/REPOSITORIES.md](inventory/REPOSITORIES.md) | 11 个上游仓库及锁定 commit |
 | [inventory/AUDIT.md](inventory/AUDIT.md) | 版本迁移、替代关系和维护记录 |
+| [inventory/CAPABILITY_ROUTER.md](inventory/CAPABILITY_ROUTER.md) | 自动生成的一级薄路由和可路由能力边界 |
+| [inventory/evaluations/TABLE_GITHUB_CAPABILITY_ROUTER.md](inventory/evaluations/TABLE_GITHUB_CAPABILITY_ROUTER.md) | 外部能力路由项目的证据、架构评估和采纳结论 |
 | [manifest/install-manifest.json](manifest/install-manifest.json) | 安装器读取的机器清单、哈希和插件选择器 |
+| [manifest/capability-registry.json](manifest/capability-registry.json) | 路由、健康、风险、授权和回退的机器事实源 |
 | [manifest/selection-policy.json](manifest/selection-policy.json) | 当前能力组合的适用领域和维护规则 |
 | [inventory/skills-lock.json](inventory/skills-lock.json) | 61 个顶层安装目标的来源、路径和文件哈希 |
 | `scripts/install.py` | 跨平台安装器核心 |
 | `scripts/snapshot.py` | 从当前 Codex 环境重新生成清单 |
 | `scripts/reconcile.py` | 迁移旧目录并备份停止使用的 skills |
+| `scripts/capability_router.py` | 校验路由目标并生成薄路由 Markdown |
 | `scripts/verify.py` | 校验数量、来源、哈希、目录和跨层冲突 |
 
 ## 可复现性与安全

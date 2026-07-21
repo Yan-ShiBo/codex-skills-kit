@@ -98,3 +98,19 @@ No retired or replaced directory is permanently erased during reconciliation. Ol
 ## Installation validation
 
 The complete manifest is installed into an isolated Codex home before local reconciliation. Validation checks every source path at its pinned commit, the exact destination set, JSON invariants, Python compilation, and PowerShell syntax.
+
+## Capability governance layer
+
+Governance review date: **2026-07-21**
+
+[`duoduoler-ops/Table-GitHub-Capability-Router`](https://github.com/duoduoler-ops/Table-GitHub-Capability-Router) was reviewed at commit `1d88c2faa488db90ee7fab7aeed2f1005a21e056`. It is retained as a **B-grade reference**, not installed as a Skill. Its useful contribution is a governance vocabulary and layered routing model; it is a Markdown workflow rather than an executable manager and cannot enforce Codex visibility or invocation policy.
+
+The repository now separates three concerns:
+
+1. `install-manifest.json` and `skills-lock.json` remain the installation and provenance truth.
+2. `capability-registry.json` records the small set of capabilities eligible for the thin router, including trigger, do-not-use, health, risk, authorization, fallback, and manager-type status.
+3. `CAPABILITY_ROUTER.md` is generated for human and agent use and is rejected by CI when it drifts from the registry.
+
+The router validator resolves every user/system Skill against `inventory/skills.json` and every plugin capability against both the configured selector list and `inventory/plugins.json`. It also rejects duplicate IDs, unknown candidates, more than ten L1 categories, more than three candidates per category, broken/missing routes, and any manager-type capability that is not `explicit-only`.
+
+This layer does not alter the Codex configuration. Native Skill and plugin discovery remains controlled by Codex; installation, login, external publishing, deletion, Hook changes, and client configuration remain separately gated actions.

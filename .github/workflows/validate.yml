@@ -12,6 +12,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: python scripts/capability_router.py --check
       - run: python scripts/verify.py
-      - run: python -m py_compile scripts/install.py scripts/reconcile.py scripts/snapshot.py scripts/verify.py
+      - run: python -m unittest discover -s tests -v
+      - run: python -m py_compile scripts/capability_router.py scripts/install.py scripts/reconcile.py scripts/snapshot.py scripts/verify.py
       - run: bash -n install.sh

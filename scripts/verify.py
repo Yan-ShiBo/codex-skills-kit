@@ -6,6 +6,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from capability_router import check_rendered_file, render_markdown, validate_registry
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -20,6 +22,7 @@ def main() -> None:
     skills = load("inventory/skills.json")
     plugins = load("inventory/plugins.json")
     lock = load("inventory/skills-lock.json")
+    registry = load("manifest/capability-registry.json")
 
     assert manifest["schema_version"] == 2
     assert manifest["install_root"] == "~/.codex/skills"
@@ -110,6 +113,9 @@ def main() -> None:
     assert lock["install_root"] == manifest["install_root"]
     assert set(lock["skills"]) == skill_destinations
 
+    validate_registry(registry, skills, plugins, manifest)
+    check_rendered_file(ROOT, registry, render_markdown(registry))
+
     print(
         json.dumps(
             {
@@ -125,6 +131,8 @@ def main() -> None:
                     {item["name"] for item in plugins}
                 ),
                 "configured_plugins": len(selectors),
+                "router_categories": len(registry["categories"]),
+                "router_entries": len(registry["entries"]),
             },
             indent=2,
         )
