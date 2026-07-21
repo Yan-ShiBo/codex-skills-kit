@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "snapshot_date": "2026-07-18",
+  "snapshot_date": "2026-07-21",
   "install_root": "~/.codex/skills",
   "description": "Reproducible source manifest for Yan-ShiBo's curated Codex skills setup.",
   "sources": [

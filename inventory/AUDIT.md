@@ -1,14 +1,22 @@
 # Skills Audit
 
-Audit date: **2026-07-18**
+Audit date: **2026-07-21**
 
 ## Result
 
 - 61 top-level user-managed install targets from 11 pinned repositories
 - 119 discoverable user-managed skill entries plus 6 Codex system entries
-- 16 configured plugins and 131 cached plugin skill entries (114 unique cached names)
+- 16 configured plugins and 132 cached plugin skill entries (115 unique cached names)
 - No name overlap between user-managed skills, Codex system skills, and skills cached for enabled plugins
 - 30 retired top-level destinations, all moved out of active discovery with recoverable backups
+
+## Current local state
+
+- `~/.codex/skills` is the only active user-managed root; the legacy `~/.agents/skills` root is absent.
+- All 125 discoverable user/system entries match the repository inventory by name, path, and `SKILL.md` content hash.
+- All 62 manifest items are present: 61 user-facing top-level targets plus the `_shared` Brooks runtime-support directory.
+- A reconciliation dry run found no agents-only items, retired destinations, pending copies, or pending moves.
+- Codex-managed cache changes were recorded rather than manually altered: Chrome moved to `26.715.52143`, Computer Use to `26.715.31925`, and Figma to `2.0.16` with the new `figma-design-to-code` entry.
 
 ## Target profile
 

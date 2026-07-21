@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-07-21",
-  "source_inventory_date": "2026-07-18",
+  "source_inventory_date": "2026-07-21",
   "generated_markdown": "inventory/CAPABILITY_ROUTER.md",
   "max_categories": 10,
   "default_fallback": "baseline-direct",

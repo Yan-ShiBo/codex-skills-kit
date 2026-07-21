@@ -1,6 +1,6 @@
 # Source Repositories
 
-Snapshot date: **2026-07-18**
+Snapshot date: **2026-07-21**
 
 | Repository | Top-level install targets | Pinned commit |
 | --- | ---: | --- |

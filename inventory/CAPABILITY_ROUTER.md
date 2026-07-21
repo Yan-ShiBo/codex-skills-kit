@@ -4,7 +4,7 @@
 > This is a soft decision layer: it does not hide, disable, install, or change Codex-native invocation behavior.
 
 - Router snapshot: **2026-07-21**
-- Source inventory: **2026-07-18**
+- Source inventory: **2026-07-21**
 - Default fallback: `baseline-direct`
 
 ## Level 0: Native Visibility Boundary

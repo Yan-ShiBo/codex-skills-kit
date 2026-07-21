@@ -2,7 +2,7 @@
 
 - Active skill entries: **125**
 - Unique skill names: **125**
-- Generated: **2026-07-18**
+- Generated: **2026-07-21**
 - User-managed root: **`~/.codex/skills`**
 
 Plugin-managed skills are listed separately and are not duplicated here.

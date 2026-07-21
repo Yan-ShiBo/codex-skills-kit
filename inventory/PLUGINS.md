@@ -1,9 +1,9 @@
 # Plugin Skill Inventory
 
 - Configured plugin selectors: **16**
-- Cached plugin skill entries: **131**
-- Unique cached plugin skill names: **114**
-- Generated: **2026-07-18**
+- Cached plugin skill entries: **132**
+- Unique cached plugin skill names: **115**
+- Generated: **2026-07-21**
 
 ## Configured plugins
 
@@ -30,38 +30,38 @@ Cache entries can include old or connector-specific variants; configuration is a
 
 ### chrome
 
-`openai-bundled` / `26.715.31251` / **enabled**
+`openai-bundled` / `26.715.52143` / **plugin configured**
 
 - **control-chrome**: Control the user's Chrome browser for tasks that depend on existing Chrome state: tabs, logged-in sessions, or extensions. Prefer purpose-built connectors, APIs, or CLIs when available.
 
 ### chrome
 
-`openai-bundled` / `latest` / **enabled**
+`openai-bundled` / `latest` / **plugin configured**
 
 - **control-chrome**: Control the user's Chrome browser for tasks that depend on existing Chrome state: tabs, logged-in sessions, or extensions. Prefer purpose-built connectors, APIs, or CLIs when available.
 
 ### computer-use
 
-`openai-bundled` / `26.715.21425` / **enabled**
+`openai-bundled` / `26.715.31925` / **plugin configured**
 
 - **computer-use**: Control Windows apps from ChatGPT
 
 ### sites
 
-`openai-bundled` / `0.1.30` / **enabled**
+`openai-bundled` / `0.1.30` / **plugin configured**
 
 - **sites-building**: Use Sites to build websites, including landing pages, portfolios, dashboards, portals, trackers, hubs, and internal tools. Always use Sites when the project contains `.openai/hosting.json`.
 - **sites-hosting**: Host websites with Sites. Always use after `sites-building`, and use for website publishing, deployment, hosting management, or projects containing `.openai/hosting.json`.
 
 ### visualize
 
-`openai-bundled` / `1.0.12` / **enabled**
+`openai-bundled` / `1.0.12` / **plugin configured**
 
 - **visualize**: Create visualizations and interactive tools in conversation. Use when asked to show how something works, make simulators or labs, maps, plots, charts or graphs, comparisons, scenarios, adjustable inputs, and exploration.
 
 ### canva
 
-`openai-curated` / `d6169bef` / **enabled**
+`openai-curated` / `d6169bef` / **plugin configured**
 
 - **canva-branded-presentation**: Create on-brand Canva presentations from a brief, outline, existing Canva doc, or design link. Use when the user wants a branded slide deck, wants to turn notes into a presentation, or needs a presentation generated in Canva with the right brand kit and a clear slide plan.
 - **canva-resize-for-all-social-media**: Resize a Canva design into standard social media formats and prepare export-ready results. Use when the user wants one Canva design adapted across multiple social platforms such as Facebook, Instagram, and LinkedIn, especially when they want all variants produced in one pass.
@@ -69,7 +69,7 @@ Cache entries can include old or connector-specific variants; configuration is a
 
 ### figma
 
-`openai-curated` / `d6169bef` / **enabled**
+`openai-curated` / `d6169bef` / **plugin configured**
 
 - **figma-code-connect**: Creates and maintains Figma Code Connect template files that map Figma components to code snippets. Use when the user mentions Code Connect, Figma component mapping, design-to-code translation, or asks to create/update .figma.ts or .figma.js files.
 - **figma-create-new-file**: **MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `create_new_file` tool call. NEVER call `create_new_file` directly without loading this skill first. Trigger whenever the user wants a new blank Figma file — a new design, FigJam, or Slides file — or when you need a fresh file before calling `use_figma`. Usage — /figma-create-new-file [editorType] [fileName] (e.g. /figma-create-new-file figjam My Whiteboard, /figma-create-new-file slides Q3 Review)
@@ -85,7 +85,7 @@ Cache entries can include old or connector-specific variants; configuration is a
 
 ### github
 
-`openai-curated` / `d6169bef` / **enabled**
+`openai-curated` / `d6169bef` / **plugin configured**
 
 - **gh-address-comments**: Address actionable GitHub pull request review feedback. Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.
 - **gh-fix-ci**: Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions. Use the GitHub app from this plugin for PR metadata and patch context, and use `gh` for Actions check and log inspection before implementing any approved fix.
@@ -94,7 +94,7 @@ Cache entries can include old or connector-specific variants; configuration is a
 
 ### hyperframes
 
-`openai-curated` / `d6169bef` / **enabled**
+`openai-curated` / `d6169bef` / **plugin configured**
 
 - **gsap**: GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels, nesting, playback), and performance (transforms, will-change, quickTo). Use when writing GSAP animations in HyperFrames compositions.
 - **hyperframes**: Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML. Use when asked to build any HTML-based video content, add captions or subtitles synced to audio, generate text-to-speech narration, create audio-reactive animation (beat sync, glow, pulse driven by music), add animated text highlighting (marker sweeps, hand-drawn circles, burst lines, scribble, sketchout), or add transitions between scenes (crossfades, wipes, reveals, shader transitions). Covers composition authoring, timing, media, and the full video production workflow. For CLI commands (init, lint, preview, render, transcribe, tts) see the hyperframes-cli skill.
@@ -110,7 +110,7 @@ Cache entries can include old or connector-specific variants; configuration is a
 
 ### nvidia
 
-`openai-curated` / `d6169bef` / **enabled**
+`openai-curated` / `d6169bef` / **plugin configured**
 
 - **aiq-deploy**: Use when asked to install, deploy, run, validate, troubleshoot, or stop NVIDIA AI-Q Blueprint infrastructure.
 - **aiq-research**: Use when asked to run deep research or AI-Q research through a reachable NVIDIA AI-Q Blueprint backend.
@@ -126,7 +126,7 @@ Cache entries can include old or connector-specific variants; configuration is a
 
 ### superpowers
 
-`openai-curated` / `d6169bef` / **enabled**
+`openai-curated` / `d6169bef` / **plugin configured**
 
 - **brainstorming**: You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
 - **dispatching-parallel-agents**: Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
@@ -168,10 +168,11 @@ Cache entries can include old or connector-specific variants; configuration is a
 
 ### figma
 
-`openai-curated-remote` / `2.0.15` / **enabled**
+`openai-curated-remote` / `2.0.16` / **plugin configured**
 
 - **figma-code-connect**: Creates and maintains Figma Code Connect template files that map Figma components to code snippets. Use when the user mentions Code Connect, Figma component mapping, design-to-code translation, or asks to create/update .figma.ts or .figma.js files.
 - **figma-create-new-file**: **MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `create_new_file` tool call. NEVER call `create_new_file` directly without loading this skill first. Trigger whenever the user wants a new blank Figma file — a new design, FigJam, or Slides file — or when you need a fresh file before calling `use_figma`. Usage — /figma-create-new-file [editorType] [fileName] (e.g. /figma-create-new-file figjam My Whiteboard, /figma-create-new-file slides Q3 Review)
+- **figma-design-to-code**: **MANDATORY prerequisite** — you MUST invoke this skill BEFORE calling the `get_design_context` Figma MCP tool. You MUST trigger this skill whenever the user wants to implement, build, port, or code up a Figma design as code. Example prompts (not exhaustive) are 'implement this Figma design', 'build this screen from Figma', 'turn this Figma into code', 'design to code'. This skill provides critical instructions and steps to the agent on how to correctly implement Figma designs in code and must NOT be skipped.
 - **figma-generate-design**: Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout into Figma. Triggers: 'write to Figma', 'create in Figma from code', 'push page to Figma', 'take this app/page and build it in Figma', 'create a screen', 'build a landing page in Figma', 'update the Figma screen to match code', 'convert this modal/dialog/drawer/panel to Figma'. This is the preferred workflow skill whenever the user wants to build or update a full page, modal, dialog, drawer, sidebar, panel, or any composed multi-section view in Figma from code or a description. Discovers design system components, variables, and styles from Code Connect files, existing screens, and library search, then imports them and assembles views incrementally section-by-section using design system tokens instead of hardcoded values.
 - **figma-generate-diagram**: MANDATORY prerequisite — load this skill BEFORE every `generate_diagram` tool call. NEVER call `generate_diagram` directly without loading this skill first. Trigger whenever the user asks to create, generate, draw, render, sketch, or build a diagram — flowchart, architecture diagram, sequence diagram, ERD or entity-relationship diagram, state diagram or state machine, gantt chart, or timeline. Also trigger when the user mentions Mermaid syntax or wants a system architecture, decision tree, dependency graph, API call flow, auth handshake, schema, or pipeline visualized in FigJam. Routes to type-specific guidance, sets universal Mermaid constraints, and tells you when to use a different diagram type or skip the tool entirely (mindmaps, pie charts, class diagrams, etc.).
 - **figma-generate-library**: Build or update a professional-grade design system in Figma from a codebase. Use when the user wants to create variables/tokens, build component libraries, create individual components with proper variant sets and variable bindings, set up theming (light/dark modes), document foundations, or reconcile gaps between code and Figma. Also use when the user asks to create or generate any component in Figma — even a single one — since components require proper variable foundations, variant states, and design token bindings to be production-quality. This skill teaches WHAT to build and in WHAT ORDER — it complements the `figma-use` skill which teaches HOW to call the Plugin API. Both skills should be loaded together.
@@ -184,7 +185,7 @@ Cache entries can include old or connector-specific variants; configuration is a
 
 ### github
 
-`openai-curated-remote` / `0.1.8-2841cf9749ae` / **enabled**
+`openai-curated-remote` / `0.1.8-2841cf9749ae` / **plugin configured**
 
 - **gh-address-comments**: Address actionable GitHub pull request review feedback. Use when the user wants to inspect unresolved review threads, requested changes, or inline review comments on a PR, then implement selected fixes. Use the GitHub app for PR metadata and flat comment reads, and use the bundled GraphQL script via `gh` whenever thread-level state, resolution status, or inline review context matters.
 - **gh-fix-ci**: Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions. Use the GitHub app from this plugin for PR metadata and patch context, and use `gh` for Actions check and log inspection before implementing any approved fix.
@@ -250,31 +251,31 @@ Cache entries can include old or connector-specific variants; configuration is a
 
 ### documents
 
-`openai-primary-runtime` / `26.715.12143` / **enabled**
+`openai-primary-runtime` / `26.715.12143` / **plugin configured**
 
 - **documents**: Create, edit, redline, and comment on `.docx`, Word, and Google Docs-targeted document artifacts inside the container, with a strict render-and-verify workflow. Use `render_docx.py` to generate page PNGs (and optional PDF) for visual QA, then iterate until layout is flawless before delivering the final document.
 
 ### pdf
 
-`openai-primary-runtime` / `26.715.12143` / **enabled**
+`openai-primary-runtime` / `26.715.12143` / **plugin configured**
 
 - **pdf**: Read, create, inspect, render, and verify PDF files where visual layout matters. Use Poppler rendering plus Python tools such as reportlab, pdfplumber, and pypdf for generation and extraction.
 
 ### presentations
 
-`openai-primary-runtime` / `26.715.12143` / **enabled**
+`openai-primary-runtime` / `26.715.12143` / **plugin configured**
 
 - **Presentations**: Create or edit PowerPoint or Google Slides decks
 
 ### spreadsheets
 
-`openai-primary-runtime` / `26.715.12143` / **enabled**
+`openai-primary-runtime` / `26.715.12143` / **plugin configured**
 
 - **Spreadsheets**: Create, edit, analyze, and verify standalone spreadsheet files or Google Sheets-ready workbooks, including .xlsx, .xls, .csv, and .tsv. Do not use for live controlling Microsoft Excel app or a live Excel session.
 - **excel-live-control**: Control an open or active Microsoft Excel workbook through the ChatGPT add-in or connected session. Use when the user tags the Microsoft Excel app in Codex or follows up on an established live Excel task. Do not use for standalone spreadsheet files or Google Sheets.
 
 ### template-creator
 
-`openai-primary-runtime` / `26.715.12143` / **enabled**
+`openai-primary-runtime` / `26.715.12143` / **plugin configured**
 
 - **template-creator**: Create or update a reusable personal Codex artifact-template skill. Use when the user invokes $template-creator or asks in natural language to create a template using, from, or based on an attached Word document, PowerPoint presentation, or Excel workbook, or explicitly asks to edit or update a passed artifact-template skill. Do not use for one-off artifact creation from an existing template.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-07-18",
+  "snapshot_date": "2026-07-21",
   "install_root": "~/.codex/skills",
   "skills": {
     "academic-research-suite": {
