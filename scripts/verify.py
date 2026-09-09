@@ -26,7 +26,7 @@ def main() -> None:
 
     assert manifest["schema_version"] == 2
     assert manifest["install_root"] == "~/.codex/skills"
-    assert len(manifest["sources"]) == 11
+    assert len(manifest["sources"]) == 12
     assert all(len(source["ref"]) == 40 for source in manifest["sources"])
     assert all(source["items"] for source in manifest["sources"])
 
@@ -42,12 +42,13 @@ def main() -> None:
     }
     retired = {item["name"] for item in manifest["retired_skills"]}
     assert len(destinations) == len(set(destinations))
-    assert len(skill_destinations) == 61
+    assert len(skill_destinations) == 62
     assert len(retired) == 30
     assert retired.isdisjoint(skill_destinations)
     assert {
         "_shared",
         "academic-research-suite",
+        "agent-reach",
         "code-review",
         "diagnosing-bugs",
         "gstack",
@@ -107,7 +108,7 @@ def main() -> None:
     }
     assert user_names.isdisjoint(system_names)
     assert user_names.isdisjoint(enabled_plugin_names)
-    assert len(user_names) == 119
+    assert len(user_names) == 120
     assert len(system_names) == 6
 
     assert lock["install_root"] == manifest["install_root"]

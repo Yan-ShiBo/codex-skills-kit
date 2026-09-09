@@ -15,6 +15,7 @@ from pathlib import Path
 
 SOURCE_REFS = {
     "Imbad0202/academic-research-skills-codex": "60b836f19705b9b42225b9f2cc3423f632c52e17",
+    "Panniantong/agent-reach": "da5044d26fc6adddb6554d5679c94ac22e76e428",
     "anthropics/skills": "fa0fa64bdc967915dc8399e803be67759e1e62b8",
     "davila7/claude-code-templates": "e4efa5367903f06d8be0320b88a95c1224b87f7e",
     "garrytan/gstack": "a3259400a366593e0c909dd9ac3e59752efd2488",
@@ -32,6 +33,7 @@ EXTRA_SKILLS = {
         "Imbad0202/academic-research-skills-codex",
         "skills/academic-research-suite",
     ),
+    "agent-reach": ("Panniantong/agent-reach", "agent_reach/skill"),
     "brooks-audit": ("hyhmrright/brooks-lint", "skills/brooks-audit"),
     "brooks-debt": ("hyhmrright/brooks-lint", "skills/brooks-debt"),
     "brooks-health": ("hyhmrright/brooks-lint", "skills/brooks-health"),

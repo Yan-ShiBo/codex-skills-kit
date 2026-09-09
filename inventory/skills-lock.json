@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-07-21",
+  "snapshot_date": "2026-09-09",
   "install_root": "~/.codex/skills",
   "skills": {
     "academic-research-suite": {
@@ -9,6 +9,13 @@
       "source_path": "skills/academic-research-suite",
       "destination": "~/.codex/skills/academic-research-suite",
       "skill_md_sha256": "19d67dd5799d9c9ba648f13cb11c646cfcd3ab807de927240c69010dea423b13"
+    },
+    "agent-reach": {
+      "source": "Panniantong/agent-reach",
+      "ref": "da5044d26fc6adddb6554d5679c94ac22e76e428",
+      "source_path": "agent_reach/skill",
+      "destination": "~/.codex/skills/agent-reach",
+      "skill_md_sha256": "621796ede32bbac680dcbc9f15110cdb9b569ebffc3de27ed9aafda9e0f9fbcf"
     },
     "baoyu-article-illustrator": {
       "source": "jimliu/baoyu-skills",

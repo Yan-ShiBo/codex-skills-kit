@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-07-21",
-  "source_inventory_date": "2026-07-21",
+  "snapshot_date": "2026-09-09",
+  "source_inventory_date": "2026-09-09",
   "generated_markdown": "inventory/CAPABILITY_ROUTER.md",
   "max_categories": 10,
   "default_fallback": "baseline-direct",
@@ -77,12 +77,12 @@
     },
     {
       "id": "browser-and-desktop",
-      "task": "浏览器、桌面与 Web QA",
-      "boundary": "仅在任务依赖登录态、Windows 应用或真实网页交互时使用；公开资料优先普通联网查询。",
+      "task": "互联网、浏览器与桌面",
+      "boundary": "公开互联网检索优先 Agent Reach；仅在任务依赖登录态或 Windows 应用时升级到浏览器或桌面控制。",
       "candidates": [
+        "agent-reach",
         "chrome-plugin",
-        "computer-use-plugin",
-        "webapp-testing"
+        "computer-use-plugin"
       ]
     },
     {
@@ -506,24 +506,24 @@
       "evidence": "插件选择器已记录且缓存条目存在；运行时健康需调用时验证。"
     },
     {
-      "id": "webapp-testing",
-      "slot": "驱动 Web 应用并产出 QA 证据",
+      "id": "agent-reach",
+      "slot": "跨平台检索互联网并产出可追溯来源",
       "target": {
         "kind": "skill",
-        "name": "webapp-testing",
+        "name": "agent-reach",
         "layer": "codex"
       },
       "deploy_status": "installed",
       "management_status": "active",
-      "health_status": "healthy",
-      "invocation": "explicit-only",
-      "authorization": "write-gated",
+      "health_status": "degraded",
+      "invocation": "conditional",
+      "authorization": "ordinary",
       "risk": "medium",
       "manager_type": false,
-      "trigger": "需要对本地或测试 Web 应用执行交互、截图、控制台和行为验证。",
-      "do_not_use": "只需阅读网页内容或没有可运行应用时不要启动 Web QA。",
-      "fallback": "使用静态代码检查或普通浏览。",
-      "evidence": "锁定来源与内容哈希已由 2026-07-18 仓库快照验证。"
+      "trigger": "需要搜索或读取公开网页、社交平台、视频、RSS、开发资源、职位或金融信息。",
+      "do_not_use": "已有专用连接器、只需加工现有内容，或任务涉及发帖、评论、点赞等写操作时不要使用。",
+      "fallback": "使用普通联网查询；登录态页面改用用户明确授权的 Chrome 会话。",
+      "evidence": "上游 v1.5.0 锁定到 da5044d；2026-09-09 安全模式诊断确认 4/15 渠道立即可用，其余需要可选依赖或登录配置。"
     },
     {
       "id": "github-plugin",

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-07-21",
+  "snapshot_date": "2026-09-09",
   "install_root": "~/.codex/skills",
   "profile": {
     "primary_domains": [
@@ -9,7 +9,8 @@
       "PAC approximation and SOS formal verification",
       "reproducible Jupyter experiment workflows",
       "remote GPU and solver execution",
-      "academic research and paper production"
+      "academic research and paper production",
+      "multi-platform internet research and source retrieval"
     ],
     "selection_rules": [
       "Prefer official or high-reputation upstream sources.",
@@ -24,6 +25,11 @@
       "name": "jupyter-notebook",
       "source": "openai/skills",
       "reason": "Official reproducible notebook templates and helpers directly match the project's thin, clean Jupyter entrypoints."
+    },
+    {
+      "name": "agent-reach",
+      "source": "Panniantong/agent-reach",
+      "reason": "Provides a single audited router for public web, social, video, developer, career, RSS, and finance retrieval while keeping authenticated and write-capable channels explicitly gated."
     }
   ],
   "renamed_replacements": [

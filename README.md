@@ -1,6 +1,6 @@
 # Codex Skills Kit
 
-这是我为 Codex 设计的一套**可复现能力系统**，覆盖科研、编程、调试、测试、代码审查、产品设计、文档办公、数据处理、浏览器自动化、内容创作和发布工作流。
+这是我为 Codex 设计的一套**可复现能力系统**，覆盖科研、互联网检索、编程、调试、测试、代码审查、产品设计、文档办公、数据处理、浏览器自动化、内容创作和发布工作流。
 
 它的目标不是堆积尽可能多的 Skills，而是让每项能力都能被**准确发现、最小调用、安全更新并在新机器恢复**。仓库记录当前可用的 Skills、Codex 插件、上游来源和锁定版本，并提供 Windows、macOS 与 Linux 安装脚本。第三方 Skill 源码仍从原作者仓库下载，本仓库不重新分发这些源码。
 
@@ -9,8 +9,8 @@
 | 设计取舍 | 实现方式 | 带来的优势 |
 | --- | --- | --- |
 | 原生目录优先 | 用户 Skills 只进入 `~/.codex/skills`；系统 Skills 和插件保留在 Codex 管理目录 | 符合 Codex 原生发现机制，迁移路径清楚，不让镜像目录参与竞争 |
-| 完整清单与薄路由分层 | Inventory 保存全部 125 个用户/系统条目，Router 只暴露 10 类、27 个高频能力 | 既保留完整能力地图，又让单次任务只考虑 1-3 个候选 |
-| 来源可复现 | 11 个上游仓库分别锁定 commit、源路径、目标目录和内容哈希 | 可以审计每个 Skill 从哪里来，也能在新机器恢复相同版本 |
+| 完整清单与薄路由分层 | Inventory 保存全部 126 个用户/系统条目，Router 只暴露 10 类、27 个高频能力 | 既保留完整能力地图，又让单次任务只考虑 1-3 个候选 |
+| 来源可复现 | 12 个上游仓库分别锁定 commit、源路径、目标目录和内容哈希 | 可以审计每个 Skill 从哪里来，也能在新机器恢复相同版本 |
 | 状态不混为一谈 | 分开记录部署、管理、健康、调用、授权和风险状态 | 不把“已经安装”误认为“运行健康”或“应该自动调用” |
 | 最小能力优先 | `baseline-direct` 是有效回退；总管型能力只能显式调用 | 简单任务保持轻量，复杂流程不会无条件接管工作 |
 | 安全与自动校验 | 写入、安装、登录态和发布分别设门禁；替换前备份；JSON、生成文档、测试和 CI 互相校验 | 降低误发布、错误清理和文档漂移风险 |
@@ -19,11 +19,11 @@
 
 ```mermaid
 flowchart LR
-    A["11 个锁定上游仓库"] --> B["Install Manifest + Skills Lock"]
+    A["12 个锁定上游仓库"] --> B["Install Manifest + Skills Lock"]
     B --> C["Installer / Reconcile"]
-    C --> D["~/.codex/skills<br/>61 个用户顶层目标"]
+    C --> D["~/.codex/skills<br/>62 个用户顶层目标"]
     E["Codex 系统 Skills<br/>16 个配置插件"] --> F["Codex 管理目录"]
-    D --> G["完整 Inventory<br/>125 个用户/系统条目"]
+    D --> G["完整 Inventory<br/>126 个用户/系统条目"]
     F --> G
     G --> H["薄 Capability Router<br/>10 类 / 27 个入口"]
     H --> I["每个任务优先 1-3 个能力"]
@@ -36,11 +36,11 @@ flowchart LR
 
 ## 包含内容
 
-当前已核验快照日期为 **2026-07-21**：
+当前已核验快照日期为 **2026-09-09**：
 
-- **61 个用户级顶层安装目标**，来自 **11 个 GitHub 上游仓库**
+- **62 个用户级顶层安装目标**，来自 **12 个 GitHub 上游仓库**
 - **1 个显式共享运行支持目录** `_shared`，不计入用户 Skill 数量
-- 其中 `gstack` 是一个包含 59 个入口的完整技能套件，因此共可发现 **119 个用户 `SKILL.md` 条目**
+- 其中 `gstack` 是一个包含 59 个入口的完整技能套件，因此共可发现 **120 个用户 `SKILL.md` 条目**
 - **6 个 Codex 系统技能**：图像生成、OpenAI 文档、插件创建、技能创建、技能安装和内部审查
 - **16 个已配置 Codex 插件**，提供 GitHub、Figma、Office、浏览器、桌面控制、网站发布等集成能力
 - 插件缓存快照包含 **132 个条目 / 115 个唯一名称**；实际启用状态以 Codex 配置为准
@@ -53,9 +53,9 @@ flowchart LR
 
 ## 能力治理与薄路由
 
-完整清单负责回答“仓库里有什么、从哪里安装、锁定到哪个版本”；[Capability Router](inventory/CAPABILITY_ROUTER.md) 负责回答“当前任务先考虑哪 1-3 个能力、什么时候不应该调用”。两者刻意分开，避免 Agent 每次为一个简单任务扫描全部 125 个用户与系统条目以及插件缓存。
+完整清单负责回答“仓库里有什么、从哪里安装、锁定到哪个版本”；[Capability Router](inventory/CAPABILITY_ROUTER.md) 负责回答“当前任务先考虑哪 1-3 个能力、什么时候不应该调用”。两者刻意分开，避免 Agent 每次为一个简单任务扫描全部 126 个用户与系统条目以及插件缓存。
 
-薄路由按 10 类常用任务组织：直接作答、科研实验、软件工程、架构交付、办公文档、数据可视化、产品设计、浏览器桌面、GitHub 发布和 Skills 治理。每个可路由入口分别记录：
+薄路由按 10 类常用任务组织：直接作答、科研实验、软件工程、架构交付、办公文档、数据可视化、产品设计、互联网与桌面、GitHub 发布和 Skills 治理。每个可路由入口分别记录：
 
 - 部署状态：内置、已安装或已配置
 - 管理状态：是否进入当前薄路由
@@ -101,7 +101,7 @@ curl -fsSL https://raw.githubusercontent.com/Yan-ShiBo/codex-skills-kit/main/ins
 | 图片与视觉内容 | `baoyu-image-gen`、`baoyu-diagram`、`baoyu-infographic`、`baoyu-comic`、`hatch-pet`、Imagegen | 图片、封面、图表、信息图、漫画、文章插图和 Codex 动画宠物 |
 | UI/UX 与设计工具 | `ui-ux-pro-max`、`frontend-design`、Figma、Canva、BioRender、Hyperframes | UI 方案、设计系统、设计转代码、演示设计、科学插图和交互动效 |
 | 文档与数据 | Documents、PDF、Presentations、Spreadsheets、`markdown-to-html`、`baoyu-markdown-to-html` | Word、PDF、PPT、Excel、Markdown、HTML 和结构化数据处理 |
-| 浏览器与桌面自动化 | Chrome、Computer Use、`webapp-testing`、`baoyu-url-to-markdown` | 操作登录态网页、控制 Windows 应用、网页 QA、抓取和内容归档 |
+| 互联网、浏览器与桌面 | `agent-reach`、Chrome、Computer Use、`webapp-testing`、`baoyu-url-to-markdown` | 跨平台检索公开信息、操作登录态网页、控制 Windows 应用、网页 QA、抓取和内容归档 |
 | 内容发布 | `baoyu-post-to-wechat`、`baoyu-post-to-weibo`、`baoyu-post-to-x`、`release-skills`、Sites | 发布公众号、微博、X、GitHub Release 和网站 |
 | GitHub 工作流 | GitHub 插件、`setup-pre-commit`、`git-guardrails-claude-code`、`triage` | Issue/PR 管理、CI 修复、评论处理、提交保护和发布变更 |
 
@@ -127,6 +127,12 @@ curl -fsSL https://raw.githubusercontent.com/Yan-ShiBo/codex-skills-kit/main/ins
 - Documents / PDF / Presentations：把研究结果整理为论文、报告、PDF 和演示文稿
 - Spreadsheets / Visualize：分析实验表格、构建图表和交互式可视化
 - `make-pdf`：把 Markdown 转成出版质量 PDF
+
+## 互联网检索与 Agent Reach
+
+`agent-reach` 为公开网页、社交平台、视频、RSS、GitHub、招聘和金融信息提供统一路由，并根据 `doctor --json` 的结果选择当前可用后端。默认安装与检查保持只读；全局 CLI、登录态、Cookie 和外部写操作仍需单独授权。
+
+本仓库锁定并恢复 `agent_reach/skill`。Agent Reach Python 运行时及可选渠道依赖不包含在 Skills Kit 中，新机器应按[上游安装指南](https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md)安装并执行安全检查。
 
 ## 软件工程与代码质量
 
@@ -243,7 +249,7 @@ Baoyu 技能组包含 22 个顶层安装目标：
 
 插件的所有缓存技能名称和版本见 [PLUGINS.md](inventory/PLUGINS.md)。
 
-## 完整的 61 个顶层安装目标
+## 完整的 62 个顶层安装目标
 
 <details>
 <summary>按上游仓库展开</summary>
@@ -251,6 +257,10 @@ Baoyu 技能组包含 22 个顶层安装目标：
 ### Imbad0202/academic-research-skills-codex
 
 `academic-research-suite`
+
+### Panniantong/agent-reach
+
+`agent-reach`
 
 ### anthropics/skills
 
@@ -295,6 +305,15 @@ Baoyu 技能组包含 22 个顶层安装目标：
 </details>
 
 ## 典型组合工作流
+
+### 多平台互联网调研
+
+```text
+agent-reach doctor --json
+  -> 公开网页 / RSS / V2EX
+  -> 按需启用社交、视频、开发、招聘或金融后端
+  -> 交给写作、分析或文档能力加工结果
+```
 
 ### 科研与论文
 
@@ -342,6 +361,7 @@ Figma / Canva / ui-ux-pro-max
 ```text
 ~/.codex/skills/
 ├── academic-research-suite/
+├── agent-reach/
 ├── gstack/
 ├── jupyter-notebook/
 ├── ...
@@ -388,16 +408,16 @@ python3 ./scripts/reconcile.py --apply
 
 | 文件 | 作用 |
 | --- | --- |
-| [inventory/SKILLS.md](inventory/SKILLS.md) | 125 个当前用户与系统 skill 条目的名称和说明 |
+| [inventory/SKILLS.md](inventory/SKILLS.md) | 126 个当前用户与系统 skill 条目的名称和说明 |
 | [inventory/PLUGINS.md](inventory/PLUGINS.md) | 插件选择器、缓存版本和插件 skill 说明 |
-| [inventory/REPOSITORIES.md](inventory/REPOSITORIES.md) | 11 个上游仓库及锁定 commit |
+| [inventory/REPOSITORIES.md](inventory/REPOSITORIES.md) | 12 个上游仓库及锁定 commit |
 | [inventory/AUDIT.md](inventory/AUDIT.md) | 版本迁移、替代关系和维护记录 |
 | [inventory/CAPABILITY_ROUTER.md](inventory/CAPABILITY_ROUTER.md) | 自动生成的一级薄路由和可路由能力边界 |
 | [inventory/evaluations/TABLE_GITHUB_CAPABILITY_ROUTER.md](inventory/evaluations/TABLE_GITHUB_CAPABILITY_ROUTER.md) | 外部能力路由项目的证据、架构评估和采纳结论 |
 | [manifest/install-manifest.json](manifest/install-manifest.json) | 安装器读取的机器清单、哈希和插件选择器 |
 | [manifest/capability-registry.json](manifest/capability-registry.json) | 路由、健康、风险、授权和回退的机器事实源 |
 | [manifest/selection-policy.json](manifest/selection-policy.json) | 当前能力组合的适用领域和维护规则 |
-| [inventory/skills-lock.json](inventory/skills-lock.json) | 61 个顶层安装目标的来源、路径和文件哈希 |
+| [inventory/skills-lock.json](inventory/skills-lock.json) | 62 个顶层安装目标的来源、路径和文件哈希 |
 | `scripts/install.py` | 跨平台安装器核心 |
 | `scripts/snapshot.py` | 从当前 Codex 环境重新生成清单 |
 | `scripts/reconcile.py` | 迁移旧目录并备份停止使用的 skills |

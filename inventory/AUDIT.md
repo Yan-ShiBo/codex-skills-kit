@@ -1,11 +1,11 @@
 # Skills Audit
 
-Audit date: **2026-07-21**
+Audit date: **2026-09-09**
 
 ## Result
 
-- 61 top-level user-managed install targets from 11 pinned repositories
-- 119 discoverable user-managed skill entries plus 6 Codex system entries
+- 62 top-level user-managed install targets from 12 pinned repositories
+- 120 discoverable user-managed skill entries plus 6 Codex system entries
 - 16 configured plugins and 132 cached plugin skill entries (115 unique cached names)
 - No name overlap between user-managed skills, Codex system skills, and skills cached for enabled plugins
 - 30 retired top-level destinations, all moved out of active discovery with recoverable backups
@@ -13,8 +13,8 @@ Audit date: **2026-07-21**
 ## Current local state
 
 - `~/.codex/skills` is the only active user-managed root; the legacy `~/.agents/skills` root is absent.
-- All 125 discoverable user/system entries match the repository inventory by name, path, and `SKILL.md` content hash.
-- All 62 manifest items are present: 61 user-facing top-level targets plus the `_shared` Brooks runtime-support directory.
+- All 126 discoverable user/system entries match the repository inventory by name, path, and `SKILL.md` content hash.
+- All 63 manifest items are present: 62 user-facing top-level targets plus the `_shared` Brooks runtime-support directory.
 - A reconciliation dry run found no agents-only items, retired destinations, pending copies, or pending moves.
 - Codex-managed cache changes were recorded rather than manually altered: Chrome moved to `26.715.52143`, Computer Use to `26.715.31925`, and Figma to `2.0.16` with the new `figma-design-to-code` entry.
 
@@ -28,6 +28,7 @@ Retirement rules are scoped to top-level destinations. A current nested skill su
 
 ## Added
 
+- **agent-reach** from [`Panniantong/agent-reach`](https://github.com/Panniantong/agent-reach/tree/main/agent_reach/skill): an audited multi-platform router for public internet retrieval. Agent Reach v1.5.0 was installed in an isolated user virtual environment and verified in safe mode; authenticated channels and system-wide dependencies remain opt-in.
 - **jupyter-notebook** from [`openai/skills`](https://github.com/openai/skills/tree/main/skills/.curated/jupyter-notebook): official templates and helpers for clean, reproducible notebooks.
 - **hatch-pet** was already installed, but is now correctly sourced from [`openai/skills`](https://github.com/openai/skills/tree/main/skills/.curated/hatch-pet) instead of being an untracked local item.
 

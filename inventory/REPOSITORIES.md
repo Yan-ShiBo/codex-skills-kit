@@ -1,10 +1,11 @@
 # Source Repositories
 
-Snapshot date: **2026-07-21**
+Snapshot date: **2026-09-09**
 
 | Repository | Top-level install targets | Pinned commit |
 | --- | ---: | --- |
 | [Imbad0202/academic-research-skills-codex](https://github.com/Imbad0202/academic-research-skills-codex) | 1 | [`60b836f19705`](https://github.com/Imbad0202/academic-research-skills-codex/commit/60b836f19705b9b42225b9f2cc3423f632c52e17) |
+| [Panniantong/agent-reach](https://github.com/Panniantong/agent-reach) | 1 | [`da5044d26fc6`](https://github.com/Panniantong/agent-reach/commit/da5044d26fc6adddb6554d5679c94ac22e76e428) |
 | [anthropics/skills](https://github.com/anthropics/skills) | 3 | [`fa0fa64bdc96`](https://github.com/anthropics/skills/commit/fa0fa64bdc967915dc8399e803be67759e1e62b8) |
 | [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) | 1 | [`e4efa5367903`](https://github.com/davila7/claude-code-templates/commit/e4efa5367903f06d8be0320b88a95c1224b87f7e) |
 | [garrytan/gstack](https://github.com/garrytan/gstack) | 1 | [`a3259400a366`](https://github.com/garrytan/gstack/commit/a3259400a366593e0c909dd9ac3e59752efd2488) |

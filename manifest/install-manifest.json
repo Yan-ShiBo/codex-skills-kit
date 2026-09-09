@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "snapshot_date": "2026-07-21",
+  "snapshot_date": "2026-09-09",
   "install_root": "~/.codex/skills",
   "description": "Reproducible source manifest for Yan-ShiBo's curated Codex skills setup.",
   "sources": [
@@ -14,6 +14,19 @@
           "source_path": "skills/academic-research-suite",
           "destination": "academic-research-suite",
           "snapshot_hash": "aa0c7ea83aae03332a545378d4e4053548344aeb780cfc2ef6731d5feeaf7f6b"
+        }
+      ]
+    },
+    {
+      "source": "Panniantong/agent-reach",
+      "url": "https://github.com/Panniantong/agent-reach.git",
+      "ref": "da5044d26fc6adddb6554d5679c94ac22e76e428",
+      "items": [
+        {
+          "name": "agent-reach",
+          "source_path": "agent_reach/skill",
+          "destination": "agent-reach",
+          "snapshot_hash": "4ff1090253d6cc64a42cfe7d4f0b6dfe808541b10afb39d18161f6ed3ac30f64"
         }
       ]
     },
