@@ -1,5 +1,9 @@
 # Skills Audit
 
+The instruction cleanup and replay validation on **2026-09-16** are recorded in
+[INSTRUCTION_AUDIT_2026-09-16.md](INSTRUCTION_AUDIT_2026-09-16.md). The inventory
+and retirement notes below describe the earlier baseline.
+
 Audit date: **2026-09-09**
 
 ## Result

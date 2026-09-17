@@ -4,7 +4,9 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import ntpath
 import os
 import shutil
 import subprocess
@@ -17,6 +19,16 @@ from pathlib import Path
 
 
 RAW_BASE = "https://raw.githubusercontent.com/Yan-ShiBo/codex-skills-kit/main"
+
+
+def windows_extended_path(path: str) -> str:
+    """Keep deep archive members accessible without changing Windows settings."""
+    absolute = ntpath.abspath(path)
+    if absolute.startswith("\\\\?\\"):
+        return absolute
+    if absolute.startswith("\\\\"):
+        return "\\\\?\\UNC\\" + absolute[2:]
+    return "\\\\?\\" + absolute
 
 
 def download(url: str, destination: Path, attempts: int = 3) -> None:
@@ -44,6 +56,27 @@ def load_manifest(script_root: Path) -> dict:
         path = Path(temp) / "manifest.json"
         download(f"{RAW_BASE}/manifest/install-manifest.json", path)
         return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_customizations(manifest: dict, script_root: Path) -> dict | None:
+    metadata = manifest.get("customizations")
+    if not metadata:
+        return None
+    local = script_root.parent / metadata["path"]
+    if local.exists():
+        data = local.read_bytes()
+    else:
+        with tempfile.TemporaryDirectory(prefix="codex-customizations-") as temp:
+            path = Path(temp) / "customizations.json"
+            download(f"{RAW_BASE}/{metadata['path']}", path)
+            data = path.read_bytes()
+    if hashlib.sha256(data).hexdigest() != metadata["sha256"]:
+        raise ValueError("Customization manifest hash mismatch")
+    from customize import validate_spec
+
+    spec = json.loads(data)
+    validate_spec(spec)
+    return spec
 
 
 def next_backup_path(backup_root: Path, name: str) -> Path:
@@ -100,7 +133,11 @@ def install_sources(
     latest: bool,
     force: bool,
     backup_root: Path,
+    customizations: dict | None = None,
 ) -> None:
+    if os.name == "nt":
+        codex_home = Path(windows_extended_path(str(codex_home)))
+        backup_root = Path(windows_extended_path(str(backup_root)))
     skills_root = codex_home / "skills"
     skills_root.mkdir(parents=True, exist_ok=True)
     installed = skipped = failed = 0
@@ -121,7 +158,11 @@ def install_sources(
         if not pending:
             continue
         try:
-            with tempfile.TemporaryDirectory(prefix="codex-skills-source-") as temp:
+            temp_root = tempfile.gettempdir()
+            if os.name == "nt":
+                temp_root = windows_extended_path(temp_root)
+            # Prefix the directory at creation so cleanup also supports long paths.
+            with tempfile.TemporaryDirectory(prefix="codex-skills-source-", dir=temp_root) as temp:
                 temp_path = Path(temp)
                 if all(item.get("single_file") for item in pending):
                     for item in pending:
@@ -135,6 +176,9 @@ def install_sources(
                             source_path / item["single_file"],
                         )
                         destination = skills_root / item["destination"]
+                        if customizations:
+                            from customize import apply_to_item
+                            apply_to_item(source_path, item["destination"], customizations)
                         result = safe_replace(
                             source_path, destination, force, backup_root
                         )
@@ -165,6 +209,9 @@ def install_sources(
                         print(f"  FAILED {item['name']}: missing {item['source_path']}")
                         failed += 1
                         continue
+                    if customizations:
+                        from customize import apply_to_item
+                        apply_to_item(source_path, item["destination"], customizations)
                     result = safe_replace(
                         source_path, destination, force, backup_root
                     )
@@ -248,13 +295,14 @@ def main() -> None:
     codex_home = codex_home.expanduser().resolve()
 
     manifest = load_manifest(Path(__file__).resolve().parent)
+    customizations = load_customizations(manifest, Path(__file__).resolve().parent)
     run_stamp = time.strftime("%Y%m%d-%H%M%S")
     backup_root = codex_home / "skill-backups" / run_stamp
     if args.prune_retired:
         print("Retiring superseded skills")
         moved = prune_retired(manifest, codex_home, backup_root / "retired")
         print(f"Retired skills moved: {moved}")
-    install_sources(manifest, codex_home, args.latest, args.force, backup_root / "replaced")
+    install_sources(manifest, codex_home, args.latest, args.force, backup_root / "replaced", customizations)
     if not args.skip_plugins:
         install_plugins(manifest)
     print("\nRestart Codex to load the installed skills.")

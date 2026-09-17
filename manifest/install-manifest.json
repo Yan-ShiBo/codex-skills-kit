@@ -13,7 +13,7 @@
           "name": "academic-research-suite",
           "source_path": "skills/academic-research-suite",
           "destination": "academic-research-suite",
-          "snapshot_hash": "aa0c7ea83aae03332a545378d4e4053548344aeb780cfc2ef6731d5feeaf7f6b"
+          "snapshot_hash": "8c28430cb07312ec17a20e238f20cca62fa1e714e049b5346a5a474781e73b65"
         }
       ]
     },
@@ -26,7 +26,7 @@
           "name": "agent-reach",
           "source_path": "agent_reach/skill",
           "destination": "agent-reach",
-          "snapshot_hash": "4ff1090253d6cc64a42cfe7d4f0b6dfe808541b10afb39d18161f6ed3ac30f64"
+          "snapshot_hash": "82ccd8c9e309082f6e6af9cd1db77bc9db6011d19c34dc333b794087cf4e7ee4"
         }
       ]
     },
@@ -64,7 +64,7 @@
           "name": "planning-with-files",
           "source_path": "cli-tool/components/skills/productivity/planning-with-files",
           "destination": "planning-with-files",
-          "snapshot_hash": "19d1f889a99b3c9d41726a05261f8ff5a5473489bca7e622206354a84785a9c0",
+          "snapshot_hash": "88d3a1c566ebf22e9c03a779ee35bdadebeca941b16e3c7cb490697f2e744c4f",
           "single_file": "SKILL.md"
         }
       ]
@@ -78,7 +78,7 @@
           "name": "gstack",
           "source_path": ".",
           "destination": "gstack",
-          "snapshot_hash": "f24b6b70b1855a6d3dbbff3b97ee1d059ae6a865c0ce2d1f8ef1256037bb96bc"
+          "snapshot_hash": "9a3976e75cb41a8b1e51f5a1efcfb6eccd3ed1031d13e8d535a4960023512ede"
         }
       ]
     },
@@ -91,7 +91,7 @@
           "name": "markdown-to-html",
           "source_path": "skills/markdown-to-html",
           "destination": "markdown-to-html",
-          "snapshot_hash": "d8f5226267c7e2940d424b8c816939249e07e60d7ee85492533b10372202d91b"
+          "snapshot_hash": "e851efae39a7618397c4274cb8345e1e70ba9af32d649577fe75fee026848c54"
         }
       ]
     },
@@ -111,37 +111,37 @@
           "name": "brooks-audit",
           "source_path": "skills/brooks-audit",
           "destination": "brooks-audit",
-          "snapshot_hash": "3689cb380b8c0abdf8c0087421f30ae2764d6335512806bdd296d350eb0e4ea4"
+          "snapshot_hash": "debff9991e1e599f8656e62475025d484814c07f45030d43cb84cd02a8bb9ed2"
         },
         {
           "name": "brooks-debt",
           "source_path": "skills/brooks-debt",
           "destination": "brooks-debt",
-          "snapshot_hash": "a9014b31625f44e1f077244fe460f537d2ede20bb380e2e2549299f23588bf89"
+          "snapshot_hash": "e6a469f7caaac3ecc3f73fa52696f5debb0c8798df0b0a87f4917285819041b9"
         },
         {
           "name": "brooks-health",
           "source_path": "skills/brooks-health",
           "destination": "brooks-health",
-          "snapshot_hash": "dad9a024d569de283efdedd4d4a80fbfa266cf902f81fa3378ce1c8163b96582"
+          "snapshot_hash": "77ca414361b7d9e5f631cfae993aeaa94c763ecfa74e7376dbc705d282f08784"
         },
         {
           "name": "brooks-review",
           "source_path": "skills/brooks-review",
           "destination": "brooks-review",
-          "snapshot_hash": "cc636d8209f02c64ed4e303d810abfe2caec4a9cbc02a615d4d1d7579c7d67f1"
+          "snapshot_hash": "735197bcad0ecaed83c76bc3ce7550a3c97189ab5869b35e4a923a898023e7c3"
         },
         {
           "name": "brooks-sweep",
           "source_path": "skills/brooks-sweep",
           "destination": "brooks-sweep",
-          "snapshot_hash": "25c0872fcb11c2e8d31265bf7c899c210f9e12705816aa73f050e1d6c9ed896c"
+          "snapshot_hash": "fe69fcb9cf9147ac440c0aab60ad35c6fc2a3acfbc57b1aebaeca96814967870"
         },
         {
           "name": "brooks-test",
           "source_path": "skills/brooks-test",
           "destination": "brooks-test",
-          "snapshot_hash": "06697d5cfbbadc9ec53fba461e5eacc1a8c234dd80c61c36459b54cd8a87ddef"
+          "snapshot_hash": "bace2dfd8661ddfe5bb4a2405f584441ece078133b8fb5124bda24ba99aab446"
         }
       ]
     },
@@ -160,7 +160,7 @@
           "name": "baoyu-comic",
           "source_path": "skills/baoyu-comic",
           "destination": "baoyu-comic",
-          "snapshot_hash": "16211fcaa7e7acb5015aaea7a3f7067f7fe8fd422b3ade45eaa70c3276420ffe"
+          "snapshot_hash": "c3b533f325c5f5fb12a5583f8e41b5ba3a56810ea80c763a434e39bb65601758"
         },
         {
           "name": "baoyu-compress-image",
@@ -172,7 +172,7 @@
           "name": "baoyu-cover-image",
           "source_path": "skills/baoyu-cover-image",
           "destination": "baoyu-cover-image",
-          "snapshot_hash": "44186726d5a0441a9f29a8d73a9c41bd2178ad24ad21a65c3fbb69a80da75305"
+          "snapshot_hash": "30c8001365b23e98ec7de7b97e9bb029de7f2d87a5a037c041442e37cc6150ed"
         },
         {
           "name": "baoyu-danger-gemini-web",
@@ -190,13 +190,13 @@
           "name": "baoyu-diagram",
           "source_path": "skills/baoyu-diagram",
           "destination": "baoyu-diagram",
-          "snapshot_hash": "a8e1f0b9f390088221bd7862302652141925006b5bbcd0b9a2cf13c7b7772735"
+          "snapshot_hash": "12e7089b84da262d773eee8d164afd28db17e734b089acfb8a98b73228e6ea7e"
         },
         {
           "name": "baoyu-electron-extract",
           "source_path": "skills/baoyu-electron-extract",
           "destination": "baoyu-electron-extract",
-          "snapshot_hash": "544e08de9f8d8cd217693bc88c5efc42cd6485dd1e88e9d53a7d217ba2ed5fd6"
+          "snapshot_hash": "da4f8d6452a8dcbb48e80c3df94a5ea55bd412f411cb57c3ca4f0e3b42283db5"
         },
         {
           "name": "baoyu-format-markdown",
@@ -208,7 +208,7 @@
           "name": "baoyu-image-gen",
           "source_path": "skills/baoyu-image-gen",
           "destination": "baoyu-image-gen",
-          "snapshot_hash": "ef414f71c1a5dd46abeebad7b4be4d427277ce71047d18dc602314a7af225acd"
+          "snapshot_hash": "31089c8eaf4109dbf4b50c50d8de3845c7a2ddd3fb54ec52c73ed283181c61e3"
         },
         {
           "name": "baoyu-infographic",
@@ -226,7 +226,7 @@
           "name": "baoyu-post-to-wechat",
           "source_path": "skills/baoyu-post-to-wechat",
           "destination": "baoyu-post-to-wechat",
-          "snapshot_hash": "84746a80ee3e6bb1fe53d78fc881cff29ffcc36bf3fdf9fb4e36fe8c42409d5a"
+          "snapshot_hash": "610154fdb4d49c37112fbc5fd740f473d18ef644a5cab6205c5ba60f0ac8a425"
         },
         {
           "name": "baoyu-post-to-weibo",
@@ -238,7 +238,7 @@
           "name": "baoyu-post-to-x",
           "source_path": "skills/baoyu-post-to-x",
           "destination": "baoyu-post-to-x",
-          "snapshot_hash": "9dbcdec146e36de495c698fc546b9d391e28a2595430aceacfa3228acdf1cd00"
+          "snapshot_hash": "c3abce7c965169dcffeb9f9edfa05ea6c062516da6b588d0bc887ab1ffe8abdc"
         },
         {
           "name": "baoyu-slide-deck",
@@ -250,7 +250,7 @@
           "name": "baoyu-translate",
           "source_path": "skills/baoyu-translate",
           "destination": "baoyu-translate",
-          "snapshot_hash": "bd2662a6aa305a6d35971a594a7b5516d295d63ecef5c3cd2e5e600834a51d51"
+          "snapshot_hash": "fd3550f4c6551b7734979764fd69b46d1c9b47a715aa5553f985a4348868dd99"
         },
         {
           "name": "baoyu-url-to-markdown",
@@ -262,19 +262,19 @@
           "name": "baoyu-wechat-summary",
           "source_path": "skills/baoyu-wechat-summary",
           "destination": "baoyu-wechat-summary",
-          "snapshot_hash": "ba5656c09a1a17aef26e33ea3ae6a5428a27388e8371b1ca1872ec7ea2058506"
+          "snapshot_hash": "8e1f8b4718667447c5ae0798b07bfc78ec92d65f25682d05671035c5cc2dda8b"
         },
         {
           "name": "baoyu-xhs-images",
           "source_path": "skills/baoyu-xhs-images",
           "destination": "baoyu-xhs-images",
-          "snapshot_hash": "369abdc3181c215f6c7b9a5caa9940f473b9eee40b92b72f43272786cd6ebca5"
+          "snapshot_hash": "67b95ed5e062064d10456c80e847fde902d280ced1a061ef7895a1ff239faa6b"
         },
         {
           "name": "baoyu-youtube-transcript",
           "source_path": "skills/baoyu-youtube-transcript",
           "destination": "baoyu-youtube-transcript",
-          "snapshot_hash": "a3dee5ea17594bb433c4eab2a12aa3a2aa19241dd425835f160c0c0d6a74f365"
+          "snapshot_hash": "2c2a0264ceb003c681c6cb997d890eed63c5c9ff5d42485915c6d9316b9ad16a"
         },
         {
           "name": "release-skills",
@@ -293,13 +293,13 @@
           "name": "code-review",
           "source_path": "skills/engineering/code-review",
           "destination": "code-review",
-          "snapshot_hash": "f7cd71d9bb846fbc1e816c0625b1ed6c8cc6b75ae4ecaaaad71a877ee0c8aebe"
+          "snapshot_hash": "e6ac8428aede9eb6eb9528cf2691a41045e912a09113d82ea0be38339c8fb9de"
         },
         {
           "name": "diagnosing-bugs",
           "source_path": "skills/engineering/diagnosing-bugs",
           "destination": "diagnosing-bugs",
-          "snapshot_hash": "6495366141dc9c48717b0b471bf937c28e84725a34fbff6954fe76ede3282a0c"
+          "snapshot_hash": "abeaa1181719dc49f14f64d14b61b60ddecd873058edb93e1bce7f0e899eb6ba"
         },
         {
           "name": "edit-article",
@@ -432,7 +432,7 @@
           "name": "ui-ux-pro-max",
           "source_path": ".claude/skills/ui-ux-pro-max",
           "destination": "ui-ux-pro-max",
-          "snapshot_hash": "e8acd0ed35400e27be3adcef6b8b0e6e9287787886ecbf57be1f086c96cb9820"
+          "snapshot_hash": "315a1a2450c5deb4bc4931c64d1ea4cd54a25ff494829a55d5e156deb757dd6a"
         }
       ]
     },
@@ -445,7 +445,7 @@
           "name": "hatch-pet",
           "source_path": "skills/.curated/hatch-pet",
           "destination": "hatch-pet",
-          "snapshot_hash": "0b4005e526f4396f129f791cbb131825f1bc46f3dbd141564db2264acdb6bf24"
+          "snapshot_hash": "b1f9fd4a8476cb1330f03b4ab4187d10437eec35e9f9a03a2ba911932a8c1d29"
         },
         {
           "name": "jupyter-notebook",
@@ -464,7 +464,7 @@
           "name": "find-skills",
           "source_path": "skills/find-skills",
           "destination": "find-skills",
-          "snapshot_hash": "aeacfcbfeb7855c5b15790e996fb6b62dc72d4c920947f6b46764e25eb6bd855"
+          "snapshot_hash": "789feb4f3151de47f0a8a000fb06210b7d2501912266890d6f87befcc5d4dc22"
         }
       ]
     }
@@ -676,5 +676,10 @@
     "Codex system and plugin skills remain in Codex-managed locations.",
     "Third-party source code is downloaded from its original repository.",
     "Replacement backups are stored under ~/.codex/skill-backups, outside the active skills directory."
-  ]
+  ],
+  "customizations": {
+    "path": "manifest/customizations.json",
+    "sha256": "42ee514a02433add5005ad24c6c8194429a154a9ab9b6aad976edb1606c3311d",
+    "audit_date": "2026-09-16"
+  }
 }

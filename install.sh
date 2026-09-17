@@ -13,4 +13,5 @@ fi
 TMP_DIR="$(mktemp -d)"
 trap 'rm -rf "${TMP_DIR}"' EXIT
 curl -fsSL "${RAW_BASE}/scripts/install.py" -o "${TMP_DIR}/install.py"
+curl -fsSL "${RAW_BASE}/scripts/customize.py" -o "${TMP_DIR}/customize.py"
 python3 "${TMP_DIR}/install.py" "$@"

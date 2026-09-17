@@ -8,14 +8,14 @@
       "ref": "60b836f19705b9b42225b9f2cc3423f632c52e17",
       "source_path": "skills/academic-research-suite",
       "destination": "~/.codex/skills/academic-research-suite",
-      "skill_md_sha256": "19d67dd5799d9c9ba648f13cb11c646cfcd3ab807de927240c69010dea423b13"
+      "skill_md_sha256": "9c4e742dfa7fbe65569998464446b57e0d37bbe4deec226654afd4203d34735e"
     },
     "agent-reach": {
       "source": "Panniantong/agent-reach",
       "ref": "da5044d26fc6adddb6554d5679c94ac22e76e428",
       "source_path": "agent_reach/skill",
       "destination": "~/.codex/skills/agent-reach",
-      "skill_md_sha256": "621796ede32bbac680dcbc9f15110cdb9b569ebffc3de27ed9aafda9e0f9fbcf"
+      "skill_md_sha256": "fe6445da1fbb152a160fd509c33100c660ed2e3ba8bab8c9d17fd1f722c86d0b"
     },
     "baoyu-article-illustrator": {
       "source": "jimliu/baoyu-skills",
@@ -29,7 +29,7 @@
       "ref": "6b7a2e417500561a5ecdd0b168332f4142584617",
       "source_path": "skills/baoyu-comic",
       "destination": "~/.codex/skills/baoyu-comic",
-      "skill_md_sha256": "98d5de8650a3401c1ee97b3f78ebacef72f3f570ef7fe7290b192ac7d24330bc"
+      "skill_md_sha256": "f1414b3782c7ea3672cfd1592230c2c5bbb675fdc93bb4544051e3ef51b4e901"
     },
     "baoyu-compress-image": {
       "source": "jimliu/baoyu-skills",
@@ -43,7 +43,7 @@
       "ref": "6b7a2e417500561a5ecdd0b168332f4142584617",
       "source_path": "skills/baoyu-cover-image",
       "destination": "~/.codex/skills/baoyu-cover-image",
-      "skill_md_sha256": "36804fce98bcb9ebe4a51c26f6f276a807805aab980ca4a0718daa40a5cc7fda"
+      "skill_md_sha256": "18b5ea0ff320e26f510842dab211a4e8a0ffa74458ef59d92f135b9ba8915c71"
     },
     "baoyu-danger-gemini-web": {
       "source": "jimliu/baoyu-skills",
@@ -64,14 +64,14 @@
       "ref": "6b7a2e417500561a5ecdd0b168332f4142584617",
       "source_path": "skills/baoyu-diagram",
       "destination": "~/.codex/skills/baoyu-diagram",
-      "skill_md_sha256": "55a2d050c3a2faea8721d1cec31749dfafa7e7d346a586e99e757f77a3526860"
+      "skill_md_sha256": "80732f4e184c8e54aaf6ec947dffc61a4b539f4dbb24cbc80fd1b6e90f96b193"
     },
     "baoyu-electron-extract": {
       "source": "jimliu/baoyu-skills",
       "ref": "6b7a2e417500561a5ecdd0b168332f4142584617",
       "source_path": "skills/baoyu-electron-extract",
       "destination": "~/.codex/skills/baoyu-electron-extract",
-      "skill_md_sha256": "3f8714f3030dd12e2b11a60ed5e561c0b2297de5b31251b40f6da081e06ae4ee"
+      "skill_md_sha256": "dd966db2534fb1320bea4c3b7993935c9ec093c78e916ade972689bc8d16186e"
     },
     "baoyu-format-markdown": {
       "source": "jimliu/baoyu-skills",
@@ -85,7 +85,7 @@
       "ref": "6b7a2e417500561a5ecdd0b168332f4142584617",
       "source_path": "skills/baoyu-image-gen",
       "destination": "~/.codex/skills/baoyu-image-gen",
-      "skill_md_sha256": "de09b723bdc7b19d74e508d0b63e2306f03b4e48ab2b83c90ac6c99c0b7de4d0"
+      "skill_md_sha256": "40644853802d49e6efb7d1f2a931a79ce7a3a585dc81111b89eed3d16c7f3961"
     },
     "baoyu-infographic": {
       "source": "jimliu/baoyu-skills",
@@ -106,7 +106,7 @@
       "ref": "6b7a2e417500561a5ecdd0b168332f4142584617",
       "source_path": "skills/baoyu-post-to-wechat",
       "destination": "~/.codex/skills/baoyu-post-to-wechat",
-      "skill_md_sha256": "e15f1b5a51b8443ef1c8191c036301fd9b3e028069b82b625f327b0344cbc9d8"
+      "skill_md_sha256": "e83532613c3f50ddee82169e5d96455e51bc67a4816b66a4841768ddfd8ab708"
     },
     "baoyu-post-to-weibo": {
       "source": "jimliu/baoyu-skills",
@@ -120,7 +120,7 @@
       "ref": "6b7a2e417500561a5ecdd0b168332f4142584617",
       "source_path": "skills/baoyu-post-to-x",
       "destination": "~/.codex/skills/baoyu-post-to-x",
-      "skill_md_sha256": "6eca9de552dd0b7bebfbbab9192a915f73ac40396ca89501dfcfbb94efb141fc"
+      "skill_md_sha256": "d0451bad78007f7e7deac87fbdf1d937906a2b937fc0fc7fa80a96cc37c8a22a"
     },
     "baoyu-slide-deck": {
       "source": "jimliu/baoyu-skills",
@@ -134,7 +134,7 @@
       "ref": "6b7a2e417500561a5ecdd0b168332f4142584617",
       "source_path": "skills/baoyu-translate",
       "destination": "~/.codex/skills/baoyu-translate",
-      "skill_md_sha256": "772f7170a61f1246d7505c97539579bb4d055f21653462e8cfaaddc65a3a5b31"
+      "skill_md_sha256": "39c02d77cb878c8645cbba054b658a4f8bac30514ce0815917c8da4fbfd22ded"
     },
     "baoyu-url-to-markdown": {
       "source": "jimliu/baoyu-skills",
@@ -148,77 +148,77 @@
       "ref": "6b7a2e417500561a5ecdd0b168332f4142584617",
       "source_path": "skills/baoyu-wechat-summary",
       "destination": "~/.codex/skills/baoyu-wechat-summary",
-      "skill_md_sha256": "6fe746670aedb1955dac6f74b096253f1935f916cc74a9709006205152c0bb86"
+      "skill_md_sha256": "96d9643566472611dafc830ccd32f2f0c737b6a7bd7b3c954d2717fa76cc17eb"
     },
     "baoyu-xhs-images": {
       "source": "jimliu/baoyu-skills",
       "ref": "6b7a2e417500561a5ecdd0b168332f4142584617",
       "source_path": "skills/baoyu-xhs-images",
       "destination": "~/.codex/skills/baoyu-xhs-images",
-      "skill_md_sha256": "17bf5498641cc60cb98f0cc15fbea27fd42777d119a39fb54fd6418840442bba"
+      "skill_md_sha256": "488dcf0656dc31e62ddb0922d2bdebfdefb2d9e246a7b608f157f9f1ef525c91"
     },
     "baoyu-youtube-transcript": {
       "source": "jimliu/baoyu-skills",
       "ref": "6b7a2e417500561a5ecdd0b168332f4142584617",
       "source_path": "skills/baoyu-youtube-transcript",
       "destination": "~/.codex/skills/baoyu-youtube-transcript",
-      "skill_md_sha256": "b7085574c6bf72e07c578db14316682b9ebf1e841d9db62916d284efd84c96cc"
+      "skill_md_sha256": "3540ccb11fe74435e8fb01ddd8e46478ca4bcd2453cd95c1b6df73515a0bc494"
     },
     "brooks-audit": {
       "source": "hyhmrright/brooks-lint",
       "ref": "141f45ebb70bfa5a67e0dc8ee33b56e40067836d",
       "source_path": "skills/brooks-audit",
       "destination": "~/.codex/skills/brooks-audit",
-      "skill_md_sha256": "4d6d42e35cf296acc570c8a19a4f7e0857cf3ad4698c4bc77a1a08a201d9f511"
+      "skill_md_sha256": "4138988682eaf321a51a59c46513a8c0f5a907a669e57448d0fc0b2701f94614"
     },
     "brooks-debt": {
       "source": "hyhmrright/brooks-lint",
       "ref": "141f45ebb70bfa5a67e0dc8ee33b56e40067836d",
       "source_path": "skills/brooks-debt",
       "destination": "~/.codex/skills/brooks-debt",
-      "skill_md_sha256": "091ca429b0bdc243e9b1650eaaf672bf7fa0731b8cfc825b6bf868c65bc118df"
+      "skill_md_sha256": "dfe34d41c80a417eea20c48722275f8d2ee0c3835605f073d30bc723809201d3"
     },
     "brooks-health": {
       "source": "hyhmrright/brooks-lint",
       "ref": "141f45ebb70bfa5a67e0dc8ee33b56e40067836d",
       "source_path": "skills/brooks-health",
       "destination": "~/.codex/skills/brooks-health",
-      "skill_md_sha256": "7b7e1e74c9f0343af183dd22d899b93c9f10b8bc1073d572cea8a36038c85604"
+      "skill_md_sha256": "d14677a3929129e8dddf78d2f7c50789d57897dd7eb2cd9008ff60a4f6548b80"
     },
     "brooks-review": {
       "source": "hyhmrright/brooks-lint",
       "ref": "141f45ebb70bfa5a67e0dc8ee33b56e40067836d",
       "source_path": "skills/brooks-review",
       "destination": "~/.codex/skills/brooks-review",
-      "skill_md_sha256": "91e3497500fc38e18637850b706c65ec270ae09597545f2c31031062137f984e"
+      "skill_md_sha256": "e199ceefafdb3293c933b9cff5ed6bd4bbf2edb89bad0f1f3017fc058498fd00"
     },
     "brooks-sweep": {
       "source": "hyhmrright/brooks-lint",
       "ref": "141f45ebb70bfa5a67e0dc8ee33b56e40067836d",
       "source_path": "skills/brooks-sweep",
       "destination": "~/.codex/skills/brooks-sweep",
-      "skill_md_sha256": "a728d41fef6fe2a41a286a0237884fa6f8c382f9d43c8fcfebccaa842cf9d687"
+      "skill_md_sha256": "c7906b4f5468574492f60e24ea67222aae919c159bb53e875aea6afecee235df"
     },
     "brooks-test": {
       "source": "hyhmrright/brooks-lint",
       "ref": "141f45ebb70bfa5a67e0dc8ee33b56e40067836d",
       "source_path": "skills/brooks-test",
       "destination": "~/.codex/skills/brooks-test",
-      "skill_md_sha256": "9afcd7c83843f07b34a14804e8d5bf7e8c621669c5850bf5f10b4b9cef8799dc"
+      "skill_md_sha256": "bde07dc4f760d5e1cf0bee0870a74d54bbbe143170f217cbf43c67db9e2074b0"
     },
     "code-review": {
       "source": "mattpocock/skills",
       "ref": "9603c1cc8118d08bc1b3bf34cf714f62178dea3b",
       "source_path": "skills/engineering/code-review",
       "destination": "~/.codex/skills/code-review",
-      "skill_md_sha256": "6a65cc61114f96db07ec41e3920e67c9c5bf70dd6e0901eb9460ebcb2bdc209f"
+      "skill_md_sha256": "586b55888b517b1269b187903b5ad7cd47d59d9f28e88526fc5327467acc9e98"
     },
     "diagnosing-bugs": {
       "source": "mattpocock/skills",
       "ref": "9603c1cc8118d08bc1b3bf34cf714f62178dea3b",
       "source_path": "skills/engineering/diagnosing-bugs",
       "destination": "~/.codex/skills/diagnosing-bugs",
-      "skill_md_sha256": "7a0779480f323a66d109404646bcc1a14bf0232b45b3e3ea93b652a035718acb"
+      "skill_md_sha256": "5f9e452c77c0384706556c73b55dae2cadd4ac1a86691a1794cb13048aec0d90"
     },
     "edit-article": {
       "source": "mattpocock/skills",
@@ -232,7 +232,7 @@
       "ref": "777599e1159e401b11ce4c8a57c20f09a8f1596e",
       "source_path": "skills/find-skills",
       "destination": "~/.codex/skills/find-skills",
-      "skill_md_sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f"
+      "skill_md_sha256": "c41467b6cf7c93fcc8d55e30db40d337bbe587afca8b2d10cf6b531166aab145"
     },
     "frontend-design": {
       "source": "anthropics/skills",
@@ -267,7 +267,7 @@
       "ref": "a3259400a366593e0c909dd9ac3e59752efd2488",
       "source_path": ".",
       "destination": "~/.codex/skills/gstack",
-      "skill_md_sha256": "b77bab43d1db15b6019f34506a204bca9f5e9632d314b70075c26fd07b13b173"
+      "skill_md_sha256": "f7ea1dc964845a70339f9b76b1fdd46d7d7f9f665ae77863bdb5e4548ec1f3f2"
     },
     "handoff": {
       "source": "mattpocock/skills",
@@ -281,7 +281,7 @@
       "ref": "49f948faa9258a0c61caceaf225e179651397431",
       "source_path": "skills/.curated/hatch-pet",
       "destination": "~/.codex/skills/hatch-pet",
-      "skill_md_sha256": "7ab0f01e8561085d1b494a6ca74abed766c655da8ec98284fb38a362c19d6871"
+      "skill_md_sha256": "29916570fb38d40b58b02b36d5370f9fb91f8b69283bf714c1158e570dd6a83b"
     },
     "improve-codebase-architecture": {
       "source": "mattpocock/skills",
@@ -302,7 +302,7 @@
       "ref": "26fe2d126bf79aafb38f43344d450b69632200f8",
       "source_path": "skills/markdown-to-html",
       "destination": "~/.codex/skills/markdown-to-html",
-      "skill_md_sha256": "a51376b7c8e88e009c60f20af5b9c1157d4e5c3b40dd62f43abc0e873381e0e4"
+      "skill_md_sha256": "fa270aef1edcd631f1983e5f1317ab20b5f5bab1627d068610f5324fbacda0be"
     },
     "mcp-builder": {
       "source": "anthropics/skills",
@@ -330,7 +330,7 @@
       "ref": "e4efa5367903f06d8be0320b88a95c1224b87f7e",
       "source_path": "cli-tool/components/skills/productivity/planning-with-files",
       "destination": "~/.codex/skills/planning-with-files",
-      "skill_md_sha256": "33533aac264cf31d22ac7a1a50b85cb9760a821a49401ad1bac8cbae9b1d369f"
+      "skill_md_sha256": "6b7c5b8312f42df5aee0e6e1467f319e52b1ca9979b9044687de0f84c3af3850"
     },
     "prototype": {
       "source": "mattpocock/skills",
@@ -407,7 +407,7 @@
       "ref": "f8ac5e1266dba8354ea96e19994d9f4345e7ec31",
       "source_path": ".claude/skills/ui-ux-pro-max",
       "destination": "~/.codex/skills/ui-ux-pro-max",
-      "skill_md_sha256": "305a7527fcb2f5b6e4129ab22cd839b5172d26df7f14d3324bfdec8fc1763560"
+      "skill_md_sha256": "ddb89ec1fd56a5b4396e5bea0435a02c91bb36cedb550d77d77a5b6b09a76d22"
     },
     "webapp-testing": {
       "source": "anthropics/skills",

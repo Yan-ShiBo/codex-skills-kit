@@ -328,6 +328,27 @@ def inventory_skills(
     return inventory
 
 
+def attach_customizations(output: Path, manifest: dict, skills: list[dict]) -> None:
+    """Keep effective inventory hashes distinct from reviewed upstream preimages."""
+    spec_path = output / "manifest" / "customizations.json"
+    if not spec_path.exists():
+        return
+    spec = json.loads(spec_path.read_text(encoding="utf-8"))
+    edits = {entry["path"]: entry for entry in spec["files"]}
+    manifest["customizations"] = {
+        "path": "manifest/customizations.json",
+        "sha256": hashlib.sha256(spec_path.read_bytes()).hexdigest(),
+        "audit_date": spec["audit_date"],
+    }
+    for skill in skills:
+        relative = skill["path"].removeprefix("~/.codex/skills/")
+        if relative in edits:
+            edit = edits[relative]
+            if skill["content_sha256"] != edit["after_sha256"]:
+                raise ValueError(f"Apply the reviewed customization before snapshotting: {relative}")
+            skill["upstream_content_sha256"] = edit["before_sha256"]
+
+
 def inventory_plugins(codex_home: Path, home: Path, selectors: list[str]) -> list[dict]:
     cache = codex_home / "plugins" / "cache"
     enabled_names = {selector.split("@", 1)[0] for selector in selectors}
@@ -476,6 +497,7 @@ def main() -> None:
     manifest = build_install_manifest(lock, selectors)
     attach_snapshot_hashes(manifest, codex_home)
     skills = inventory_skills(codex_home, home, lock, manifest)
+    attach_customizations(output, manifest, skills)
     plugins = inventory_plugins(codex_home, home, selectors)
 
     (output / "manifest").mkdir(parents=True, exist_ok=True)

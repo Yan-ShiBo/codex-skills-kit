@@ -2,7 +2,28 @@
 
 这是我为 Codex 设计的一套**可复现能力系统**，覆盖科研、互联网检索、编程、调试、测试、代码审查、产品设计、文档办公、数据处理、浏览器自动化、内容创作和发布工作流。
 
-它的目标不是堆积尽可能多的 Skills，而是让每项能力都能被**准确发现、最小调用、安全更新并在新机器恢复**。仓库记录当前可用的 Skills、Codex 插件、上游来源和锁定版本，并提供 Windows、macOS 与 Linux 安装脚本。第三方 Skill 源码仍从原作者仓库下载，本仓库不重新分发这些源码。
+它的目标不是堆积尽可能多的 Skills，而是让每项能力都能被**准确发现、最小调用、安全更新并在新机器恢复**。仓库记录 Skills、Codex 插件、上游来源和锁定版本，并提供 Windows、macOS 与 Linux 安装脚本。第三方 Skill 从原作者仓库下载；本仓库维护经过审阅的个人覆盖文件和最小文本补丁。
+
+## 指令精简与可恢复定制
+
+2026-09-16 依据 OpenAI 的 [Rethinking skills and prompts for GPT-6 Astra](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) 审计了用户管理的 Skills 和 AGENTS.md：
+
+- 收窄“任何网址都必须触发”等描述；根据实际交付物选技能。
+- 移除重复启动流程、强制建计划文档、无关全面测试和默认发 Issue 等扩张行为。
+- 重用已有授权与通过的检查；缺少偏好文件不再自动阻塞，等待以已运行操作的状态为依据。
+
+具体变更和验证结果见 [2026-09-16 审计记录](inventory/INSTRUCTION_AUDIT_2026-09-16.md)。系统技能和插件仍由 Codex 管理；插件清单保留原快照，不代表重新验证了登录态渠道。
+
+安装器先下载锁定上游，再按 [customizations.json](manifest/customizations.json) 应用绑定修改前后哈希的补丁。未知内容会拒绝修改。重复应用不会重复写入，已有文件的备份保存在 `~/.codex/skill-backups/`。
+
+已有安装可先预览，再应用：
+
+```bash
+python scripts/customize.py
+python scripts/customize.py --apply
+```
+
+该命令检查本清单的全部定制目标，适用于完整安装。全局偏好模板是 [overrides/AGENTS.md](overrides/AGENTS.md)，只有加 `--include-preferences` 才写入空白或相同的全局 AGENTS.md；已有其他规则需合并，安装器不会自动覆盖。维护补丁时修改 `overrides/` 或 `scripts/build_customizations.py`，从未经修改的锁定上游重新生成清单，验证后更新快照。
 
 ## 设计优势
 
@@ -36,7 +57,7 @@ flowchart LR
 
 ## 包含内容
 
-当前已核验快照日期为 **2026-09-09**：
+基础能力与插件快照日期为 **2026-09-09**，用户指令定制更新于 **2026-09-16**：
 
 - **62 个用户级顶层安装目标**，来自 **12 个 GitHub 上游仓库**
 - **1 个显式共享运行支持目录** `_shared`，不计入用户 Skill 数量
@@ -400,7 +421,7 @@ python3 ./scripts/reconcile.py --apply
 | --- | --- |
 | `--force` / `-Force` | 使用清单锁定版本替换已有 skill，旧版本进入备份 |
 | `--prune-retired` / `-PruneRetired` | 把已停止使用的顶层目标移出活动目录 |
-| `--latest` / `-Latest` | 使用上游 `main`，适合尝试最新版本但不保证严格复现 |
+| `--latest` / `-Latest` | 尝试上游 `main`；若定制目标内容已变，哈希校验会拒绝安装，需先审阅和更新补丁 |
 | `--skip-plugins` / `-SkipPlugins` | 跳过 Codex 插件恢复 |
 | `scripts/reconcile.py --apply` | 将旧 `.agents/skills` 安全迁移到 Codex 目录与备份区 |
 
@@ -415,6 +436,8 @@ python3 ./scripts/reconcile.py --apply
 | [inventory/CAPABILITY_ROUTER.md](inventory/CAPABILITY_ROUTER.md) | 自动生成的一级薄路由和可路由能力边界 |
 | [inventory/evaluations/TABLE_GITHUB_CAPABILITY_ROUTER.md](inventory/evaluations/TABLE_GITHUB_CAPABILITY_ROUTER.md) | 外部能力路由项目的证据、架构评估和采纳结论 |
 | [manifest/install-manifest.json](manifest/install-manifest.json) | 安装器读取的机器清单、哈希和插件选择器 |
+| [manifest/customizations.json](manifest/customizations.json) | 审阅后的定制规则及修改前后哈希 |
+| [overrides/](overrides/) | 精简的个人指令模板 |
 | [manifest/capability-registry.json](manifest/capability-registry.json) | 路由、健康、风险、授权和回退的机器事实源 |
 | [manifest/selection-policy.json](manifest/selection-policy.json) | 当前能力组合的适用领域和维护规则 |
 | [inventory/skills-lock.json](inventory/skills-lock.json) | 62 个顶层安装目标的来源、路径和文件哈希 |
@@ -423,6 +446,8 @@ python3 ./scripts/reconcile.py --apply
 | `scripts/reconcile.py` | 迁移旧目录并备份停止使用的 skills |
 | `scripts/capability_router.py` | 校验路由目标并生成薄路由 Markdown |
 | `scripts/verify.py` | 校验数量、来源、哈希、目录和跨层冲突 |
+| `scripts/customize.py` / `scripts/customize.ps1` | Python 与原生 PowerShell 补丁重放 |
+| `scripts/build_customizations.py` | 从原始上游和覆盖文件生成定制清单 |
 
 ## 可复现性与安全
 

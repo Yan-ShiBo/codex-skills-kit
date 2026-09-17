@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from capability_router import check_rendered_file, render_markdown, validate_registry
+from customize import digest, validate_spec
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,6 +24,20 @@ def main() -> None:
     plugins = load("inventory/plugins.json")
     lock = load("inventory/skills-lock.json")
     registry = load("manifest/capability-registry.json")
+    customization_path = ROOT / manifest["customizations"]["path"]
+    spec = json.loads(customization_path.read_text(encoding="utf-8"))
+    assert digest(customization_path.read_bytes()) == manifest["customizations"]["sha256"]
+    validate_spec(spec)
+    inventory_by_path = {item["path"].removeprefix("~/.codex/skills/"): item for item in skills}
+    for entry in spec["files"]:
+        if entry["path"].endswith("SKILL.md"):
+            recorded = inventory_by_path[entry["path"]]
+            assert recorded["content_sha256"] == entry["after_sha256"]
+            assert recorded["upstream_content_sha256"] == entry["before_sha256"]
+    assert spec["global_preferences"] == (ROOT / "overrides/AGENTS.md").read_text(encoding="utf-8")
+    for name, rule in spec["rules"].items():
+        if rule["op"] == "file":
+            assert rule["text"] == (ROOT / "overrides" / name).read_text(encoding="utf-8")
 
     assert manifest["schema_version"] == 2
     assert manifest["install_root"] == "~/.codex/skills"
@@ -121,6 +136,7 @@ def main() -> None:
         json.dumps(
             {
                 "sources": len(manifest["sources"]),
+                "customized_files": len(spec["files"]),
                 "install_items": len(destinations),
                 "user_install_targets": len(skill_destinations),
                 "retired_skills": len(retired),

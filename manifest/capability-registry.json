@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-09-09",
+  "snapshot_date": "2026-09-16",
   "source_inventory_date": "2026-09-09",
   "generated_markdown": "inventory/CAPABILITY_ROUTER.md",
   "max_categories": 10,
@@ -78,7 +78,7 @@
     {
       "id": "browser-and-desktop",
       "task": "互联网、浏览器与桌面",
-      "boundary": "公开互联网检索优先 Agent Reach；仅在任务依赖登录态或 Windows 应用时升级到浏览器或桌面控制。",
+      "boundary": "普通网页与搜索使用现有联网工具；平台专用检索才选择 Agent Reach，需要登录态或桌面操作时使用对应工具。",
       "candidates": [
         "agent-reach",
         "chrome-plugin",
@@ -98,7 +98,7 @@
     {
       "id": "skills-governance",
       "task": "Skills 发现与维护",
-      "boundary": "用于发现、安装或创建 Skill；安装和配置变更必须显式批准，普通任务不扩充能力。",
+      "boundary": "用于发现、安装或创建 Skill；沿用当前任务已给出的安装授权，普通任务不自动扩充能力。",
       "candidates": [
         "find-skills",
         "skill-installer",
@@ -180,8 +180,8 @@
       "authorization": "write-gated",
       "risk": "low",
       "manager_type": false,
-      "trigger": "多阶段任务需要跨回合保存计划、证据和状态。",
-      "do_not_use": "一次即可完成的小任务不要创建额外计划文件。",
+      "trigger": "用户要求持久计划，或跨会话任务确实需要保存决策、依赖与状态。",
+      "do_not_use": "不要仅因工具调用次数或步骤数量创建三份计划文档。",
       "fallback": "在当前任务中使用简短内联计划。",
       "evidence": "锁定来源与内容哈希已由 2026-07-18 仓库快照验证。"
     },
@@ -520,7 +520,7 @@
       "authorization": "ordinary",
       "risk": "medium",
       "manager_type": false,
-      "trigger": "需要搜索或读取公开网页、社交平台、视频、RSS、开发资源、职位或金融信息。",
+      "trigger": "需要 Agent Reach 的平台专用后端读取社交内容、视频字幕、订阅源或配置这些后端。",
       "do_not_use": "已有专用连接器、只需加工现有内容，或任务涉及发帖、评论、点赞等写操作时不要使用。",
       "fallback": "使用普通联网查询；登录态页面改用用户明确授权的 Chrome 会话。",
       "evidence": "上游 v1.5.0 锁定到 da5044d；2026-09-09 安全模式诊断确认 4/15 渠道立即可用，其余需要可选依赖或登录配置。"

@@ -87,6 +87,25 @@ try {
         $manifest = Get-Content -Raw -LiteralPath $manifestPath | ConvertFrom-Json
     }
 
+    $customizations = $null
+    if ($manifest.customizations) {
+        $helper = if ($PSScriptRoot) { Join-Path $PSScriptRoot 'scripts\customize.ps1' } else { $null }
+        if (-not $helper -or -not (Test-Path -LiteralPath $helper)) {
+            $helper = Join-Path $tempRoot 'customize.ps1'
+            Get-WithRetry "$RawBase/scripts/customize.ps1" $helper
+        }
+        . $helper
+        $specPath = if ($PSScriptRoot) { Join-Path $PSScriptRoot $manifest.customizations.path } else { $null }
+        if (-not $specPath -or -not (Test-Path -LiteralPath $specPath)) {
+            $specPath = Join-Path $tempRoot 'customizations.json'
+            Get-WithRetry "$RawBase/$($manifest.customizations.path)" $specPath
+        }
+        if ((Get-FileHash -LiteralPath $specPath -Algorithm SHA256).Hash.ToLowerInvariant() -ne $manifest.customizations.sha256) {
+            throw 'Customization manifest hash mismatch'
+        }
+        $customizations = Get-Content -Raw -Encoding UTF8 -LiteralPath $specPath | ConvertFrom-Json
+    }
+
     if ($PruneRetired) {
         $retiredCount = 0
         $retiredBackup = Join-Path $BackupRoot "retired"
@@ -146,6 +165,7 @@ try {
                     New-Item -ItemType Directory -Path $sourcePath | Out-Null
                     $relative = "$($item.source_path.TrimEnd('/'))/$($item.single_file)"
                     Get-WithRetry "https://raw.githubusercontent.com/$($package.source)/$ref/$relative" (Join-Path $sourcePath $item.single_file)
+                    if ($customizations) { Set-SkillCustomization -Source $sourcePath -DestinationName $item.destination -Spec $customizations }
                     $destination = Join-Path $SkillsRoot $item.destination
                     $result = Copy-SkillDirectory -Source $sourcePath -Destination $destination -BackupRoot (Join-Path $BackupRoot "replaced") -Replace:$Force
                     Write-Host ("  {0,-9} {1} -> {2}" -f $result.ToUpperInvariant(), $item.name, $destination)
@@ -174,6 +194,7 @@ try {
                     $failed++
                     continue
                 }
+                if ($customizations) { Set-SkillCustomization -Source $sourcePath -DestinationName $item.destination -Spec $customizations }
                 $result = Copy-SkillDirectory -Source $sourcePath -Destination $destination -BackupRoot (Join-Path $BackupRoot "replaced") -Replace:$Force
                 Write-Host ("  {0,-9} {1} -> {2}" -f $result.ToUpperInvariant(), $item.name, $destination)
                 if ($result -eq "installed") { $installed++ } else { $skipped++ }
